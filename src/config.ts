@@ -13,13 +13,19 @@ export const SITE: Site = {
 export const LOCALE = ["en-EN"]; // set to [] to use the environment default
 
 export const LOGO_IMAGE = {
-  enable: false,
-  svg: true,
+  enable: true,
+  svg: false,
   width: 216,
   height: 46,
 };
 
 export const SOCIALS: SocialObjects = [
+  {
+    name: "Website",
+    href: "https://turpelurpeluren.online",
+    linkTitle: ` ${SITE.author} on the web`,
+    active: true,
+  },
   {
     name: "Github",
     href: "https://github.com/turpeluren",

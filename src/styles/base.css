@@ -6,10 +6,15 @@
   color: rgb(24, 22, 22);
   color: rgb(211, 211, 182);
   color: rgb(206, 93, 0);
+  color: rgb(0, 21, 206);
   color: rgb(58, 51, 51);
   color: rgb(41, 35, 35);
   color: rgb(39, 35, 35)
 }
+
+/** {
+  font-family: monospace;
+}*/
 
 @layer base {
   :root,
@@ -38,8 +43,9 @@
     display: block;
   }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
-    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
+    @apply flex min-h-[100svh] flex-col bg-skin-fill /*font-mono*/ text-skin-base;
+    /* selection color */
+    /*selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;*/
   }
   section,
   footer {

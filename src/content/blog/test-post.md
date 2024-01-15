@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2023-12-09T22:30:00Z
 title: Test article
 postSlug: test-article
-featured: true
+featured: false
 draft: false
 tags:
   - site

@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-01-13T14:52:00Z
 title: Crying Out
 postSlug: crying-out
-featured: true
+featured: false
 draft: false
 tags:
   - thoughts
