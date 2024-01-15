@@ -1,11 +1,11 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://blogelogeluren.netlify.app/", // replace this with your deployed domain
   author: "turpelurpeluren",
   desc: "Just getting my thoughts out there... while learning :00",
   title: "blogelogeluren",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "blogeloge-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,
 };
