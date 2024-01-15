@@ -17,7 +17,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   };
 
   return (
-    <li className="my-6">
+    <li className="my-5">
       <span>
       
       <a
@@ -29,10 +29,11 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         ) : (
           <h3 {...headerProps}>{title}</h3>
         )}
-    </a>
-    <Datetime datetime={pubDatetime} />
+
+		
+
+    </a><Datetime datetime={pubDatetime} />
     </span>
-    <p>{description}</p>
     </li>
   );
 }
