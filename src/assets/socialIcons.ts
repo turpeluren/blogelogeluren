@@ -3,13 +3,13 @@ import type { SocialIcons } from "../types";
 const socialIcons: SocialIcons = {
   Website: `<svg 
     xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 64 64"  xml:space="preserve"
     class="icon-tabler"
     stroke-linecap="round"
     stroke-linejoin="round"
+    viewBox="0 0 24 24" stroke-width="2"
   >
     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-    <circle cx="32" cy="32" r="24.86"/><path d="M32,6.84A34.09,34.09,0,0,1,43.66,32.31c0,16.19-7.28,21-11.66,24.24"/><path d="M32,6.84A34.09,34.09,0,0,0,20.31,32.31c0,16.19,7.28,21,11.66,24.24"/><line x1="10.37" y1="19.75" x2="53.75" y2="19.75"/><line x1="32" y1="6.84" x2="32" y2="56.55"/><line x1="11.05" y1="45.33" x2="52.98" y2="45.33"/><line x1="7.14" y1="32.31" x2="56.86" y2="31.69"/>
+    <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" /><path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" /><path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" /><path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" /><path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" /><path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" /><path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" /><path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" /><path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
   </svg>`,
   Github: `<svg
     xmlns="http://www.w3.org/2000/svg"
