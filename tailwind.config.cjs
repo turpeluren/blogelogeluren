@@ -25,6 +25,7 @@ module.exports = {
       skin: {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+		secondary: withOpacity("--color-secondary"),
         inverted: withOpacity("--color-fill"),
       },
     },
@@ -53,6 +54,7 @@ module.exports = {
       skin: {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+        secondary: withOpacity("--color-secondary"),
       },
       transparent: "transparent",
     },

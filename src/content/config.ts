@@ -10,6 +10,7 @@ const blog = defineCollection({
       title: z.string(),
       postSlug: z.string().optional(),
       featured: z.boolean().optional(),
+      project: z.boolean().optional(),
       draft: z.boolean().optional(),
       tags: z.array(z.string()).default(["others"]),
       ogImage: image()

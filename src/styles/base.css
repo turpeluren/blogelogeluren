@@ -6,15 +6,11 @@
   color: rgb(24, 22, 22);
   color: rgb(211, 211, 182);
   color: rgb(206, 93, 0);
-  color: rgb(0, 21, 206);
+  color: rgb(214, 216, 255);
   color: rgb(58, 51, 51);
   color: rgb(41, 35, 35);
   color: rgb(39, 35, 35)
 }
-
-/** {
-  font-family: monospace;
-}*/
 
 @layer base {
   :root,
@@ -22,6 +18,7 @@
     --color-fill: 248, 250, 248;
     --color-text-base: 40, 39, 40;
     --color-accent: 255, 115, 0;
+	--color-secondary: 19, 28, 153;
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
@@ -30,6 +27,7 @@
     --color-fill: 24, 22, 22;
     --color-text-base: 211, 211, 182;
     --color-accent: 206, 93, 0;
+	--color-secondary: 214, 216, 255;
     --color-card: 58, 51, 51;
     --color-card-muted: 41, 35, 35;
     --color-border: 39, 35, 35;
@@ -66,12 +64,12 @@
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
     prose-h3:italic prose-p:!text-skin-base 
-    prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
-    hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
+    prose-a:!text-skin-secondary prose-a:!decoration-dotted prose-a:!font-normal
+    hover:prose-a:text-skin-secondary/*text-skin-accent*/ 
+	prose-blockquote:!border-l-skin-accent
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
-
     
     prose-code:rounded prose-code:bg-skin-card 
     prose-code:bg-opacity-75 prose-code:p-1 prose-code:!text-skin-base 
@@ -85,7 +83,7 @@
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
   .prose a {
-    @apply break-words hover:!text-skin-accent;
+    @apply break-words hover:!text-skin-secondary hover:!decoration-solid underline-offset-2;
   }
   .prose thead th:first-child,
   tbody td:first-child,
@@ -147,4 +145,9 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+}
+
+/*randomantagning post*/
+img[alt="Some courses from spring 2024"] {
+	width: max(50%, 500px);
 }

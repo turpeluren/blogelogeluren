@@ -4,7 +4,8 @@ pubDatetime: 2023-12-09T22:30:00Z
 title: Test article
 postSlug: test-article
 featured: false
-draft: false
+project: true
+draft: true
 tags:
   - site
 description:

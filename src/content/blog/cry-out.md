@@ -4,6 +4,7 @@ pubDatetime: 2024-01-13T14:52:00Z
 title: Crying Out
 postSlug: crying-out
 featured: false
+project: false
 draft: false
 tags:
   - thoughts
@@ -19,7 +20,7 @@ Maybe it was the onset of teenage angst, the [changing nature of the internet](h
 
 What I am slowly coming to realize is that there is a mismatch in pace between my conceptions of real life vs. internet. Everything online seems to be moving at incredible speeds, everyone eerily productive with [aesthetics that ensnare and overload my mind's processor](https://www.jam2go.xyz/kitten-burst) around every corner. But that is only the top of humanity’s iceberg and the poison that mainstream apps like Instagram uses to numb their victims. 
 
-Truth is all of this elusive aetherly content comes from a reeal slow cooking pot. People are only doing their own thing, at their own pace. After joining a couple discords of online creators I like, it is apparent that their creations do not come out of nowhere. A [third place](https://tante.cc/2021/12/17/the-third-web/), breeding ground for ideas and experiments, where not only the shiniest trinkets are presented, but the mud and grit of regular human life, is probably the ingredient my online body is missing.
+Truth is all of this elusive aetherly content comes from a reeal slow cooking pot. People are only doing their own thing, at their own pace. After joining a couple discords of online creators I like, it is apparent that their creations do not come out of nowhere. A [third place](https://courier.unesco.org/en/articles/third-places-true-citizen-spaces), breeding ground for ideas and experiments, where not only the shiniest trinkets are presented, but the mud and grit of regular human life, is probably the ingredient my online body is missing.
 
 So I will try this, starting here, to put myself out there. Express myself and endure the cringe of it, speaking my mind even if I am not sure about what it will say. Maybe if I cry out into the nothingness, the fog will disappear. 
 
