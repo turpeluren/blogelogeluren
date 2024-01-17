@@ -88,7 +88,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 {
 	projectPosts.length > 0 && (
 	  <>
-		<section id="featured">
+		<section id="projects">
 		  <h2>projects</h2>
 		  <ul>
 			{projectPosts.map(({ data }) => (
@@ -136,6 +136,28 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         </LinkButton>
       </div>
     </section>
+
+	<section id="links">
+		<h2>links</h2>
+		to other sites I like
+		<ul>
+			<Card
+				href={`https://neocities.org/browse`}
+				frontmatter={{title: "Neocities"}}/>
+			<Card
+				href={`https://searchmysite.net/`}
+				frontmatter={{title: "searchmysite.net"}}/>
+			<Card
+				href={`https://blog.erlend.sh/reclaiming-my-digital-identity`}
+				frontmatter={{title: "Erlend"}}/>
+		</ul>
+	</section>
+
+	<section id="chat">
+		<h2>chat</h2>
+		<iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+	</section>
+
   </main>
 
   <Footer />
@@ -167,12 +189,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
   /* ===== Featured & Recent Posts Sections ===== */
   #featured,
-  #recent-posts {
-    @apply pb-6 pt-12;
+  #recent-posts,
+  #projects,
+  #links,
+  #chat {
+    @apply pb-6 pt-8;
   }
   #featured h2,
-  #recent-posts h2 {
-    @apply text-2xl font-semibold tracking-wide;
+  #recent-posts h2,
+  #projects h2,
+  #links h2,
+  #chat h2 {
+    @apply text-xl font-semibold tracking-wide;
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;

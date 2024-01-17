@@ -31,8 +31,13 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         )}
 
 		
-
-    </a><Datetime datetime={pubDatetime} />
+	
+    </a>
+	{pubDatetime != null && (
+		<Datetime datetime={pubDatetime} />
+	
+	)}
+	
     </span>
     </li>
   );
