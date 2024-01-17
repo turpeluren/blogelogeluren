@@ -9,7 +9,8 @@
   color: rgb(214, 216, 255);
   color: rgb(58, 51, 51);
   color: rgb(41, 35, 35);
-  color: rgb(39, 35, 35)
+  color: rgb(39, 35, 35);
+  --color-fill: 248, 250, 248;
 }
 
 @layer base {
@@ -101,6 +102,22 @@
   }
   .prose h2#table-of-contents + p {
     @apply hidden;
+  }
+  .rss {
+	@apply px-2;
+  }
+  .rss a svg {
+	@apply hover:fill-skin-accent
+  }
+  .banner img {
+	width: 100%;
+	height: 100%;
+  }
+  .pfp img {
+	@apply border-2 border-skin-line hover:border-skin-accent;
+	width: 12em;
+	transform: translate(1em, -50%);
+	border-radius: 100%;
   }
 
   /* ===== scrollbar ===== */
