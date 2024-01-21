@@ -120,10 +120,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <!--h2>Recent Posts</h2 <h2>Featured</h2>-->
 	  <h2>latest thoguths</h2>
       <ul>
-        {
+        <!--{
           sortedPosts
             .filter(({ data }) => !data.featured)
             .filter(({ data }) => !data.project)
+            .filter(({ data }) => !data.microblog)
             .map(
               ({ data }, index) =>
                 index < 4 && (data.microblog || data.image) ? (
@@ -133,7 +134,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     secHeading={false}
                   />
 				  <div class="microblog">
-                  {<sortedContent[index].Content/>}</div>
+                  <sortedContent[index].Content/></div>
                 ) : (
 				  <Card
                     href={`/posts/${slugify(data)}`}
@@ -142,7 +143,30 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                   />
 				)
             )
-        }
+        }-->
+		{
+		sortedContent
+            .filter(({ frontmatter }) => !frontmatter.featured)
+            .filter(({ frontmatter }) => !frontmatter.project)
+            .map(
+              ({ frontmatter, Content }, index) =>
+                index < 4 && (frontmatter.microblog || frontmatter.image) ? (
+                  <Card
+                    href={`/posts/${slugify(frontmatter)}`}
+                    frontmatter={frontmatter}
+                    secHeading={false}
+                  />
+				  <div class="microblog">
+                  <Content/></div>
+                ) : (
+				  <Card
+                    href={`/posts/${slugify(frontmatter)}`}
+                    frontmatter={frontmatter}
+                    secHeading={false}
+                  />
+				)
+            )
+		}
       </ul>
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/posts">
