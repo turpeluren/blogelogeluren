@@ -5,11 +5,12 @@ title: ❤️👾
 postSlug: ili
 featured: false
 project: false
+microblog: true
 draft: true
 tags:
   - thoughts
 description:
-  ❤️👾
+  web
 ---
 
 I love the internet ❤️👾

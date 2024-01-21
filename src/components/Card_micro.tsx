@@ -1,7 +1,6 @@
 import { slugifyStr } from "@utils/slugify";
 import Datetime from "./Datetime";
 import type { CollectionEntry } from "astro:content";
-import type { AstroComponentFactory, AstroComponentInstance } from "astro/runtime/server/index.js";
 
 export interface Props {
   href?: string;
@@ -10,22 +9,12 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { author, title, pubDatetime, description, microblog, image } = frontmatter;
+  const { title, pubDatetime, description, textcontent } = frontmatter;
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
     className: "text-lg font-medium decoration-dashed hover:underline",
   };
-
-  if (microblog || image) {
-	return (
-		<div className={"microblog date"}>
-				<a href="https://mas.to/@turpelurpeluren"><span className={"microblog author"}>@{author}</span></a>
-				<Datetime className="pr-2" datetime={pubDatetime} />
-				<hr></hr>
-		</div>
-	)
-  }
 
   return (
     <li className="my-5">
@@ -35,22 +24,19 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         href={href}
         className="inline-block text-lg font-medium text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
       >
+        {secHeading ? (
+          <h2 {...headerProps}>{title}</h2>
+        ) : (
+          <h3 {...headerProps}>{title}</h3>
+        )}
+
 		
-		{!microblog && (
-			<h2 {...headerProps}>{title}</h2>
-		)}
-		
+	
     </a>
-
-	{pubDatetime != null && !microblog && (
+	{pubDatetime != null && (
 		<Datetime datetime={pubDatetime} />
+	
 	)}
-
-		{microblog && (
-			<div className={"microblog date"}>
-				<Datetime datetime={pubDatetime} />
-			</div>
-		)}
 	
     </span>
     </li>

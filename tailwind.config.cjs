@@ -46,8 +46,10 @@ module.exports = {
     borderColor: {
       skin: {
         line: withOpacity("--color-border"),
+        base: withOpacity("--color-fill"),
         fill: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+        "card-muted": withOpacity("--color-card-muted"),
       },
     },
     fill: {

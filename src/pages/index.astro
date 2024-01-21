@@ -8,11 +8,22 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import getSortedPosts from "@utils/getSortedPosts";
+import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
 
 const posts = await getCollection("blog");
+const items = await Astro.glob('./../content/blog/*.md');
 
+/*for(var i = 0; i<posts.length; i++) {
+	Content[i] = await posts[i].render();
+}*/
+
+/*import {Content as BlogContent} from "content/blog/";
+
+// 2. For your template, you can get the entry directly from the prop*/
+
+const sortedContent = getSortedItems(items);
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const projectPosts = sortedPosts.filter(({ data }) => data.project);
@@ -107,7 +118,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
     <section id="recent-posts">
       <!--h2>Recent Posts</h2 <h2>Featured</h2>-->
-	  <h2>thoguths</h2>
+	  <h2>latest thoguths</h2>
       <ul>
         {
           sortedPosts
@@ -115,13 +126,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .filter(({ data }) => !data.project)
             .map(
               ({ data }, index) =>
-                index < 4 && (
+                index < 4 && (data.microblog || data.image) ? (
                   <Card
                     href={`/posts/${slugify(data)}`}
                     frontmatter={data}
                     secHeading={false}
                   />
-                )
+				  <div class="microblog">
+                  {<sortedContent[index].Content/>}</div>
+                ) : (
+				  <Card
+                    href={`/posts/${slugify(data)}`}
+                    frontmatter={data}
+                    secHeading={false}
+                  />
+				)
             )
         }
       </ul>
