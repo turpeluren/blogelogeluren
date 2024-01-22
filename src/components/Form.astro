@@ -58,6 +58,7 @@
     document.getElementById('send').onclick = function() {
         const question = document.getElementById("question") as HTMLTextAreaElement;
         const nameInput = document.getElementById("name") as HTMLInputElement;
+        const webInput = document.getElementById("website") as HTMLInputElement;
         const emailInput = document.getElementById("email") as HTMLInputElement;
     
         var request = new XMLHttpRequest();
@@ -66,14 +67,15 @@
         // the below variables combine a label (text) + the textarea value + a newline (\n)
         // add up to 2,000 characters (Discord's character limit)
         var name = nameInput.value;
-        var email = 'Mail: ' + emailInput.value + "\n";
+        var web = 'Mail: ' + emailInput.value + "\n";
+        var email = 'Website: ' + webInput.value + "\n";
         var message = 'Message: ' + question.value;
     
         // you have to combine both into one single variable before you can pass it to discord
         var date = new Date();
         var f_date = date.toLocaleDateString('sv-SE');
         var username = name + " " + f_date;
-        var msg = email + message;
+        var msg = email + web + message;
         // play with it a bit until you get a feel for how you want the incoming messages to look!
     
         var params = {

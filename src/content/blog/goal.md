@@ -5,7 +5,7 @@ title: Goals and practices for the blog
 postSlug: blog-goals-and-practices
 featured: false
 project: false
-draft: true
+draft: false
 tags:
   - thoughts
   - meta
@@ -32,4 +32,4 @@ This time, I noticed, I actually have a minimal working example up and running. 
 ## ❤️👾
 This was not intended to be this lengthy but it was good to get a thinker about the underlying goals, driving factors and development principles of the blog. As an endnote I would like to invite you, the reader, to participate. Take a stroll in the park. And don’t be shy to leave your two cents, a recommendation, tell me I’m all wrong or instill me with wisdom of which you believe I am still unaware. For this is the beauty of the internet. It is a moving conversation piece. Maybe even a higher collective intelligence/consciousness. This is not a diary tucked away in my closet but a node in the expansive network of the internet, and nothing would make me happier right now than to interact with some other nodes!
 
-I still don't know enough about servers to host comments here, but I do have this nifty [discord webhook](https://sadgrl.online/learn/articles/create-webform-discord) thanks to [Sadness](https://sadgrl.online/):
+I still don't know enough about servers to host comments here, but I do have this nifty [form](https://sadgrl.online/learn/articles/create-webform-discord) that hooks up directly to a private discord channel thanks to [Sadness](https://sadgrl.online/):

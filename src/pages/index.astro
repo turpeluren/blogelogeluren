@@ -15,14 +15,6 @@ import { SOCIALS } from "@config";
 const posts = await getCollection("blog");
 const items = await Astro.glob('./../content/blog/*.md');
 
-/*for(var i = 0; i<posts.length; i++) {
-	Content[i] = await posts[i].render();
-}*/
-
-/*import {Content as BlogContent} from "content/blog/";
-
-// 2. For your template, you can get the entry directly from the prop*/
-
 const sortedContent = getSortedItems(items);
 const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);

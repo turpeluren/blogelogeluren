@@ -5,6 +5,7 @@ import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import Form from "@components/Form.astro";
+import Commentbox from "@components/Commentbox.astro";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 
@@ -56,6 +57,7 @@ const ogUrl = new URL(
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
       <Form />
+      <Commentbox />
     </article>
     <ul class="tags-container">
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
