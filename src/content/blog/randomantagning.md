@@ -23,7 +23,7 @@ Below are some of the best courses I found from spring 2024:
 ![Some courses from spring 2024](@assets/images/randomantagning_vt24.jpg)
 
 Translates to:
-> The horse's senses and behaivors
+> The horse's senses and behaviors
 
 > Pain in children and youths
 

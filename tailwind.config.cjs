@@ -41,6 +41,7 @@ module.exports = {
     outlineColor: {
       skin: {
         fill: withOpacity("--color-accent"),
+        base: withOpacity("--color-base"),
       },
     },
     borderColor: {
