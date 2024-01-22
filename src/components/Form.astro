@@ -1,27 +1,37 @@
 
 
 <div class="contactForm">
-    <div class="contactFormBox">
-    <h2>Leave me a message:</h2>
+  <div class="contactFormBox">
+    <h3>Leave me a message:</h3>
     <textarea rows="4" cols="50" id="question" placeholder="Type your message here!"></textarea>
-    <label>Name:</label> <input type="text" id="name" placeholder="Name"><br>
-    <label>Email/@:</label> <input type="text" id="email" placeholder="(Optional) Where can I reach you?"><br>
+    <label>Name: </label> <input type="text" id="name" placeholder="Name"><br>
+    <label>Email/@: </label> <input type="text" id="email" placeholder="(Optional) Where can I reach you?"><br>
     <button id="send">Send!</button>
-    </div>
+  </div>
 </div>
 
 <style>
     .contactFormBox {
-      @apply w-full;
+      @apply w-full border-skin-line;
     }
-    #question {
-      
+    .contactFormBox label{
+        width: 25%;
+    }
+    #question{
+        @apply w-full;
+    }
+    
+    #name,
+    #email {
+      @apply border-skin-fill w-1/2 ml-1 px-1;
     }
     #name {
     }
     #email {
     }
     #send {
+        @apply bg-skin-card px-1;
+        border-radius: 3px;
     }
   </style>
   
@@ -30,14 +40,18 @@
     'use strict';
 
     document.getElementById('send').onclick = function() {
+        const question = document.getElementById("question") as HTMLTextAreaElement;
+        const nameInput = document.getElementById("name") as HTMLInputElement;
+        const emailInput = document.getElementById("email") as HTMLInputElement;
+    
         var request = new XMLHttpRequest();
         request.open("POST", "https://discordapp.com/api/webhooks/1039221226712875170/COYPEqaVrlKTWCnqrjCPjyea9nlrHi-wdBpvLwXW4VyswzOeNogUbkkVoCuSEu2MdMKK");
         request.setRequestHeader('Content-type', 'application/json');
         // the below variables combine a label (text) + the textarea value + a newline (\n)
         // add up to 2,000 characters (Discord's character limit)
-        var name = document.getElementById("name").value;
-        var email = 'Mail: ' + document.getElementById("email").value + "\n";
-        var message = 'Message: ' + document.getElementById("question").value;
+        var name = nameInput.value;
+        var email = 'Mail: ' + emailInput.value + "\n";
+        var message = 'Message: ' + question.value;
     
         // you have to combine both into one single variable before you can pass it to discord
         var date = new Date();
@@ -56,7 +70,7 @@
         // below gives your user some helpful feedback letting them know their message has been sent
         alert('Thanks, your message has been sent.');
         // below clears the form fields after submission
-        document.getElementById("question").value = '';
+        question.value = '';
     }
 
 })();
