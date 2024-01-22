@@ -9,6 +9,10 @@ import LinkButton from "@components/LinkButton.astro";
 import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
 
+const items = await Astro.glob('./../content/blog/*.md');
+
+//const sortedPosts = getSortedPosts(posts);
+
 export interface Props {
   pageNum: number;
   totalPages: number;
@@ -26,8 +30,10 @@ const next = pageNum < totalPages ? "" : "disabled";
   <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
     <ul>
       {
-        posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+        items
+        .filter(({ frontmatter }) => !frontmatter.draft)
+        .map(({ frontmatter }) => (
+          <Card href={`/posts/${slugify(frontmatter)}`} frontmatter={frontmatter} />
         ))
       }
     </ul>

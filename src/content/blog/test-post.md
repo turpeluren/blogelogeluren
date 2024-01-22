@@ -1,6 +1,6 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2023-12-09T22:30:00Z
+pubDatetime: 2023-12-09T22:30:00+01:00
 title: Test article
 postSlug: test-article
 featured: false

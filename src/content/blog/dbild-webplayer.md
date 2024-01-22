@@ -1,6 +1,6 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2023-04-07T20:30:00Z
+pubDatetime: 2023-04-07T20:30:00+01:00
 title: Dbild Webplayer
 postSlug: dbild-webplayer
 featured: false

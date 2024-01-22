@@ -1,6 +1,6 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2024-01-16T16:54:00Z
+pubDatetime: 2024-01-16T16:54:00+01:00
 title: Randomantagning.se
 postSlug: randomantagning.se
 featured: false
