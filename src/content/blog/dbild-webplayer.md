@@ -1,8 +1,8 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2023-04-07T20:30:00+01:00
-title: Dbild Webplayer
-postSlug: dbild-webplayer
+title: Picture of the day Webplayer
+postSlug: potd-webplayer
 featured: false
 project: true
 draft: false
@@ -13,11 +13,10 @@ description:
 ---
 
 For more than five years I have taken a picture of my face every day.
-Now the archive is interactive and readily avaliable online for anyone to browse through at their own pace. [( here )](https://turpelurpeluren.online/dbild)
+Now the archive is interactive and readily avaliable online for anyone to browse through at their own pace.
 
-![A mosaic of my face in the player](@assets/images/4x3-mosaik-webplayer.jpg)
-
-## [Check it out!](https://turpelurpeluren.online/dbild)
+## [Check it out on its own page](https://turpelurpeluren.online/dbild) or use the embedded version below!
+<iframe class="w-full" style="height: calc(28px + 78px + 48px * 2 + 32px + min(56.25vw, 0.5625 * 48.75rem) + 10px); overflow:visible;" src="https://turpelurpeluren.online/dbild.html"></iframe>
 
 The player has support for flipping one image at a time, playing at desired fps and dragging across the timeline.
 
@@ -25,6 +24,7 @@ It also has an option in the settings menu for onionskin time, which means the t
 
 Open the settings menu with "s", play with Space or flip one image with the arrow keys.
 
+![A mosaic of my face in the player](@assets/images/4x3-mosaik-webplayer.jpg)
 
 ## Building it
 
