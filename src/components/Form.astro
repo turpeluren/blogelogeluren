@@ -9,7 +9,7 @@
     <label><p>Name: </p><input type="text" name="name" id="name" placeholder="Name"></label>
     <label><p>Website: </p><input type="text" name="website" id="website" placeholder="(Optional) Your website"></label>
     <label><p>Email/@: </p><input type="text" name="email" id="email" placeholder="(Optional) Where can I reach you?"></label>
-    <input type="hidden" name="form-name" value="myformname"/>
+    <input type="hidden" name="form-name" value="contact"/>
     <flexbox id="bottom"><button type="submit" id="send">Send!</button>
     <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></flexbox>
   </form>
@@ -92,30 +92,32 @@
 
         // below gives your user some helpful feedback letting them know their message has been sent
         //alert('Thanks, your message has been sent.'); //Handled in netlify AJAX instead
+        
+    }
+
+    //AJAX netlify
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData as any).toString(),
+        })
+            .then(() => alert("Thank you for your submission"))
+            .catch((error) => alert(error));
 
         // below clears the form fields after submission
+        const question = document.getElementById("question") as HTMLTextAreaElement;
         question.value = '';
+    };
 
-        //AJAX netlify
-        /*const handleSubmit = (event) => {
-            event.preventDefault();
-
-            const myForm = event.target;
-            const formData = new FormData(myForm);*/
-            
-            fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(msg).toString(),
-            })
-                .then(() => alert("Thank you for your submission"))
-                .catch((error) => alert(error));
-        /*};
-
-        document
-            .querySelector("form")
-            .addEventListener("submit", handleSubmit);*/
-    }
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
 
 })();
 </script>
