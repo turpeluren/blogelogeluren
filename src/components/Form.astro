@@ -1,7 +1,12 @@
 
 
 <div class="contactForm">
-  <form class="contactFormBox" name="contact" method="POST" data-netlify="true">
+  <form class="contactFormBox" 
+    name="contact" 
+    method="POST" 
+    data-netlify="true"
+    action=""
+    >
     <h2>Leave me a message:</h2>
     <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here!"></textarea>
     <label><p>Name: </p><input type="text" name="name" id="name" placeholder="Name"></label>
@@ -88,9 +93,30 @@
         request.send(JSON.stringify(params));
 
         // below gives your user some helpful feedback letting them know their message has been sent
-        alert('Thanks, your message has been sent.');
+        //alert('Thanks, your message has been sent.'); //Handled in netlify AJAX instead
+
         // below clears the form fields after submission
         question.value = '';
+
+        //AJAX netlify
+        /*const handleSubmit = (event) => {
+            event.preventDefault();
+
+            const myForm = event.target;
+            const formData = new FormData(myForm);*/
+            
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(msg).toString(),
+            })
+                .then(() => alert("Thank you for your submission"))
+                .catch((error) => alert(error));
+        /*};
+
+        document
+            .querySelector("form")
+            .addEventListener("submit", handleSubmit);*/
     }
 
 })();
