@@ -1,15 +1,15 @@
 
 
 <div class="contactForm">
-  <div class="contactFormBox">
+  <form class="contactFormBox" name="contact" method="POST" data-netlify="true">
     <h2>Leave me a message:</h2>
-    <textarea rows="4" cols="50" id="question" placeholder="Type your message here!"></textarea>
-    <label>Name: </label> <input type="text" id="name" placeholder="Name"><br>
-    <label>Website: </label> <input type="text" id="website" placeholder="(Optional) Your website"><br>
-    <label>Email/@: </label> <input type="text" id="email" placeholder="(Optional) Where can I reach you?">
-    <button id="send">Send!</button>
-    <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a>
-  </div>
+    <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here!"></textarea>
+    <label><p>Name: </p><input type="text" name="name" id="name" placeholder="Name"></label>
+    <label><p>Website: </p><input type="text" name="website" id="website" placeholder="(Optional) Your website"></label>
+    <label><p>Email/@: </p><input type="text" name="email" id="email" placeholder="(Optional) Where can I reach you?"></label>
+    <flexbox id="bottom"><button type="submit" id="send">Send!</button>
+    <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></flexbox>
+  </form>
 </div>
 
 <style>
@@ -17,9 +17,12 @@
         @apply w-full;
     }
     .contactFormBox label {
-        @apply text-skin-base;
-        display: inline-block;
-        width: 4rem;
+        @apply text-skin-base w-full;
+        display: flex;
+    }
+    .contactFormBox label p {
+        @apply my-2;
+        width: 5rem;
     }
     #question {
         @apply w-full;
@@ -28,25 +31,24 @@
     #name,
     #website,
     #email {
-        @apply outline-skin-base bg-skin-card px-1;
+        @apply outline-skin-base bg-skin-card px-1 w-full;
     }
     #name,
     #website,
     #email {
-        @apply mt-1 ml-1;
-        width: calc(100% - 4rem - 4px);
+        @apply mb-2;
     }
-    #email {
-        width: calc(100% - 7.5rem - 4px);
+    #bottom {
+        @apply w-full;
+        display: flex;
+        justify-content: space-between;
     }
     #send {
-        @apply text-skin-base bg-skin-card hover:bg-skin-card-muted active:bg-skin-accent px-1 ml-2 mt-1;
+        @apply text-skin-base bg-skin-accent hover:bg-skin-card-muted active:bg-skin-card px-2 py-1 mt-1;
         border-radius: 3px;
     }
     #ref {
         @apply mt-3;
-        display: block;
-        text-align: right;
         font-size: smaller;
     }
   </style>
