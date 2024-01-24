@@ -3,15 +3,13 @@
 <div class="contactForm">
   <form class="contactFormBox" 
     name="contact" 
-    method="POST" 
-    data-netlify="true"
-    action=""
     >
     <h2>Leave me a message:</h2>
     <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here!"></textarea>
     <label><p>Name: </p><input type="text" name="name" id="name" placeholder="Name"></label>
     <label><p>Website: </p><input type="text" name="website" id="website" placeholder="(Optional) Your website"></label>
     <label><p>Email/@: </p><input type="text" name="email" id="email" placeholder="(Optional) Where can I reach you?"></label>
+    <input type="hidden" name="form-name" value="myformname"/>
     <flexbox id="bottom"><button type="submit" id="send">Send!</button>
     <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></flexbox>
   </form>
