@@ -56,7 +56,8 @@ const ogUrl = new URL(
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
-      <Form />
+      <Form 
+        slug={slugifyStr(title)}/>
       <!--Commentbox /-->
       <div class="commentbox"></div>
     </article>
