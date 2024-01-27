@@ -73,6 +73,7 @@ const { slug } = Astro.props;
     (function () {
     'use strict';
 
+    // Send to discord webhook
     document.getElementById('send').onclick = function() {
         const question = document.getElementById("question") as HTMLTextAreaElement;
         const nameInput = document.getElementById("name") as HTMLInputElement;

@@ -1,0 +1,68 @@
+---
+const { slug } = Astro.props;
+
+import { getEntry } from 'astro:content';
+import Datetime from './Datetime.tsx';
+import Hr from './Hr.astro';
+import Icons from '@assets/socialIcons';
+
+const commentsEntry = await getEntry('comments', slug);
+const comments = commentsEntry?.data?.comments || [];
+const parentId = null;
+
+comments
+  .filter((comment) => comment.parentId === parentId)
+  .sort((a, b) => {
+    return Math.floor(new Date(a.createdAt).getTime() / 1000) -
+           Math.floor(new Date(b.createdAt).getTime() / 1000);
+  });
+
+console.log(slug+" comments: ");
+console.log(comments);
+---
+
+<ul class="commentlist">
+    {comments.length > 0 && (
+        <h2>Comments:</h2>
+    )}
+    {comments.map(data => (
+        <div class="line"></div>
+        <div class="comment" id={data.id}>
+            <span id="head"><h3 id="name">{data.createdBy.fullName}</h3>
+            <Datetime className="date" datetime={data.createdAt} /></span>
+            {data.website && (<a href={"https://"+data.website} id="website"><svg set:html={Icons.Website}/> {data.website}</a>)}
+            <hr class="h" />
+            <div class="message">
+                <span
+                    set:html={data.html}
+                />
+            </div>
+        </div>
+    ))}
+</ul>
+
+<style>
+    .commentlist {
+        @apply p-0 flex flex-col;
+    }
+    .comment h3 {
+        display: inline;
+    }
+    .comment {
+        @apply pl-4 pb-4 border-skin-fill;
+        border-left-width: 1px;
+    }
+    #website {
+        @apply pl-2;
+    }
+    .h {
+        @apply m-0 mt-2;
+    }
+    .message {
+        
+    }
+    .line {
+        background-color: black;
+    }
+    
+</style>
