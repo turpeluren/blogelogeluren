@@ -11,8 +11,8 @@ const { slug } = Astro.props;
     name="contact" 
     netlify-honeypot="bot-field"
     >
-    <input type="hidden" name="form-name" value="contact"/>
     <input type="hidden" name="slug" value={slug as string}/>
+    <input type="hidden" name="form-name" value="contact"/>
 
     <h2>Leave me a message:</h2>
     <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here!"></textarea>
