@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import commentBox from 'commentbox.io';
 
 export default class PageWithComments extends React.Component {
@@ -19,4 +19,4 @@ export default class PageWithComments extends React.Component {
             <div className="commentbox" />
         );
     }
-}
+}*/
