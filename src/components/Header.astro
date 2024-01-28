@@ -4,24 +4,24 @@ import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
 export interface Props {
-  activeNav?: "/" | "posts" | "tags" | "about" | "search";
+  activeNav?: "/" | "posts" | "projects" | "media" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
 ---
 
-<header>
+<header class="header">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <!--section class="banner">
 	<img src={`/assets/banner.jpg`}>
   </section-->
   <div class="nav-container">
-	<a href="/" class="pr-4 pl-4 w-48 h-12">
+	<a href="/" class="pfp-a">
 	<div class="pfp">
 		<img class="" src={`/assets/pfp.png`}>
 	  </div></a>
 
-	  <div class="name flex pt-2">
+	  <!--div class="name flex pt-2">
 		<a href="/" class="logo whitespace-nowrap pl-6">
 			{
 			LOGO_IMAGE.enable ? (
@@ -53,7 +53,7 @@ const { activeNav } = Astro.props;
 			</svg>
 			</a>
 		</div>
-	  </div>
+	  </div-->
 	<!--/div>
 	<div class="nav-container"-->
     <div class="top-nav-wrap">
@@ -85,19 +85,24 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="">
-		  <li>
-			<a href="/" class={activeNav === "/" ? "active" : ""}>
-			  frontpage
-			</a>
-			</li>
           <li>
-            <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
-              all posts
+            <a href="/" class={activeNav === "/" ? "active" : ""}>
+              now
             </a>
           </li>
           <li>
-            <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
-              tags
+            <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
+              posts
+            </a>
+          </li>
+          <li>
+            <a href="/projects" class={activeNav === "projects" ? "active" : ""}>
+              projects
+            </a>
+          </li>
+          <li>
+            <a href="/media" class={activeNav === "media" ? "active" : ""}>
+              media
             </a>
           </li>
           <li>
@@ -105,10 +110,10 @@ const { activeNav } = Astro.props;
               about
             </a>
           </li>
-          <li>
+          <!--li>
             <LinkButton
               href="/search"
-              className={`focus-outline p-3 sm:p-1 ${
+              className={`focus-outline ${
                 activeNav === "search" ? "active" : ""
               } flex`}
               ariaLabel="search"
@@ -122,8 +127,8 @@ const { activeNav } = Astro.props;
                 ></path>
               </svg>
             </LinkButton>
-          </li>
-          <li>
+          </li-->
+          <!--li>
             {
               SITE.lightAndDarkMode && (
                 <button
@@ -141,8 +146,8 @@ const { activeNav } = Astro.props;
                   </svg>
                 </button>
               )
-            }
-          </li>
+            }  
+          </li-->
         </ul>
       </nav>
     </div>
@@ -154,15 +159,19 @@ const { activeNav } = Astro.props;
   #skip-to-content {
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
+  .header {
+    @apply col-start-1 col-end-2;
+    max-width: 1rem;
+  }
   .banner {
 	  @apply px-0 sm:px-4;
   }
   .nav-container {
-    @apply mx-auto flex max-w-0 h-full flex-col items-start 
-    justify-start sm:flex-col;
+    @apply mx-auto flex w-auto h-full flex-col items-end 
+    justify-end sm:flex-col;
   }
   .top-nav-wrap {
-    @apply relative flex w-full h-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full h-full items-start justify-between sm:items-center;
   }
   .logo {
     @apply py-1 text-2xl font-semibold sm:static sm:text-2xl;
@@ -173,25 +182,32 @@ const { activeNav } = Astro.props;
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
   }
+  
+  .pfp-a {
+    @apply border-2 border-skin-base hover:border-skin-accent;
+    width: 8em;
+    border-radius: 4px;
+  }
 
   nav {
-    @apply flex w-full h-full flex-col items-center sm:ml-2 sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;
+    @apply flex w-full h-full flex-col items-end sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;
   }
   nav ul {
-    @apply mt-0 grid grid-cols-1 text-left gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-0 sm:gap-y-5;
+    @apply mt-0 grid grid-cols-1 text-left gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-0 sm:gap-y-3;
   }
   nav ul li {
-    @apply col-span-2 grid items-center justify-center;
+    @apply col-span-2 grid items-end justify-end;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
+    @apply text-right w-full py-3 underline decoration-dotted 
+    hover:decoration-solid hover:text-skin-secondary sm:py-1;
   }
   nav ul li:nth-last-child(2) a {
     @apply w-auto;
   }
   nav ul li:nth-last-child(1),
   nav ul li:nth-last-child(2) {
-    @apply col-span-1;
+    /*@apply col-span-1;*/
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
@@ -201,7 +217,7 @@ const { activeNav } = Astro.props;
   }
 
   nav button {
-    @apply p-1;
+    
   }
   nav button svg {
     @apply h-6 w-6 fill-skin-base hover:fill-skin-accent;

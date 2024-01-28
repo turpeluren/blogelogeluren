@@ -36,8 +36,9 @@ const ogUrl = new URL(
   ogImage={ogUrl}
   canonicalURL={canonicalURL}
 >
-  <SiteLayout>
-  <Header />
+  <!--SiteLayout-->
+  <!--Header /-->
+  <main id="main-content">
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
@@ -50,7 +51,7 @@ const ogUrl = new URL(
       </svg><span>Go back</span>
     </button>
   </div>
-  <main id="main-content">
+  
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
     <svg xmlns="http://www.w3.org/2000/svg" opacity="0.8" aria-hidden="true">
         <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
@@ -69,8 +70,8 @@ const ogUrl = new URL(
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
   </main>
-  </SiteLayout>
-  <Footer />
+  <!--/SiteLayout-->
+  <!--Footer /-->
 </Layout>
 
 <style>

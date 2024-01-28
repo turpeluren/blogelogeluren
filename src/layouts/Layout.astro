@@ -3,6 +3,7 @@ import { SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
 import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
 import Footer from "@components/Footer.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -85,9 +86,10 @@ const socialImageURL = new URL(
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
-    <div id="main-content" class="wrap">
+    <div class="wrap">
      <Header />
      <slot id="main-content" class="content"/>
+     <SidebarR />
     </div>
     <Footer />
   </body>
@@ -95,12 +97,14 @@ const socialImageURL = new URL(
 
 <style>
   .wrap {
-    @apply flex flex-row;
+    @apply flex flex-row grid m-auto max-w-4xl;
+    grid-template-columns: auto auto auto;
+    column-gap: 2rem;
+    grid-row: auto;
   }
   .content {
-    @apply max-w-3xl;
   }
   #main-content {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply w-full max-w-3xl px-4 pb-12 col-start-2 col-end-6;
   }
 </style>
