@@ -11,15 +11,16 @@ const { slug } = Astro.props;
     name="contact" 
     netlify-honeypot="bot-field"
     >
+    <input type="hidden" name="slug" value={slug as string}/>
     <input type="hidden" name="form-name" value="contact"/>
-    <input type="hidden" name="slug" value={slug as any}/>
 
-    <h2>Leave me a message:</h2>
-    <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here!"></textarea>
+    <h2>Leave a comment:</h2>
     <label><p>Name: </p><input type="text" name="name" id="name" placeholder="Name"></label>
     <label><p>Website: </p><input type="text" name="website" id="website" placeholder="(Optional) Your website"></label>
     <label><p>Email/@: </p><input type="text" name="email" id="email" placeholder="(Optional) Where can I reach you?"></label>
     <label id="hidden">Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here! You can use markdown and html!"></textarea>
+
     <flexbox id="bottom"><button type="submit" id="send">Send!</button>
     <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></flexbox>
   </form>
@@ -38,7 +39,7 @@ const { slug } = Astro.props;
         width: 5rem;
     }
     #question {
-        @apply w-full;
+        @apply w-full text-skin-base;
     }
     #question,
     #name,
@@ -73,6 +74,7 @@ const { slug } = Astro.props;
     (function () {
     'use strict';
 
+    // Send to discord webhook
     document.getElementById('send').onclick = function() {
         const question = document.getElementById("question") as HTMLTextAreaElement;
         const nameInput = document.getElementById("name") as HTMLInputElement;
