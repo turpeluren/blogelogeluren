@@ -8,7 +8,7 @@ export interface Props {
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
-    <span className={` items-center space-x-2 opacity-80 ${className}`}>
+    <span className={` items-center opacity-80 ${className}`}>
       
       <span className="sr-only">Posted on:</span>
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>

@@ -50,6 +50,7 @@ module.exports = {
         base: withOpacity("--color-fill"),
         fill: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
+        secondary: withOpacity("--color-secondary"),
         "card-muted": withOpacity("--color-card-muted"),
       },
     },

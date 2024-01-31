@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
 import Footer from "@components/Footer.astro";
 import LinkButton from "@components/LinkButton.astro";
 import Hr from "@components/Hr.astro";
@@ -24,7 +25,8 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
-  <main id="main-content">
+    <Header activeNav="/" />
+    <main id="main-content">
     <!--section id="hero">
       <h1 class="mr-2">Welcome </h1>
       <a
@@ -196,7 +198,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 	</section>
 
   </main>
-
+  <SidebarR activeNav="/"/>
 </Layout>
 
 <style>

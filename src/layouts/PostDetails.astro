@@ -10,6 +10,7 @@ import Comments from "@components/Comments.astro";
 //import Commentbox from "@components/Commentbox.jsx";
 import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
+import SidebarR from "@components/SidebarR.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -37,26 +38,26 @@ const ogUrl = new URL(
   canonicalURL={canonicalURL}
 >
   <!--SiteLayout-->
-  <!--Header /-->
+  <Header />
   <main id="main-content">
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="mx-auto flex w-full max-w-3xl justify-start">
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="history.back()"
     >
-      <svg xmlns="http://www.w3.org/2000/svg"
+      <!--svg xmlns="http://www.w3.org/2000/svg"
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg--><span>&lt Go back</span>
     </button>
   </div>
   
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
-    <svg xmlns="http://www.w3.org/2000/svg" opacity="0.8" aria-hidden="true">
+    <!--svg xmlns="http://www.w3.org/2000/svg" opacity="0.8" aria-hidden="true">
         <path d="M7 11h2v2H7zm0 4h2v2H7zm4-4h2v2h-2zm0 4h2v2h-2zm4-4h2v2h-2zm0 4h2v2h-2z"></path>
         <path d="M5 22h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2zM19 8l.001 12H5V8h14z"></path>
-      </svg>
+      </svg-->
     <Datetime datetime={pubDatetime} size="lg" className="my-2" />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
@@ -70,13 +71,13 @@ const ogUrl = new URL(
       {tags.map(tag => <Tag name={slugifyStr(tag)} />)}
     </ul>
   </main>
-  <!--/SiteLayout-->
+  <SidebarR />
   <!--Footer /-->
 </Layout>
 
 <style>
   main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply mx-auto w-full max-w-3xl pb-12;
   }
   .post-title {
     @apply text-2xl font-semibold text-skin-accent;

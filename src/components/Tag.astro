@@ -7,15 +7,15 @@ export interface Props {
 const { name, size = "sm" } = Astro.props;
 ---
 
-<li
+<span
   class={`inline-block ${
-    size === "sm" ? "my-1 underline-offset-4" : "my-3 mx-1 underline-offset-8"
+    size === "sm" ? "mb-1 p-0 underline-offset-4 bg-skin-card text-left rounded" : "my-3 mx-1 underline-offset-8"
   }`}
 >
   <a
     href={`/tags/${name.toLowerCase()}`}
     transition:name={name.toLowerCase()}
-    class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
+    class={`${size === "sm" ? "text-sm" : "text-lg"} p-1 group`}
   >
     <!--svg
       xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const { name, size = "sm" } = Astro.props;
     <!--span style="opacity: 100;">#</span-->
     <span>#{name.toLowerCase()}</span>
   </a>
-</li>
+</span>
 
 <style>
   a {

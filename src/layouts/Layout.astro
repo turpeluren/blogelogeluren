@@ -5,6 +5,7 @@ import { ViewTransitions } from "astro:transitions";
 import Header from "@components/Header.astro";
 import SidebarR from "@components/SidebarR.astro";
 import Footer from "@components/Footer.astro";
+import Logo from "@components/Logo.astro";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -87,9 +88,12 @@ const socialImageURL = new URL(
   </head>
   <body>
     <div class="wrap">
-     <Header />
-     <slot id="main-content" class="content"/>
-     <SidebarR />
+     <Logo />
+     <!--Header /-->
+     
+        <slot />
+     
+     <!--SidebarR /-->
     </div>
     <Footer />
   </body>
@@ -97,14 +101,33 @@ const socialImageURL = new URL(
 
 <style>
   .wrap {
-    @apply flex flex-row grid m-auto max-w-4xl;
-    grid-template-columns: auto auto auto;
-    column-gap: 2rem;
+    @apply grid mx-auto mt-0 max-w-4xl;
+    
+    grid-template-rows: auto auto;
+    grid-template-columns: calc(min(56rem, 100vw - 1em) * 0.15) calc(min(56rem, 100vw - 1em) * 0.55) calc(min(56rem, 100vw - 1em) * 0.15);
+    column-gap: calc(min(56rem, 100vw - 1em) * 0.075);
     grid-row: auto;
+
+    /*border: 1px dashed purple;*/
   }
+  @media only screen and (max-width: 640px) {
+    .wrap {
+        grid-template-columns: 0 auto auto;
+        grid-template-rows: auto auto auto;
+        column-gap: 0;
+        max-width: 100%;
+    }
+  }
+  .wrap #main-content {
+    @apply p-4;
+  }
+  /*
   .content {
+    @apply w-full max-w-3xl px-4 pb-12 row-start-2 row-end-3;
+    border: 5px dashed orangered;
   }
   #main-content {
-    @apply w-full max-w-3xl px-4 pb-12 col-start-2 col-end-6;
-  }
+    @apply col-start-2 col-end-3
+  }*/
+
 </style>

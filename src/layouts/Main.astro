@@ -17,8 +17,9 @@ export type Props = StringTitleProp | ArrayTitleProp;
 const { props } = Astro;
 ---
 
-<Breadcrumbs />
-<main id="main-content">
+
+<div id="main-content">
+  <Breadcrumbs />
   {
     "titleTransition" in props ? (
       <h1>
@@ -33,11 +34,11 @@ const { props } = Astro;
   }
   <p>{props.pageDesc}</p>
   <slot />
-</main>
+</div>
 
 <style>
   #main-content {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply mx-auto w-full max-w-3xl pb-12;
   }
   #main-content h1 {
     @apply text-2xl font-semibold sm:text-3xl;

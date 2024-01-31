@@ -4,6 +4,7 @@ import { SITE } from "@config";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
 import Footer from "@components/Footer.astro";
 import SearchBar from "@components/Search";
 
@@ -19,9 +20,10 @@ const searchList = posts.map(({ data }) => ({
 ---
 
 <Layout title={`Search | ${SITE.title}`}>
-  <Header activeNav="search" />
-  <Main pageTitle="Search" pageDesc="Search any article ...">
+  <Header activeNav="posts" />
+  <Main pageTitle="search" pageDesc="Search any article ...">
     <SearchBar client:load searchList={searchList} />
   </Main>
-  <Footer />
+  <SidebarR />
+  <!--Footer /-->
 </Layout>

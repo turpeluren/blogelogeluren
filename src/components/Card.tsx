@@ -21,7 +21,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
 	return (
 		<div className={"microblog date"}>
 				<a href="https://mas.to/@turpelurpeluren"><span className={"microblog author"}>@{author}</span></a>
-				<Datetime className="pr-2" datetime={pubDatetime} />
+				<Datetime className="px-2" datetime={pubDatetime} />
 				<hr></hr>
 		</div>
 	)
@@ -43,7 +43,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
     </a>
 
 	{pubDatetime != null && !microblog && (
-		<Datetime datetime={pubDatetime} />
+		<Datetime className="px-2" datetime={pubDatetime} />
 	)}
 
 		{microblog && (

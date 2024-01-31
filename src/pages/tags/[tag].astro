@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
 import Footer from "@components/Footer.astro";
 import Card from "@components/Card";
 import getUniqueTags from "@utils/getUniqueTags";
@@ -38,14 +39,14 @@ const tagPosts = getPostsByTag(posts, tag);
 const sortTagsPost = getSortedPosts(tagPosts);
 ---
 
-<Layout title={`Tag:${tag} | ${SITE.title}`}>
-  <Header activeNav="tags" />
+<Layout title={`tag:${tag} | ${SITE.title}`}>
+  <Header activeNav="posts" />
   <Main
-    pageTitle={[`Tag:`, `${tag}`]}
+    pageTitle={[`tag:`, `${tag}`]}
     titleTransition={tag}
     pageDesc={`All the articles with the tag "${tag}".`}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <h1 slot="title" transition:name={tag}>{`tag:${tag}`}</h1>
     <ul>
       {
         sortTagsPost.map(({ data }) => (
@@ -54,5 +55,5 @@ const sortTagsPost = getSortedPosts(tagPosts);
       }
     </ul>
   </Main>
-  <Footer />
+  <SidebarR />
 </Layout>

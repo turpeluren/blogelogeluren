@@ -1,0 +1,64 @@
+---
+export interface Props {
+    left: boolean;
+    activeNav?: "/" | "posts" | "projects" | "media" | "about" | "search";
+}
+
+const { activeNav } = Astro.props;
+const { left } = Astro.props;
+---
+
+<nav id="nav-menu">
+    <ul id="menu-items" class={`${left === true ? "left" : "right"} display-none sm:grid`}>
+        <li>
+            <a href="/" class={activeNav === "/" ? "active" : ""}>
+            now
+            </a>
+        </li>
+        <li>
+            <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
+            posts
+            </a>
+        </li>
+        <li>
+            <a href="/projects" class={activeNav === "projects" ? "active" : ""}>
+            projects
+            </a>
+        </li>
+        <li>
+            <a href="/media" class={activeNav === "media" ? "active" : ""}>
+            media
+            </a>
+        </li>
+        <li>
+            <a href="/about" class={activeNav === "about" ? "active" : ""}>
+            about
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<style>
+  .left {
+    @apply text-center sm:hidden;
+  }
+  .right {
+    @apply items-start justify-start text-right;
+  }
+  nav {
+    @apply flex w-full flex-col sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;
+  }
+  nav ul {
+    @apply mt-0 grid-cols-1 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-0 sm:gap-y-3;
+  }
+  nav ul li {
+    @apply mb-2;
+  }
+  nav ul li a {
+    @apply text-right w-full py-3 underline decoration-dotted decoration-2
+    hover:decoration-solid hover:text-skin-secondary sm:py-1 underline-offset-4;
+  }
+  nav a.active {
+    @apply underline decoration-wavy decoration-2 underline-offset-4;
+  }
+</style>

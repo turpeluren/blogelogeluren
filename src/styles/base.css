@@ -33,13 +33,29 @@
     --color-card-muted: 41, 35, 35;
     --color-border: 39, 35, 35;
   }
-  #sun-svg,
+  #sun-svg, #day-symbol
   html[data-theme="dark"] #moon-svg {
     display: none;
   }
-  #moon-svg,
+  #moon-svg, #night-symbol
   html[data-theme="dark"] #sun-svg {
     display: block;
+  }
+  #day-symbol,
+  html[data-theme="dark"] #day-symbol {
+    display: none;
+  }
+  #night-symbol,
+  html[data-theme="dark"] #night-symbol {
+    display: inline-block;
+  }
+  #day-symbol,
+  html[data-theme="light"] #day-symbol {
+    display: inline-block;
+  }
+  #night-symbol,
+  html[data-theme="light"] #night-symbol {
+    display: none;
   }
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill /*font-mono*/ text-skin-base;
@@ -48,7 +64,7 @@
   }
   section,
   footer {
-    @apply mx-auto max-w-3xl px-4;
+    @apply mx-auto max-w-3xl;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 
@@ -123,16 +139,6 @@
   .microblog a {
 	@apply break-words hover:underline decoration-dotted text-skin-secondary hover:!decoration-solid underline-offset-2;
   }
-  /*.microblog img {
-	@apply border-skin-base hover:border-skin-line hover:opacity-70;
-	border-width: 4px;
-	border-radius: 3px;
-	max-height: 20em;
-	width: 100%;
-	overflow: hidden;
-	object-fit: cover;
-	cursor: pointer;
-  }*/
   .microblog img {
 	max-height: 20em;
 	max-width: 100%;
@@ -146,6 +152,9 @@
   }
   .author {
 	@apply p-0 pl-2 text-skin-secondary font-bold;
+  }
+  #main-content {
+    @apply col-start-2 col-end-3 px-4 sm:p-0;
   }
 
   /* ===== scrollbar ===== */
