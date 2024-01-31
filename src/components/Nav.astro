@@ -8,8 +8,8 @@ const { activeNav } = Astro.props;
 const { left } = Astro.props;
 ---
 
-<nav id="nav-menu">
-    <ul id="menu-items" class={`${left === true ? "left" : "right"} display-none sm:grid`}>
+<nav id="nav-menu" class={`${left === true ? "sm:hidden" : ""}`}>
+    <ul id="menu-items" class={`${left === true ? "left" : "right"}`}>
         <li>
             <a href="/" class={activeNav === "/" ? "active" : ""}>
             now
@@ -37,13 +37,14 @@ const { left } = Astro.props;
         </li>
     </ul>
 </nav>
+<br class="left">
 
 <style>
   .left {
-    @apply text-center sm:hidden;
+    @apply text-center grid sm:hidden;
   }
   .right {
-    @apply items-start justify-start text-right;
+    @apply items-start justify-start text-right grid;
   }
   nav {
     @apply flex w-full flex-col sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;

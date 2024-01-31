@@ -40,8 +40,8 @@ const next = pageNum < totalPages ? "" : "disabled";
 
 <Layout title={`Posts | ${SITE.title}`}>
     <Header activeNav="posts" />
-    <main id="main-content">
-        <Searchbar client:load searchList={searchList} />
+    <main id="main-content" style="">
+        <!--Searchbar client:load searchList={searchList} /-->
         <Main pageTitle="posts" pageDesc="">
             <ul>
             {

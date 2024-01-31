@@ -28,7 +28,7 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<div class="sidebar">
+<div class="sidebar bg-tsp">
   
   <div class="nav-container">
     <div class="top-nav-wrap">
@@ -123,7 +123,6 @@ const { activeNav } = Astro.props;
         <br>
         <Nav left={true} activeNav={activeNav} />
         
-        <br>
           <li>
             <a href="/tags" class="tags">
               tags
@@ -138,6 +137,7 @@ const { activeNav } = Astro.props;
               archive
             </a>
           </li>
+          <Hr />
         </ul>
       </nav>
     </div>
@@ -179,7 +179,7 @@ const { activeNav } = Astro.props;
   nav ul {
     @apply grid-cols-3 gap-x-2 gap-y-2
     w-full justify-end items-end
-    sm:w-full sm:justify-start sm:items-start sm:grid sm:ml-0 sm:w-auto sm:gap-y-3;
+    sm:w-full sm:justify-start sm:items-start sm:ml-0 sm:w-auto sm:gap-y-3;
   }
   nav ul li, nav ul span {
     @apply col-span-3 grid 
@@ -187,17 +187,16 @@ const { activeNav } = Astro.props;
     sm:text-left sm:items-start sm:justify-start;
   }
   nav ul span {
-    @apply col-span-1 sm:flex; 
+    @apply col-span-1 sm:flex py-1 sm:py-0; 
   }
   nav ul li a, nav ul li button {
     @apply w-full py-3 sm:py-1;
   }
   nav ul li:nth-last-child(2) a {
-    @apply w-auto;
+    @apply w-auto pb-8 sm:pb-0;;
   }
-  nav ul li:nth-last-child(1),
-  nav ul li:nth-last-child(2) {
-    
+  nav ul li:nth-last-child(1) {
+
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
@@ -230,11 +229,15 @@ const { activeNav } = Astro.props;
   .menu-icon.is-active .close {
     @apply opacity-100;
   }
+  .bg-tsp {
+    background-color: rgba(0, 0, 0, 0);
+  }
 </style>
 
 <script>
   function toggleNav() {
-    // Toggle menu
+    // Toggle menu    
+    const sidebar = document.querySelector(".sidebar");
     const menuBtn = document.querySelector(".hamburger-menu");
     const menuIcon = document.querySelector(".menu-icon");
     const menuItems = document.querySelector(".left"); //#menu-items men bara i högra sidebaren
@@ -249,8 +252,9 @@ const { activeNav } = Astro.props;
         menuExpanded ? "Open Menu" : "Close Menu"
       );
 
-      menuItems?.classList.toggle("display-none");
+      //menuItems?.classList.toggle("display-none");
       sidebarItems?.classList.toggle("display-none");
+      sidebar?.classList.toggle("bg-tsp");
     });
   }
 
