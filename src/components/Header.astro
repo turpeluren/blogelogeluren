@@ -14,18 +14,13 @@ const { activeNav } = Astro.props;
 <header class="header display-none sm:block">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
 
-  <!--div class="nav-container"-->
 	<a href="/" class="pfp-a"><p class="pl-1">/</p>
 	  <div class="pfp">
 		<img class="" src={`/assets/pfp.png`}>
 	  </div>
     </a>
-	
-      <!--div class="top-nav-wrap"-->
-        <Nav left={false} activeNav={activeNav} />
-      
-      <!--/div-->
-    <!--/div-->
+
+    <Nav left={false} activeNav={activeNav} />
 
 </header>
 
