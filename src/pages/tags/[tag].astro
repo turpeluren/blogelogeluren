@@ -41,6 +41,7 @@ const sortTagsPost = getSortedPosts(tagPosts);
 
 <Layout title={`tag:${tag} | ${SITE.title}`}>
   <Header activeNav="posts" />
+  <main id="main-content">
   <Main
     pageTitle={[`tag:`, `${tag}`]}
     titleTransition={tag}
@@ -55,5 +56,6 @@ const sortTagsPost = getSortedPosts(tagPosts);
       }
     </ul>
   </Main>
+  </main>
   <SidebarR />
 </Layout>

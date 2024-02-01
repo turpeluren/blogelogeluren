@@ -21,9 +21,11 @@ const searchList = posts.map(({ data }) => ({
 
 <Layout title={`Search | ${SITE.title}`}>
   <Header activeNav="posts" />
+  <main id="main-content">
   <Main pageTitle="search" pageDesc="Search any article ...">
     <SearchBar client:load searchList={searchList} />
   </Main>
+  </main>
   <SidebarR activeNav="posts" />
   <!--Footer /-->
 </Layout>

@@ -44,6 +44,7 @@ const yearPosts = getPostsByYear(sortPost, year);
 
 <Layout title={`year:${year} | ${SITE.title}`}>
   <Header activeNav="posts" />
+  <main id="main-content">
   <Main
     pageTitle={[`year:`, `${year}`]}
     titleTransition={year}
@@ -57,5 +58,6 @@ const yearPosts = getPostsByYear(sortPost, year);
       }
     </ul>
   </Main>
+  </main>
   <SidebarR />
 </Layout>
