@@ -18,4 +18,4 @@ description:
 
 A wall I did with [Jocknad](https://www.instagram.com/jocknad/) in Umeå. He did the faces and I the text.
 
-![Yttersta dagen](https://i.imgur.com/KmfV2H8.png)
+![full](https://i.imgur.com/KmfV2H8.png)

@@ -18,7 +18,7 @@ const { props } = Astro;
 ---
 
 
-<div id="main-content">
+<div id="main-b-content">
   <Breadcrumbs />
   {
     "titleTransition" in props ? (
@@ -37,13 +37,13 @@ const { props } = Astro;
 </div>
 
 <style>
-  #main-content {
-    @apply mx-auto w-full max-w-3xl pb-12;
+  #main-b-content {
+    @apply pb-12;
   }
-  #main-content h1 {
+  #main-b-content h1 {
     @apply text-2xl font-semibold sm:text-3xl;
   }
-  #main-content p {
+  #main-b-content p {
     @apply mb-6 mt-2 italic;
   }
 </style>

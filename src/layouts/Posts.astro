@@ -11,6 +11,7 @@ import slugify from "@utils/slugify";
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import Searchbar from "@components/Search"
+import getSortedPosts from "@utils/getSortedPosts";
 
 const items = await Astro.glob('./../content/blog/*.md');
 
@@ -25,6 +26,7 @@ const searchList = articles.map(({ data }) => ({
   description: data.description,
   data,
 }));
+
 
 export interface Props {
   pageNum: number;

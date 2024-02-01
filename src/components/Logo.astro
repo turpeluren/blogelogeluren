@@ -30,15 +30,19 @@ style="">
 
 <style>
     #banner {
-        @apply text-center mx-auto max-w-full h-full pb-0.5 row-start-1 row-end-1 col-start-1 col-end-4 sm:col-end-4 overflow-hidden;
-        letter-spacing: -2.2px; /*calc(-1 * 56rem / 290);*/
-        line-height: 1.0;
+        @apply text-center mx-auto max-w-full h-full pb-0.5
+        row-start-1 row-end-1 col-start-1 col-end-4 
+        overflow-x-hidden;
+        letter-spacing: /*-2.8px;*/ -1.5px; /*calc(-1 * 56rem / 290);*/
+        line-height: 1.1;
+        /*margin-left: max((min(56rem, 100vw - 1em) * 0.15), 0px);*/
 
         /*border: 1px dashed black;*/
     }
     @media only screen and (max-width: 640px) {
         #banner {
             font-size: small;
+            margin-left: 0;
         }
     }
 </style>

@@ -100,12 +100,21 @@ const socialImageURL = new URL(
 </html>
 
 <style>
+  :root {
+    --w-sidebar-l: 0.15;
+    --w-sidebar-r: 0.15;
+    --w-main: 0.6;
+	--w-col-gap: calc((1 - var(--w-sidebar-l) - var(--w-main) - var(--w-sidebar-r)) / 2);
+  }
   .wrap {
     @apply grid mx-auto mt-0 max-w-4xl;
+    /*margin-left: max(calc((100vw - 56rem) * 0.5 - min(56rem, 100vw - 1em) * 0.15), 0px);*/
     
     grid-template-rows: auto auto;
-    grid-template-columns: calc(min(56rem, 100vw - 1em) * 0.15) calc(min(56rem, 100vw - 1em) * 0.55) calc(min(56rem, 100vw - 1em) * 0.15);
-    column-gap: calc(min(56rem, 100vw - 1em) * 0.075);
+    grid-template-columns: calc(min(56rem, 100vw - 1em) * var(--w-sidebar-l)) 
+                           calc(min(56rem, 100vw - 1em) * var(--w-main)) 
+                           calc(min(56rem, 100vw - 1em) * var(--w-sidebar-r));
+    column-gap: calc(min(56rem, 100vw - 1em) * var(--w-col-gap));
     grid-row: auto;
 
     /*border: 1px dashed purple;*/

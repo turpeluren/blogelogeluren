@@ -64,7 +64,7 @@
   }
   section,
   footer {
-    @apply mx-auto max-w-3xl;
+    @apply mx-auto max-w-4xl;
   }
   a {
     @apply outline-2 outline-offset-1 outline-skin-fill 
@@ -119,6 +119,7 @@
   .prose h2#table-of-contents + p {
     @apply hidden;
   }
+  
   .rss a svg {
 	  @apply hover:fill-skin-accent
   }
@@ -141,8 +142,8 @@
 	@apply break-words hover:underline decoration-dotted text-skin-secondary hover:!decoration-solid underline-offset-2;
   }
   .microblog img, .image img {
-	max-height: 20em;
 	max-width: 100%;
+	max-height: 20em;
 	object-fit: scale-down;
   }
   
@@ -158,13 +159,15 @@
 
   #main-content {
     @apply col-start-2 col-end-3 px-4 sm:p-0;
-    width: calc(min(56rem, 100vw - 1em) * 0.55);
+    width: calc(min(56rem, 100vw - 1em) * var(--w-main));
   }
   @media only screen and (max-width: 640px) {
     #main-content {
         width: calc(100vw - 1em);
     }
   }
+
+  
 
   /* ===== scrollbar ===== */
   html {
@@ -201,6 +204,10 @@
   }
 }
 
+.prose {
+    @apply max-w-full;
+}
+
 @layer components {
   .display-none {
     @apply hidden;
@@ -208,6 +215,7 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+  
 }
 
 /*randomantagning post*/

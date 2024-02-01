@@ -10,7 +10,9 @@ import getUniqueTags from "@utils/getUniqueTags";
 const posts = await getCollection("blog");
 let tags = getUniqueTags(posts);
 
-import Searchbar from "@components/Search"
+//import Searchbar from "@components/Search"
+//import type { data } from "../../dist/chunks/astro-paper-2_0b5d7125.mjs";
+
 // Retrieve all articles
 const articles = await getCollection("blog", ({ data }) => !data.draft);
 
@@ -21,6 +23,13 @@ const searchList = articles.map(({ data }) => ({
   data,
 }));
 
+// Get years from archive
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const years = articles.map(({ data }) => (/*[*/
+    data.pubDatetime.getFullYear()/*, 
+    monthNames[data.pubDatetime.getMonth()]*/
+/*]*/));
+
 export interface Props {
     activeNav?: "/" | "posts" | "projects" | "media" | "about" | "search";
 }
@@ -30,7 +39,7 @@ const { activeNav } = Astro.props;
 
 <div class="sidebar bg-tsp">
   
-  <div class="nav-container">
+  <!--div class="nav-container"-->
     <div class="top-nav-wrap">
       <nav id="nav-menu">
         <button
@@ -58,6 +67,11 @@ const { activeNav } = Astro.props;
               <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
             </svg>
           </button>
+          <a href="/" class="pfp-a"><p class="pl-1">/</p>
+            <div class="pfp">
+              <img class="" src={`/assets/pfp.png`}>
+            </div>
+          </a>
         <ul id="sidebar-items" class="display-none sm:grid">
             
 		
@@ -136,12 +150,19 @@ const { activeNav } = Astro.props;
             <a href="/archive" class="archive">
               archive
             </a>
+            {
+                years
+                .filter(( year , index) => years.indexOf(year) === index)
+                .map(year => 
+                  <a class="sm:pl-3" href={"/archive/"+year.toString()}>{year}</a>
+                )
+            }
           </li>
           <Hr />
         </ul>
       </nav>
     </div>
-   </div>
+   <!--/div-->
 </header>
 
 <style>
@@ -159,18 +180,34 @@ const { activeNav } = Astro.props;
     @apply underline decoration-dotted hover:text-skin-secondary hover:decoration-solid
     underline-offset-4 decoration-2;
   }
-  .nav-container {
+  /*.nav-container {
     @apply mx-auto flex w-full h-full flex-col items-start
     justify-start sm:flex-col;
-  }
+  }*/
   .top-nav-wrap {
     @apply flex w-full h-full items-start justify-between sm:items-start;
   }
   .hamburger-menu {
-    @apply self-end p-2 sm:hidden;
+    @apply self-end p-5 sm:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
+  }
+  .pfp-a {
+    @apply absolute w-20 top-0 sm:hidden;
+  }
+  .pfp {
+    @apply border rounded-sm border-skin-fill hover:border-skin-secondary;
+    box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
+    width: calc(100% - 1rem);
+    transform: translate(1rem, -1rem);
+  }
+  /* Blue on hover */
+  .pfp-a:hover .pfp {
+    box-shadow: /*-12px 15px rgba(var(--color-fill)), */-13px 16px rgba(var(--color-secondary));
+  }
+  .pfp-a:hover {
+    color: rgba(var(--color-secondary));
   }
 
   nav {
@@ -190,10 +227,10 @@ const { activeNav } = Astro.props;
     @apply col-span-1 sm:flex py-1 sm:py-0; 
   }
   nav ul li a, nav ul li button {
-    @apply w-full py-3 sm:py-1;
+    @apply w-full pb-2 sm:py-1;
   }
-  nav ul li:nth-last-child(2) a {
-    @apply w-auto pb-8 sm:pb-0;;
+  nav ul li a:nth-last-child(1) {
+    @apply w-auto pb-8 sm:pb-0;
   }
   nav ul li:nth-last-child(1) {
 

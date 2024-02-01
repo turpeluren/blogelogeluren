@@ -1,0 +1,61 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
+import Footer from "@components/Footer.astro";
+import Card from "@components/Card";
+import getUniqueTags from "@utils/getUniqueTags";
+import getPostsByTag from "@utils/getPostsByTag";
+import getPostsByYear from "@utils/getPostsByYear";
+import slugify from "@utils/slugify";
+import { SITE } from "@config";
+import getSortedPosts from "@utils/getSortedPosts";
+
+export interface Props {
+  post: CollectionEntry<"blog">;
+  year: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  var years = posts
+    .map(({ data }) => (data.pubDatetime.getFullYear().toString()));
+  years = years.filter(( year , index) => years.indexOf(year) === index);
+
+  return years.map(year => {
+    return {
+      params: { year },
+      props: { year },
+    };
+  });
+}
+
+const { year } = Astro.props;
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+const sortPost = getSortedPosts(posts);
+
+const yearPosts = getPostsByYear(sortPost, year);
+---
+
+<Layout title={`year:${year} | ${SITE.title}`}>
+  <Header activeNav="posts" />
+  <Main
+    pageTitle={[`year:`, `${year}`]}
+    titleTransition={year}
+  >
+    <h1 slot="title" transition:name={year}>{`year:${year}`}</h1>
+    <ul>
+      {
+        yearPosts.map(({ data }) => (
+          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+        ))
+      }
+    </ul>
+  </Main>
+  <SidebarR />
+</Layout>
