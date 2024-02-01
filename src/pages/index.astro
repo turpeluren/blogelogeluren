@@ -143,13 +143,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
             .filter(({ frontmatter }) => !frontmatter.project)
             .map(
               ({ frontmatter, Content }, index) =>
-                index < 4 && (frontmatter.microblog || frontmatter.image) ? (
+                index < 4 && ((frontmatter.microblog || frontmatter.image) ? (
                   <Card
                     href={`/posts/${slugify(frontmatter)}`}
                     frontmatter={frontmatter}
                     secHeading={false}
                   />
-				  <div class="microblog">
+				  <div class={frontmatter.microblog? ("microblog") : ("image")}>
                   <Content/></div>
                 ) : (
 				  <Card
@@ -158,7 +158,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                     secHeading={false}
                   />
 				)
-            )
+            ))
 		}
       </ul>
       <div class="all-posts-btn-wrapper">
