@@ -16,8 +16,8 @@ const { left } = Astro.props;
             </a>
         </li>
         <li>
-            <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
-            posts
+            <a href="/archive" class={activeNav === "posts" ? "active" : ""}>
+            archive
             </a>
         </li>
         <li>
@@ -41,13 +41,13 @@ const { left } = Astro.props;
 
 <style>
   .left {
-    @apply font-medium text-center grid sm:hidden;
+    @apply font-medium text-right grid sm:hidden;
   }
   .right {
     @apply items-start justify-start text-right grid;
   }
   nav {
-    @apply flex w-full flex-col sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;
+    @apply col-start-1 flex w-full flex-col sm:flex-col sm:justify-between sm:space-x-0 sm:py-5;
   }
   nav ul {
     @apply mt-0 grid-cols-1 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-0 sm:gap-y-3;

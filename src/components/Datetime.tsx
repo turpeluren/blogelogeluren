@@ -8,10 +8,10 @@ export interface Props {
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
-    <span className={` items-center opacity-80 ${className}`}>
+    <span className={`opacity-80 ${className}`}>
       
       <span className="sr-only">Posted on:</span>
-      <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
+      <span className={`${size === "sm" ? "text-xs" : "text-base"}`}>
         <FormattedDatetime datetime={datetime} />
       </span>
     </span>
@@ -33,11 +33,13 @@ export default function Datetime({ datetime, size = "sm", className }: Props) {
 const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   const myDatetime = new Date(datetime);
 
-  const date = myDatetime.toLocaleDateString(LOCALE, {
+  const date2 = myDatetime.toLocaleDateString(LOCALE, {
     year: "numeric",
-    month: "long",
+    month: "numeric",
     day: "numeric",
   });
+
+  const date = format(myDatetime);
 
   const time = myDatetime.toLocaleTimeString(LOCALE, {
     hour: "2-digit",
@@ -47,9 +49,20 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   return (
     <>
       {date}
-      <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
-      {time}
     </>
   );
 };
+
+function format(inputDate: Date) { 
+    let date, month, year;
+    date = inputDate.getDate();
+    month = inputDate.getMonth() + 1;
+    year = inputDate.getFullYear();
+    date = date.toString().padStart(2, '0');
+    month = month.toString().padStart(2, '0');
+    return `${date}-${month}-${year}`;
+} 
+
+/*<span aria-hidden="true"> | </span>
+      <span className="sr-only">&nbsp;at&nbsp;</span>
+      {time}*/

@@ -1,19 +1,19 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2024-02-01T13:23:00+01:00
-title: a
-postSlug: a
+title: demitri sticker
+postSlug: demitri-sticker
 featured: false
 project: false
 microblog: false
 image: true
-draft: false
+draft: true
 tags:
   - thoughts
   - images
   - art
 description:
-  a
+  Demitri!
 ---
 
 ![demitri](@assets/images/demitri.png)

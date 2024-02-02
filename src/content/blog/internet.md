@@ -6,7 +6,7 @@ postSlug: ili
 featured: false
 project: false
 microblog: true
-draft: true
+draft: false
 tags:
   - thoughts
 description:

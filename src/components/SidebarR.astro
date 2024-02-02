@@ -66,14 +66,13 @@ const { activeNav } = Astro.props;
               <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
             </svg>
           </button>
-          <a href="/" class="pfp-a"><p class="pl-1">/</p>
+          <a href="/" class="pfp-a"><p class="pl-1"></p>
             <div class="pfp">
               <img class="" src={`/assets/pfp.png`}>
             </div>
           </a>
-        <ul id="sidebar-items" class="display-none sm:grid">
-            
-		
+          
+        <grid id="sidebar-items" class="display-none sm:grid">
         <span>
         <LinkButton
             href="/search"
@@ -136,29 +135,31 @@ const { activeNav } = Astro.props;
         <br>
         <Nav left={true} activeNav={activeNav} />
         
-          <li>
-            <a href="/tags" class="tags">
-              tags
-            </a>
-            <div class="text-left">
-              {tags.map(tag => <Tag name={tag} size="sm"/>)}
-            </div>
-          </li>
-          <br>
-          <li>
-            <a href="/archive" class="archive">
-              archive
-            </a>
-            {
-                years
-                .filter(( year , index) => years.indexOf(year) === index)
-                .map(year => 
-                  <a class="sm:pl-3" href={"/archive/"+year.toString()}>{year}</a>
-                )
-            }
-          </li>
-          <Hr />
-        </ul>
+        <ul>
+            <li>
+                <a href="/tags" class="tags">
+                tags
+                </a>
+                <div class="text-left">
+                {tags.map(tag => <Tag name={tag} size="sm"/>)}
+                </div>
+            </li>
+            <br>
+            <li>
+                <!--a href="/archive" class="archive">
+                archive
+                </a-->
+                {
+                    years
+                    .filter(( year , index) => years.indexOf(year) === index)
+                    .map(year => 
+                    <a class="" href={"/archive/"+year.toString()}>{year}</a>
+                    )
+                }
+            </li>
+          </ul>
+        </grid>
+        <Hr />
       </nav>
     </div>
 </header>
@@ -168,9 +169,9 @@ const { activeNav } = Astro.props;
     @apply absolute -top-full left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
   .sidebar {
-    @apply w-full sticky top-0 bg-skin-fill self-start pt-2
-    right-0 h-auto col-start-1 col-end-4 row-start-2 row-end-3
-    sm:right-auto sm:h-screen sm:col-start-3 sm:col-end-4;
+    @apply w-full sticky top-0 bg-skin-fill self-start
+    right-0 h-auto col-start-1 col-end-4 row-start-1 row-end-2 sm:row-start-2 sm:row-end-3
+    sm:right-auto sm:h-screen sm:col-start-3 sm:col-end-4 sm:pt-2;
 
     /*border: 1px dashed black;*/
   }
@@ -192,13 +193,13 @@ const { activeNav } = Astro.props;
     @apply h-6 w-6 scale-125 fill-skin-base;
   }
   .pfp-a {
-    @apply absolute w-20 top-0 sm:hidden;
+    @apply absolute w-12 m-2 sm:hidden;
   }
   .pfp {
     @apply border rounded-sm border-skin-fill hover:border-skin-secondary;
-    box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
+    /*box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
     width: calc(100% - 1rem);
-    transform: translate(1rem, -1rem);
+    transform: translate(1rem, -1rem);*/
   }
   /* Blue on hover */
   .pfp-a:hover .pfp {
@@ -211,45 +212,34 @@ const { activeNav } = Astro.props;
   nav {
     @apply flex w-full h-full flex-col items-start sm:flex-col sm:justify-between sm:space-x-0;
   }
-  nav ul {
-    @apply grid-cols-3 gap-x-2 gap-y-2
+  grid {
+    @apply grid-cols-3 gap-x-2 gap-y-2 p-5 pb-10 sm:p-0
     w-full justify-end items-end
     sm:w-full sm:justify-start sm:items-start sm:ml-0 sm:w-auto sm:gap-y-3;
   }
-  nav ul li, nav ul span {
-    @apply col-span-3 grid 
-    text-center items-center justify-center
-    sm:text-left sm:items-start sm:justify-start;
+  .sidebar.active grid {
+    @apply grid items-start;
+    border-bottom: 1px solid rgba(var(--color-card))
   }
-  nav ul span {
-    @apply col-span-1 sm:flex py-1 sm:py-0; 
+  nav grid ul {
+    @apply sm:col-span-3;
   }
-  nav ul li a, nav ul li button {
-    @apply w-full pb-2 sm:py-1;
+  nav grid li {
+    @apply col-start-3 grid 
+    /*text-center items-center justify-center*/
+    sm:col-span-3 sm:text-left sm:items-start sm:justify-start;
   }
-  nav ul li a:nth-last-child(1) {
-    @apply w-auto pb-8 sm:pb-0;
+  nav grid span {
+    @apply text-center items-center justify-center
+    sm:text-left sm:items-start sm:justify-start
+    col-span-1 flex py-1 sm:py-0; 
   }
-  nav ul li:nth-last-child(1) {
 
-  }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;
   }
   nav a.active svg {
     @apply fill-skin-accent;
-  }
-
-  nav button {
-  }
-  nav button svg {
-    @apply h-6 w-6 fill-skin-base hover:fill-skin-accent;
-  }
-  #theme-btn {
-    
-  }
-  #theme-btn svg {
-    @apply scale-125 hover:rotate-12 sm:scale-100;
   }
 
   .menu-icon line {
@@ -290,6 +280,7 @@ const { activeNav } = Astro.props;
       //menuItems?.classList.toggle("display-none");
       sidebarItems?.classList.toggle("display-none");
       sidebar?.classList.toggle("bg-tsp");
+      sidebar?.classList.toggle("active");
     });
   }
 

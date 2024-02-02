@@ -96,7 +96,7 @@
     prose-table:text-skin-base prose-th:border
     prose-th:border-skin-line prose-td:border 
     prose-td:border-skin-line prose-img:mx-auto 
-    prose-img:!mt-2 prose-img:border-2 
+    prose-img:!mt-2 /*prose-img:border-2 */
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
   .prose a {
@@ -129,9 +129,10 @@
   }
   /* ===== Microblog ===== */
   .microblog, .image{
-	@apply text-skin-base p-2 bg-skin-card;
-	border-radius: 2px;
-	/*max-height: 10em;*/
+	@apply text-skin-base p-2 /*bg-skin-card*/;
+	border-radius: 6px;
+    border-left: 2px solid rgba(var(--color-card));
+
 	overflow: hidden;
 	width: fit-content;
   }
@@ -142,7 +143,8 @@
 	@apply break-words hover:underline decoration-dotted text-skin-secondary hover:!decoration-solid underline-offset-2;
   }
   .microblog img, .image img {
-	max-width: 100%;
+	/*max-width: 100%;*/
+    width: auto;
 	max-height: 20em;
 	object-fit: scale-down;
   }
@@ -157,13 +159,14 @@
 	@apply p-0 pl-2 text-skin-secondary font-bold;
   }
 
+  /*!====== Main content ======!*/
   #main-content {
-    @apply col-start-2 col-end-3 px-4 sm:p-0;
+    @apply col-start-2 col-end-3 px-3 sm:p-0;
     width: calc(min(56rem, 100vw - 1em) * var(--w-main));
   }
   @media only screen and (max-width: 640px) {
     #main-content {
-        width: calc(100vw - 1em);
+        width: calc(100vw);
     }
   }
 
