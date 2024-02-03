@@ -25,17 +25,35 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
     <Main pageTitle="media" pageDesc="">
       {
         imageContent.length > 0 && (
-          <grid id="grid">
+          <flex id="grid">
             {imageContent.map(
               ({ frontmatter, Content }, index) =>
-                  <a href={`/posts/${slugify(frontmatter)}`}>
-				    <div class="imagebox">
-                      <Content/>
-                    </div>
-                  </a>
+                  index % 3 === 0 ? (
+                    <column class="col1">
+                    <a href={`/posts/${slugify(frontmatter)}`}>
+                        <div class="imagebox">
+                        <Content/>
+                        </div>
+                    </a></column>
+                  ) : (
+                  index % 3 === 1 ? (
+                    <column class="col2">
+                     <a href={`/posts/${slugify(frontmatter)}`}>
+                        <div class="imagebox">
+                          <Content/>
+                        </div>
+                    </a></column>
+                  ) : (
+                    <column class="col3">
+                    <a href={`/posts/${slugify(frontmatter)}`}>
+                        <div class="imagebox">
+                        <Content/>
+                        </div>
+                    </a></column>
+                  ))
               )
             }
-          </grid>
+          </flex>
         )
       }
     </Main>
@@ -46,8 +64,20 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
 
 <style>
   #grid {
-    @apply grid;
+    @apply grid justify-center items-center;
     grid-template-columns: auto auto auto;
+  }
+  column {
+    
+  }
+  .col1 {
+    @apply col-start-1 col-end-1;
+  }
+  .col2 {
+    @apply col-start-2 col-end-2;
+  }
+  .col3 {
+    @apply col-start-3 col-end-3;
   }
   .imagebox {
     @apply m-2;
@@ -57,5 +87,6 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
     -ms-grid-column-span: 1;
     max-width: 100%;
     max-height: 100%;
+    display: contents;
   }
 </style>

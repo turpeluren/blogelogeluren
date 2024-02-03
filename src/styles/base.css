@@ -5,6 +5,8 @@
 .test {
   color: rgb(24, 22, 22);
   color: rgb(211, 211, 182);
+  color: rgb(70, 136, 49);
+  color: rgb(147, 226, 123);
   color: rgb(206, 93, 0);
   color: rgb(214, 216, 255);
   color: rgb(58, 51, 51);
@@ -19,7 +21,7 @@
     --color-fill: 248, 250, 248;
     --color-text-base: 40, 39, 40;
     --color-accent: 255, 115, 0;
-	--color-secondary: 19, 28, 153;
+	--color-secondary: 70, 136, 49;
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
@@ -28,7 +30,7 @@
     --color-fill: 24, 22, 22;
     --color-text-base: 211, 211, 182;
     --color-accent: 206, 93, 0;
-	--color-secondary: 214, 216, 255;
+	--color-secondary: 147, 226, 123;
     --color-card: 58, 51, 51;
     --color-card-muted: 41, 35, 35;
     --color-border: 39, 35, 35;
@@ -81,8 +83,9 @@
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
     prose-h3:italic prose-p:!text-skin-base 
-    prose-a:!text-skin-secondary prose-a:!decoration-dotted prose-a:!font-normal
-    hover:prose-a:text-skin-secondary/*text-skin-accent*/ 
+    /*prose-a:!text-skin-secondary  prose-a:!font-normal prose-a:!decoration-1
+    hover:prose-a:text-skin-secondary hover:prose-a:no-underline*//*prose-a:!decoration-dotted*/
+    hover:prose-a:no-underline prose-a:!font-normal
 	prose-blockquote:!border-l-skin-accent
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
@@ -99,9 +102,11 @@
     prose-img:!mt-2 /*prose-img:border-2 */
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
-  .prose a {
-    @apply break-words hover:!text-skin-secondary hover:!decoration-solid underline-offset-2;
-  }
+
+  /* === link default colors === */
+  .prose :link { color: #0000EE; }
+  .prose :visited { color: #551A8B; }
+
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
@@ -123,30 +128,47 @@
   .rss a svg {
 	  @apply hover:fill-skin-accent
   }
-  .banner img {
-	width: 100%;
-	height: 100%;
-  }
+
   /* ===== Microblog ===== */
-  .microblog, .image{
-	@apply text-skin-base p-2 /*bg-skin-card*/;
-	border-radius: 6px;
-    border-left: 2px solid rgba(var(--color-card));
+  .microblog, .image {
+	@apply text-skin-base p-2 bg-skin-card /*hover:brightness-95*/;
 
 	overflow: hidden;
-	width: fit-content;
+	width: 100%;
+  }
+  .microblog:hover {
+    @apply opacity-90;
   }
   .microblog p, .image p {
-	@apply text-skin-base p-2;
+	@apply text-skin-base p-2 text-sm;
   }
   .microblog a, .image a {
 	@apply break-words hover:underline decoration-dotted text-skin-secondary hover:!decoration-solid underline-offset-2;
   }
   .microblog img, .image img {
-	/*max-width: 100%;*/
+	@apply mb-0;
     width: auto;
 	max-height: 20em;
 	object-fit: scale-down;
+  }
+  .microblog, .image, .postSnippet {
+    border-radius: 3px;
+    border-left: 2px solid rgba(var(--color-card-muted));
+  }
+
+  /* ===== Post snippet ====== */
+  .postSnippet {
+    @apply pl-4;
+    max-height: 5.5em;
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, #000 50%, transparent);
+    -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent);
+  }
+  .postSnippet h1, .postSnippet h2, .postSnippet h3, .postSnippet img, .postSnippet iframe {
+    @apply hidden;
+  }
+  .postSnippet p {
+    font-size: smaller;
   }
   
   .date {
@@ -169,8 +191,6 @@
         width: calc(100vw);
     }
   }
-
-  
 
   /* ===== scrollbar ===== */
   html {

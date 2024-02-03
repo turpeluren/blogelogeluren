@@ -1,7 +1,7 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2024-02-03T16:08:00+01:00
-title: Best thing I read today
+title: "Best quote I read today:"
 postSlug: compost-the-rich
 featured: false
 project: false
@@ -10,7 +10,8 @@ draft: false
 tags:
   - thoughts
 description:
-  Best thing I read today.
+  Best quote I read today.
 ---
 
-> Compost the rich [[source]](https://www.reddit.com/r/solarpunk/comments/qdztqh/comment/hhqicjy/?utm_source=share&utm_medium=web2x&context=3)
+
+> ~~Eat the rich~~ Compost the rich [[source]](https://www.reddit.com/r/solarpunk/comments/qdztqh/comment/hhqicjy/?utm_source=share&utm_medium=web2x&context=3)

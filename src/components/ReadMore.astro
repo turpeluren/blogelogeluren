@@ -1,0 +1,24 @@
+---
+export interface Props {
+    href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a href={href}>read more </a>
+
+<style>
+    a {
+        @apply pl-4 text-skin-base hover:text-skin-accent;
+        padding-top: 5em;
+        border-radius: 6px;
+        border-left: 2px solid rgba(var(--color-card));
+        border-bottom: 2px solid rgba(var(--color-card));
+    }
+    a:hover {
+        border-color: rgba(var(--color-card-muted));
+    }
+    a::after { content: ">"; }
+    a:hover::after { content: " ->"; }
+</style>

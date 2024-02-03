@@ -6,6 +6,7 @@ import SidebarR from "@components/SidebarR.astro";
 import Main from "@layouts/Main.astro";
 import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
+import ReadMore from "@components/ReadMore.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
@@ -29,13 +30,27 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       {
         projectPosts.length > 0 && (
           <ul>
-            {projectPosts.map(({ data }) => (
-            <Card
-                href={`/posts/${slugify(data)}`}
-                frontmatter={data}
+            {sortedContent
+                .filter(({ frontmatter }) => frontmatter.project)
+                .map(({ frontmatter, Content }) => ( 
+            frontmatter.microblog || frontmatter.image ? (
+            <Card 
+                href={`/posts/${slugify(frontmatter)}`}
+                frontmatter={frontmatter}
                 secHeading={false}
             />
-            ))}
+            <div class={frontmatter.microblog? ("microblog") : ("image")}>
+                <Content/></div>
+            ) : (
+            <Card 
+                href={`/posts/${slugify(frontmatter)}`}
+                frontmatter={frontmatter}
+                secHeading={false}
+            />
+            <div class="prose postSnippet">
+              <Content/></div>
+            <ReadMore href={`/posts/${slugify(frontmatter)}`} />
+            )))}
           </ul>
         )
       }

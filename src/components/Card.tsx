@@ -14,7 +14,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
-    className: "decoration-dashed hover:underline",
+    className: "decoration-solid decoration-1 hover:underline underline-offset-2",
   };
 
   /*if (microblog || image) {
@@ -28,12 +28,12 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   }*/
 
   return (
-    <li className={`list-disc ml-4 ${microblog || image ? "mt-4" : "my-4"}`}>
+    <li className={`list-disc ml-4 mt-6 mb-2 ${microblog || image ? "" : ""}`}>
       <span>
       
       <a
         href={href}
-        className={`${microblog || image ? "text-skin-secondary" : "text-skin-accent"} inline-block decoration-dashed underline-offset-2 focus-visible:no-underline focus-visible:underline-offset-0`}
+        className={`${microblog || image ? "text-skin-secondary" : "text-skin-accent"} inline-block`}
       >
 		
 	    <h2 className="font-normal" {...headerProps}>{title}&nbsp;</h2>

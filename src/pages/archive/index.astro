@@ -7,13 +7,19 @@ import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
 import Tag from "@components/Tag.astro";
 import Card from "@components/Card";
+import ReadMore from "@components/ReadMore.astro";
 import getUniqueTags from "@utils/getUniqueTags";
 import { SITE } from "@config";
 import slugify from "@utils/slugify";
 import getSortedPosts from "@utils/getSortedPosts";
+import getSortedItems from "@utils/getSortedItems";
 
 const posts = await getCollection("blog");
 const sortedPosts = getSortedPosts(posts);
+
+const items = await Astro.glob('./../../content/blog/*.md');
+
+const sortedContent = getSortedItems(items);
 ---
 
 <Layout title={`Archive | ${SITE.title}`}>
@@ -21,12 +27,25 @@ const sortedPosts = getSortedPosts(posts);
   <main id="main-content">
     <Main pageTitle="archive" pageDesc="">
         <ul>
-        {sortedPosts.map(({ data }) => ( 
+        {sortedContent.map(({ frontmatter, Content }) => ( 
+            frontmatter.microblog || frontmatter.image ? (
             <Card 
-                href={`/posts/${slugify(data)}`}
-                frontmatter={data}
+                href={`/posts/${slugify(frontmatter)}`}
+                frontmatter={frontmatter}
                 secHeading={false}
-            />))}
+            />
+            <div class={`${frontmatter.microblog? ("microblog") : ("image")} prose`}>
+                <Content/></div>
+            ) : (
+            <Card 
+                href={`/posts/${slugify(frontmatter)}`}
+                frontmatter={frontmatter}
+                secHeading={false}
+            />
+            <div class="prose postSnippet">
+              <Content/></div>
+            <ReadMore href={`/posts/${slugify(frontmatter)}`} />
+            )))}
         </ul>
     </Main>
   </main>
