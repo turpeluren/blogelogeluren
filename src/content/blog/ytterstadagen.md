@@ -7,9 +7,8 @@ featured: false
 project: false
 microblog: false
 image: true
-draft: false
+draft: true
 tags:
-  - thoughts
   - images
   - art
 description:
