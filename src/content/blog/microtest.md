@@ -8,7 +8,8 @@ project: false
 microblog: true
 draft: false
 tags:
-  - thoughts
+  - meta
+  - images
 description:
   microblog test post
 ---

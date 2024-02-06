@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "terminal-site.md",
+                "file": "goal.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "terminal-site.md",
+                "file": "goal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "terminal-site.md",
+                "file": "goal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "terminal-site.md"
+                "file": "goal.md"
               }
             }
           }
@@ -148,6 +148,10 @@
   },
   "active": "01fd9832451201a3",
   "lastOpenFiles": [
+    "now2024-02-06.md",
+    "goal.md",
+    "cry-out.md",
+    "terminal-site.md",
     "compost-the-rich.md",
     "microtest copy.md"
   ]

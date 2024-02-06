@@ -87,7 +87,7 @@
     hover:prose-a:text-skin-secondary hover:prose-a:no-underline*//*prose-a:!decoration-dotted*/
     hover:prose-a:no-underline prose-a:!font-normal
 	prose-blockquote:!border-l-skin-accent
-    prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
+    prose-blockquote:border-opacity-50 prose-blockquote:opacity-90
     prose-figcaption:!text-skin-base prose-figcaption:opacity-70
     prose-strong:!text-skin-base
     
@@ -220,6 +220,9 @@
   code,
   blockquote {
     word-wrap: break-word;
+  }
+  blockquote p::after, blockquote p::before {
+    @apply !content-none;
   }
 
   pre > code {

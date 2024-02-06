@@ -151,7 +151,7 @@ const { activeNav } = Astro.props;
                 </a-->
                 {
                     years
-                    .filter(( year , index) => years.indexOf(year) === index)
+                    .filter(( year , index ) => years.indexOf(year) === index)
                     .map(year => 
                     <a class="" href={"/archive/"+year.toString()}>{year}</a>
                     )
