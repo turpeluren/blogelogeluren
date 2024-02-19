@@ -1,0 +1,105 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
+import Main from "@layouts/Main.astro";
+import ReadMore from "@components/ReadMore.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import Datetime from "@components/Datetime";
+import getSortedPosts from "@utils/getSortedPosts";
+import getSortedItems from "@utils/getSortedItems";
+import slugify from "@utils/slugify";
+import { SOCIALS } from "@config";
+
+const posts = await getCollection("blog");
+const items = await Astro.glob('./../content/blog/*.md');
+
+const sortedContent = getSortedItems(items);
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedContent.filter(({ frontmatter }) => frontmatter.featured);
+const projectPosts = sortedContent.filter(({ frontmatter }) => frontmatter.project);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+
+const now = await Astro.glob('./../content/now/*.md');
+const latestnow = getSortedItems(now);
+console.log(latestnow);
+---
+
+<Layout>
+    <Header activeNav="now" />
+    <main id="main-content">
+        <Main pageTitle="" pageDesc="">
+            <section id="now">
+                {
+                    latestnow
+                        .map(( { frontmatter, Content }, index ) => (
+                        index === 0 && (
+                            <span>
+                                <h2>now</h2>
+                                <Datetime size="lg" datetime={frontmatter.pubDatetime} />
+                            </span>
+                            <div class="prose"><Content /></div>
+                        )
+                    ))
+                }
+            </section>
+        </Main>
+  </main>
+  <SidebarR activeNav="now"/>
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-3 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+  #featured,
+  #recent-posts,
+  #projects,
+  #links,
+  #chat {
+    @apply pb-3 pt-4;
+  }
+  #now {
+    @apply pb-16;
+  }
+  #featured h2,
+  #recent-posts h2,
+  #projects h2,
+  #links h2,
+  #chat h2 {
+    @apply text-xl font-semibold tracking-wide pb-1;
+  }
+  #now h2 {
+    @apply inline-block text-3xl font-semibold tracking-wide mb-8;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }
+</style>

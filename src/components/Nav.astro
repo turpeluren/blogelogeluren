@@ -1,7 +1,7 @@
 ---
 export interface Props {
     left: boolean;
-    activeNav?: "/" | "posts" | "projects" | "media" | "about" | "search";
+    activeNav?: "/" | "now" | "posts" | "projects" | "media" | "about" | "search";
 }
 
 const { activeNav } = Astro.props;
@@ -12,6 +12,11 @@ const { left } = Astro.props;
     <ul id="menu-items" class={`${left === true ? "left" : "right"}`}>
         <li>
             <a href="/" class={activeNav === "/" ? "active" : ""}>
+            /
+            </a>
+        </li>
+        <li>
+            <a href="/now" class={activeNav === "now" ? "active" : ""}>
             now
             </a>
         </li>
