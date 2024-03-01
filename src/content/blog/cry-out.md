@@ -12,6 +12,8 @@ description:
   Crying out into the nothingness for an end to my lurker days.
 ---
 
+>*This post retroactivly became part of February's [Indie web carnival](https://indieweb.org/indieweb-carnival) hosted by Manu on [digital relationships](https://manuelmoreale.com/indieweb-carnival-digital-relationships).*
+
 I have a confession to make that’s long overdue. Something that’s been building up inside of me and is slowly tearing my soul apart. It’s time for me to come out. *I am a chronic internet [lurker](https://www.reddit.com/r/Lurkers/).*
 
 But it wasn’t always like this. I used to have online friends back in the day when I played Minecraft every waking hour. We used to talk on Teamspeak, play together and we were actually a part of the server community as a whole. At that time I also had a (very) active YouTube channel where I… did um😅… daily Minecraft videos. Me and my friend even made memes about and kik:ed other bigger YouTubers (yes, in a creepy stalky way). I engaged in the forums and there are many old embarrassing tweets on my account from 2015 and before. Safe to say I was not a lurker but rather an active member of my little online community.
