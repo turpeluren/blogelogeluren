@@ -39,15 +39,15 @@ If I try to think of some examples of "current" projects and ideas I have poppin
 - Read about/start to practice some spirituality.
 - Continue development on the blog.
 - Bleach and draw on some T-shirts.
-- Catch up on stabilizing my [picture of the day](potd-webplayer)
+- Catch up on stabilizing my [picture of the day](/posts/potd-webplayer).
 - Continue development of my Rave simulator game.
 - Get a password manager.
 - Apply for a job during the summer.
-- Continue development on my [terminal website](terminal-website).
+- Continue development on my [terminal website](/posts/terminal-website).
 - Find a driving school and get my drivers license.
 - Eventually get new screen printing gear.
 - Eventually get a new tattooing machine.
-- Maintain [randomantagning.se](randomantagningse).
+- Maintain [randomantagning.se](/posts/randomantagningse).
 - Finish the last part of a web development course.
 - Do some business of websites for other people.
 

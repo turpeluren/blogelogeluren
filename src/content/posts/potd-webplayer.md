@@ -53,4 +53,4 @@ I expanded the python program to take the raw HTML as input and now it was spitt
 
 ![The finished python program](@assets/images/dbildpythonprogram.jpg)
 
-*This article was originally posted on [turpelurpeluren.online](turpelurpeluren-online).*
+*This article was originally posted on [turpelurpeluren.online](/posts/turpelurpeluren-online).*

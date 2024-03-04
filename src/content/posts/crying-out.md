@@ -28,4 +28,4 @@ So I will try this, starting here, to put myself out there. Express myself and e
 
 Sincerely *thank you* for reading. I really appreciate it and I would also love to hear what you have to say! 
 
-*To message me, use the `message` command (type `help message`) in my [terminal page](terminal-website)*, or simply:
+*To message me, use the `message` command (type `help message`) in my [terminal page](/posts/terminal-website)*, or simply:

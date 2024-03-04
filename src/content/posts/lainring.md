@@ -24,4 +24,4 @@ It's cool to see that some of the sites are hidden services on the Tor network, 
 
 You can also subscribe to the members feeds (like rss), which I haven't yet added to my index.
 
-My webring page can currently be reached on [turpelurpeluren.online](turpelurpeluren-online) by typing `webring`, but I probably want to add it here as well since this is where i 'live' rn :3
+My webring page can currently be reached on [turpelurpeluren.online](/posts/turpelurpeluren-online) by typing `webring`, but I probably want to add it here as well since this is where i 'live' rn :3
