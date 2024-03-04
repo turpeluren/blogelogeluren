@@ -11,8 +11,8 @@ import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
 
-const posts = await getCollection("blog");
-const items = await Astro.glob('./../content/blog/*.md');
+const posts = await getCollection("posts");
+const items = await Astro.glob('./../content/posts/*.md');
 
 const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter.image);
 
@@ -59,7 +59,7 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
     </Main>
 
   </main>
-  <SidebarR activeNav="media"/>
+  <!--SidebarR activeNav="media"/-->
 </Layout>
 
 <style>

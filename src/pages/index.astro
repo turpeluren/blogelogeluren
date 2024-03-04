@@ -16,8 +16,8 @@ import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
 
-const posts = await getCollection("blog");
-const items = await Astro.glob('./../content/blog/*.md');
+const posts = await getCollection("posts");
+const items = await Astro.glob('./../content/posts/*.md');
 
 const sortedContent = getSortedItems(items);
 
@@ -44,13 +44,16 @@ console.log(latestnow);
                     If you want to know what I'm currently up to, check out <a href="/now">/now.</a>
                 </li>
                 <li>
-                    If you want to know who I am, read <a href="/about">/about</a> me.
-                </li>
-                <li>
                     If you want to read my scrappy thoughts, head to <a href="/notes">/notes</a>.
                 </li>
                 <li>
-                    If you want to see some projects of mine, <a href="/projects"></a>
+                    If you want to see some projects of mine, the place is <a href="/projects">/projects</a>.
+                </li>
+                <li>
+                    If you want to see some pretty pictures, look at <a href="/media">/media</a>.
+                </li>
+                <li>
+                    If you want to know who I am, read <a href="/about">/about</a> me.
                 </li>
             </ul>
           </div>
@@ -209,7 +212,7 @@ console.log(latestnow);
 	</section-->
 
   </main>
-  <SidebarR activeNav="/"/>
+  <!--SidebarR activeNav="/"/-->
 </Layout>
 
 <style>

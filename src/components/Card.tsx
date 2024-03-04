@@ -5,7 +5,7 @@ import type { AstroComponentFactory, AstroComponentInstance } from "astro/runtim
 
 export interface Props {
   href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
+  frontmatter: CollectionEntry<"posts">["data"];
   secHeading?: boolean;
 }
 

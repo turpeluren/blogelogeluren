@@ -1,15 +1,18 @@
 ---
 import Breadcrumbs from "@components/Breadcrumbs.astro";
+import SidebarR from "@components/SidebarR.astro";
 
 interface StringTitleProp {
   pageTitle: string;
   pageDesc?: string;
+  sidebar?: boolean;
 }
 
 interface ArrayTitleProp {
   pageTitle: [string, string];
   titleTransition: string;
   pageDesc?: string;
+  sidebar?: boolean;
 }
 
 export type Props = StringTitleProp | ArrayTitleProp;
@@ -28,7 +31,7 @@ const { props } = Astro;
             <span transition:name={props.titleTransition}>
             {props.pageTitle[1]}
             </span>
-            <p>{props.pageDesc}</p>
+            
         </h1>
         ) : (
         <h1>{props.pageTitle}</h1>
@@ -36,7 +39,16 @@ const { props } = Astro;
         )
   )
   }
-  <slot />
+  {
+    props.sidebar ? (
+        <grid id="sidebar-grid">
+            <slot />
+            <SidebarR activeNav="posts" showTagsArchive={true} />
+        </grid>
+    ) : (
+        <slot />
+    )
+  }
 </div>
 
 <style>
@@ -48,5 +60,18 @@ const { props } = Astro;
   }
   #main-b-content p {
     @apply mb-6 mt-2 italic;
+  }
+  #sidebar-grid {
+        @apply grid;
+        grid-template-columns: calc(min(56rem, 100vw - 1em) * 0.6)
+                               calc(min(56rem, 100vw - 1em) * 0.15);
+        column-gap: calc(min(56rem, 100vw - 1em) * (1 - 0.6 - 0.3) / 4);
+  }
+  @media only screen and (max-width: 640px) {
+    #sidebar-grid {
+        grid-template-columns: calc(min(56rem, 100vw - 1em) * 1);
+        column-gap: 0;
+        max-width: 100%;
+    }
   }
 </style>

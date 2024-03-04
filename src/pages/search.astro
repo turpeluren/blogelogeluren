@@ -9,7 +9,7 @@ import Footer from "@components/Footer.astro";
 import SearchBar from "@components/Search";
 
 // Retrieve all articles
-const posts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = await getCollection("posts", ({ data }) => !data.draft);
 
 // List of items to search in
 const searchList = posts.map(({ data }) => ({
@@ -26,6 +26,6 @@ const searchList = posts.map(({ data }) => ({
     <SearchBar client:load searchList={searchList} />
   </Main>
   </main>
-  <SidebarR activeNav="posts" />
+  <!--SidebarR activeNav="posts" /-->
   <!--Footer /-->
 </Layout>

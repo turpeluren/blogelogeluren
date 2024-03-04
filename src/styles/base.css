@@ -82,7 +82,7 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-h3:italic prose-p:!text-skin-base 
+    prose-h3:italic prose-p:!text-skin-base prose-p:text-justify
     /*prose-a:!text-skin-secondary  prose-a:!font-normal prose-a:!decoration-1
     hover:prose-a:text-skin-secondary hover:prose-a:no-underline*//*prose-a:!decoration-dotted*/
     hover:prose-a:no-underline prose-a:!font-normal

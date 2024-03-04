@@ -1,0 +1,164 @@
+{
+  "main": {
+    "id": "b47ee18f86c222aa",
+    "type": "split",
+    "children": [
+      {
+        "id": "9db2339a8909c792",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01fd9832451201a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "organizing-ideas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8b48a213223aa12f",
+    "type": "split",
+    "children": [
+      {
+        "id": "761572c67c9a039b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dccd03c18e5bfca6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2c9819d45864ab50",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "488e3e58b67d5292",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "edf8ec62f65ff3fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "62df70c7a165d7aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5c17b716a2b89da0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "organizing-ideas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b7b0754f3bd0e34b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "organizing-ideas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4d9c73dbc598f035",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "32458dc3055158a9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "organizing-ideas.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "01fd9832451201a3",
+  "lastOpenFiles": [
+    "potd-webplayer.md",
+    "organizing-ideas.md",
+    "blog-goals-and-practices.md",
+    "randomantagning.md",
+    "microtest.md",
+    "Anew_draft.md",
+    "Untitled.canvas",
+    "now2024-02-06.md",
+    "cry-out.md",
+    "terminal-site.md",
+    "compost-the-rich.md",
+    "microtest copy.md"
+  ]
+}

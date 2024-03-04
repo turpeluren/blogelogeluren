@@ -13,12 +13,12 @@ import { getCollection } from "astro:content";
 import Searchbar from "@components/Search"
 import getSortedPosts from "@utils/getSortedPosts";
 
-const items = await Astro.glob('./../content/blog/*.md');
+const items = await Astro.glob('./../content/posts/*.md');
 
 //const sortedPosts = getSortedPosts(posts);
 
 // Retrieve all articles
-const articles = await getCollection("blog", ({ data }) => !data.draft);
+const articles = await getCollection("posts", ({ data }) => !data.draft);
 
 // List of items to search in
 const searchList = articles.map(({ data }) => ({
@@ -31,7 +31,7 @@ const searchList = articles.map(({ data }) => ({
 export interface Props {
   pageNum: number;
   totalPages: number;
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<"posts">[];
 }
 
 const { pageNum, totalPages, posts } = Astro.props;

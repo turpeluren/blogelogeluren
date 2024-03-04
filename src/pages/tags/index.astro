@@ -9,7 +9,7 @@ import Tag from "@components/Tag.astro";
 import getUniqueTags from "@utils/getUniqueTags";
 import { SITE } from "@config";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("posts");
 
 let tags = getUniqueTags(posts);
 ---
@@ -17,7 +17,7 @@ let tags = getUniqueTags(posts);
 <Layout title={`Tags | ${SITE.title}`}>
   <Header activeNav="posts" />
   <main id="main-content">
-    <Main pageTitle="tags" pageDesc="">
+    <Main pageTitle="tags" pageDesc="" sidebar={true}>
         <ul>
         {tags.map(tag => <Tag name={tag} size="lg" />)}
         </ul>

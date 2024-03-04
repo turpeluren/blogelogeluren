@@ -11,7 +11,7 @@ export interface Props {
 const { activeNav } = Astro.props;
 ---
 
-<header class="header display-none sm:block">
+<header class="header bg-tsp">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
 
 	<a href="/" class="pfp-a"><p class="pl-1">/</p>
@@ -19,6 +19,32 @@ const { activeNav } = Astro.props;
 		<img class="" src={`/assets/pfp.png`}>
 	  </div>
     </a>
+
+    <button
+        class="hamburger-menu focus-outline"
+        aria-label="Open Menu"
+        aria-expanded="false"
+        aria-controls="menu-items"
+        >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="menu-icon"
+        >
+            <line x1="3" y1="12" x2="21" y2="12" class="line"></line>
+            <line x1="3" y1="6" x2="21" y2="6" class="line"></line>
+            <line x1="3" y1="18" x2="21" y2="18" class="line"></line>
+            <line x1="18" y1="6" x2="6" y2="18" class="close"></line>
+            <line x1="6" y1="6" x2="18" y2="18" class="close"></line>
+        </svg>
+    </button>
 
     <Nav left={false} activeNav={activeNav} />
 
@@ -29,12 +55,21 @@ const { activeNav } = Astro.props;
     @apply absolute -top-96 left-16 z-50 bg-skin-accent px-3 py-2 text-skin-inverted transition-all focus:top-4;
   }
   .header {
-    @apply col-start-1 col-end-2 pt-0 
-    sm:h-screen sm:w-full sm:self-start sm:sticky sm:top-0;
+    @apply flex flex-col col-start-1 col-end-3 pt-0 sticky top-0 bg-skin-fill
+    sm:h-screen sm:col-end-2 w-full self-start z-50;
 
     /*border: 1px dashed black;*/
   }
+  .hamburger-menu {
+    @apply self-end p-6 sm:hidden;
+  }
+  .hamburger-menu svg {
+    @apply h-6 w-6 scale-125 fill-skin-base;
+  }
   
+  .pfp-a {
+    @apply hidden sm:block;
+  }
   .pfp {
     @apply border rounded-sm border-skin-fill hover:border-skin-secondary;
     box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
@@ -42,7 +77,7 @@ const { activeNav } = Astro.props;
     transform: translate(1rem, -1rem);
   }
   /* Blue on hover */
-  .pfp-a:hover .pfp, .pfp-a:hover {
+  .pfp-a:hover .pfp {
     box-shadow: /*-12px 15px rgba(var(--color-fill)), */-13px 16px rgba(var(--color-secondary));
     color: rgba(var(--color-secondary));
   }
@@ -53,14 +88,35 @@ const { activeNav } = Astro.props;
   nav a.active svg {
     @apply fill-skin-accent;
   }
+
+  .menu-icon line {
+    @apply transition-opacity duration-75 ease-in-out;
+  }
+  .menu-icon .close {
+    opacity: 0;
+  }
+  .menu-icon.is-active .line {
+    @apply opacity-0;
+  }
+  .menu-icon.is-active .close {
+    @apply opacity-100;
+  }
+  .bg-tsp {
+    @apply h-0;
+    background-color: rgba(0, 0, 0, 0);
+  }
 </style>
 
 <script>
-  /*function toggleNav() {
+  function toggleNav() {
     // Toggle menu
+    const header = document.querySelector(".header");
+    const navMenu = document.querySelector("#nav-menu");
     const menuBtn = document.querySelector(".hamburger-menu");
     const menuIcon = document.querySelector(".menu-icon");
-    const menuItems = document.querySelector("#menu-items");
+    //const menuItems = document.querySelector("#menu-items");
+
+    console.log(navMenu);
 
     menuBtn?.addEventListener("click", () => {
       const menuExpanded = menuBtn.getAttribute("aria-expanded") === "true";
@@ -70,12 +126,14 @@ const { activeNav } = Astro.props;
         "aria-label",
         menuExpanded ? "Open Menu" : "Close Menu"
       );
-      menuItems?.classList.toggle("display-none");
+      navMenu?.classList.toggle("display-none");
+      header?.classList.toggle("bg-tsp");
+      //navMenu?.classList.toggle("active");
     });
   }
 
-  //toggleNav();
+  toggleNav();
 
   // Runs on view transitions navigation
-  //document.addEventListener("astro:after-swap", toggleNav);*/
+  document.addEventListener("astro:after-swap", toggleNav);
 </script>
