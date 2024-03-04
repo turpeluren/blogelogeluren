@@ -12,7 +12,6 @@ const { left } = Astro.props;
 
 <nav id="nav-menu" class={`${left === true ? "sm:hidden" : ""} display-none sm:flex`}>
     <div id="buttons">
-        <!--span-->
         <span class="rss">
             <a
             target="_blank"
@@ -32,8 +31,6 @@ const { left } = Astro.props;
         </span>
         
         <!--Searchbar client:load searchList={searchList}/-->
-        <!--/span-->
-        <!--span-->
         <!--{
             SITE.lightAndDarkMode && (-->
           <button
@@ -54,7 +51,6 @@ const { left } = Astro.props;
             </svg>
           </button-->
         <!-- )} -->
-        <!--/span-->
         <LinkButton
             href="/search"
             className={`focus-outline ${
