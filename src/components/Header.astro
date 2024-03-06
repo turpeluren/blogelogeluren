@@ -71,15 +71,17 @@ const { activeNav } = Astro.props;
     @apply hidden sm:block;
   }
   .pfp {
-    @apply border rounded-sm border-skin-fill hover:border-skin-secondary;
+    @apply border rounded-sm border-skin-fill hover:border-skin-internal;
     box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
     width: calc(100% - 1rem);
     transform: translate(1rem, -1rem);
+    transition: border 0.1s ease-in-out;
   }
   /* Blue on hover */
   .pfp-a:hover .pfp {
-    box-shadow: /*-12px 15px rgba(var(--color-fill)), */-13px 16px rgba(var(--color-secondary));
-    color: rgba(var(--color-secondary));
+    @apply border-skin-internal;
+    box-shadow: -12px 15px rgba(var(--color-internal)), -13px 16px rgba(var(--color-internal));
+    color: rgba(var(--color-internal));
   }
 
   nav a.active {

@@ -122,8 +122,8 @@ const { showTagsArchive=false } = Astro.props;
     /*border: 1px dashed black;*/
   }
   .sidebar a, .sidebar button, .sidebar button span {
-    @apply underline decoration-dotted hover:text-skin-secondary hover:decoration-solid
-    underline-offset-4 decoration-2;
+    @apply underline decoration-dashed hover:text-skin-internal hover:decoration-solid
+    underline-offset-4 decoration-1;
   }
   #buttons {
     @apply col-span-3 w-1/2 sm:w-full mx-auto;
@@ -147,17 +147,17 @@ const { showTagsArchive=false } = Astro.props;
     @apply absolute w-12 m-2 sm:hidden;
   }
   .pfp {
-    @apply border rounded-sm border-skin-fill hover:border-skin-secondary;
+    @apply border rounded-sm border-skin-fill hover:border-skin-internal;
     /*box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
     width: calc(100% - 1rem);
     transform: translate(1rem, -1rem);*/
   }
   /* Blue on hover */
   .pfp-a:hover .pfp {
-    box-shadow: /*-12px 15px rgba(var(--color-fill)), */-13px 16px rgba(var(--color-secondary));
+    box-shadow: /*-12px 15px rgba(var(--color-fill)), */-13px 16px rgba(var(--color-internal));
   }
   .pfp-a:hover {
-    color: rgba(var(--color-secondary));
+    color: rgba(var(--color-internal));
   }
 
   nav {
@@ -181,7 +181,7 @@ const { showTagsArchive=false } = Astro.props;
     sm:col-span-3 sm:text-left sm:items-start sm:justify-start;
   }
   #archive a {
-    @apply mr-2;
+    @apply mr-1 bg-skin-card text-sm rounded-sm px-1 relative hover:-top-0.5 hover:pb-0.5;
   }
   nav grid span {
     /*@apply text-center items-center justify-center

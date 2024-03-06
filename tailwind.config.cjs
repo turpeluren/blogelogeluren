@@ -25,7 +25,7 @@ module.exports = {
       skin: {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
-		secondary: withOpacity("--color-secondary"),
+		internal: withOpacity("--color-internal"),
         inverted: withOpacity("--color-fill"),
       },
     },
@@ -50,7 +50,7 @@ module.exports = {
         base: withOpacity("--color-fill"),
         fill: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
-        secondary: withOpacity("--color-secondary"),
+        internal: withOpacity("--color-internal"),
         "card-muted": withOpacity("--color-card-muted"),
       },
     },
@@ -58,12 +58,13 @@ module.exports = {
       skin: {
         base: withOpacity("--color-text-base"),
         accent: withOpacity("--color-accent"),
-        secondary: withOpacity("--color-secondary"),
+        internal: withOpacity("--color-internal"),
       },
       transparent: "transparent",
     },
     fontFamily: {
-      mono: ["IBM Plex Mono", "monospace"],
+      mono: ["Roboto Mono", "monospace"],
+      sans: ["ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji"],
     },
     // },
   },

@@ -12,38 +12,44 @@ const { left } = Astro.props;
 
 <nav id="nav-menu" class={`${left === true ? "sm:hidden" : ""} display-none sm:flex`}>
     <div id="buttons">
-        <span class="rss">
-            <a
-            target="_blank"
+        <LinkButton
             href="/rss.xml"
-            class="rss-link"
-            aria-label="rss feed"
+            className={"focus-outline"}
+            ariaLabel="rss feed"
             title="RSS Feed"
-            >📡
-            <!--svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
-                ><path
-                d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
-                ></path><path
-                d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
-                ></path><circle cx="6" cy="18" r="2"></circle>
-            </svg-->
-            </a>
-        </span>
+        >rss</LinkButton>
+        <!--📡svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+            ><path
+            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+            ></path><path
+            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+            ></path><circle cx="6" cy="18" r="2"></circle>
+        </svg-->
         
         <!--Searchbar client:load searchList={searchList}/-->
         <!--{
             SITE.lightAndDarkMode && (-->
-          <button
+        <button
             id="theme-btn"
             class="focus-outline"
             title="Toggles light & dark"
             aria-label="auto"
             aria-live="polite"
           >
-            <span id="day-symbol">🌐</span>
-            <span id="night-symbol">🌞</span>
-          </button>
-            <!--svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
+            <span id="day-symbol">drk<br>mde</span>
+            <span id="night-symbol">lght<br>mde</span>
+        </button>
+        <button
+            id="font-btn"
+            class="focus-outline"
+            title="Toggles font style"
+            aria-label="auto"
+            aria-live="polite"
+          >
+            <span id="sans-symbol">mno<br>fnt</span>
+            <span id="mono-symbol">sns<br>fnt</span>
+        </button>
+            <!--🌐🌞svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
               <path d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z" />
             </svg>
             <svg xmlns="http://www.w3.org/2000/svg" id="sun-svg">
@@ -58,8 +64,8 @@ const { left } = Astro.props;
             }`}
             ariaLabel="search"
             title="Search"
-        >🔍
-            <!--svg
+        >srch
+            <!--🔍svg
             xmlns="http://www.w3.org/2000/svg"
             class="scale-125 sm:scale-100"
             ><path
@@ -114,7 +120,7 @@ const { left } = Astro.props;
     /*@apply self-end flex w-3/4 justify-between mb-5;*/
   }
   #buttons {
-    @apply flex flex-col sm:flex-row justify-between w-auto sm:w-3/4 self-start sm:self-end ml-[20%] sm:ml-0 mb-5;
+    @apply flex flex-col sm:flex-row justify-between w-auto text-sm sm:w-full self-start sm:self-end ml-[20%] sm:ml-0 mb-5;
   }
   #buttons span, #buttons a {
     @apply mb-10 sm:mb-0;
@@ -135,7 +141,7 @@ const { left } = Astro.props;
   }
   nav ul li a {
     @apply text-right font-medium w-full decoration-dotted decoration-2
-    hover:decoration-solid hover:text-skin-secondary /*py-3 sm:py-1*/ underline-offset-4;
+    hover:decoration-solid hover:text-skin-internal /*py-3 sm:py-1*/ underline-offset-4;
     white-space: nowrap;
   }
   nav ul li a::after {
@@ -152,6 +158,9 @@ const { left } = Astro.props;
   }
   nav ul li:last-child::after {
     content: "\a";
+  }
+  #theme-btn, #font-btn {
+    @apply hover:text-skin-accent;
   }
   nav a.active {
     @apply underline decoration-wavy decoration-2 underline-offset-4;

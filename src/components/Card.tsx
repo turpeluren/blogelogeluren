@@ -33,7 +33,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       
       <a
         href={href}
-        className={`${microblog || image ? "text-skin-secondary" : "text-skin-accent"} inline-block`}
+        className={`${microblog || image ? "text-skin-internal" : "text-skin-internal"} inline-block`}
       >
 		
 	    <h2 className="font-normal" {...headerProps}>{title}&nbsp;</h2>

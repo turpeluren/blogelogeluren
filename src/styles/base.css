@@ -3,16 +3,21 @@
 @tailwind utilities;
 
 .test {
-  color: rgb(24, 22, 22);
-  color: rgb(211, 211, 182);
+  color: rgb(13, 12, 14);
+  color: rgb(248, 250, 248);
   color: rgb(70, 136, 49);
-  color: rgb(147, 226, 123);
+  color: rgb(0, 128, 0);
+  color: rgb(82, 102, 9);
+  color: rgb(97, 187, 70);
+  color: rgb(106, 133, 10);
   color: rgb(206, 93, 0);
   color: rgb(214, 216, 255);
   color: rgb(58, 51, 51);
   color: rgb(41, 35, 35);
   color: rgb(39, 35, 35);
   --color-fill: 248, 250, 248;
+  --color-link: rgb(118, 150, 255);
+  --color-link-visited: rgb(140, 70, 206);
 }
 
 @layer base {
@@ -21,19 +26,31 @@
     --color-fill: 248, 250, 248;
     --color-text-base: 40, 39, 40;
     --color-accent: 255, 115, 0;
-	--color-secondary: 70, 136, 49;
+	--color-internal: 0, 128, 0;
+    --color-internal-visited: 82, 102, 9;
     --color-card: 230, 230, 230;
     --color-card-muted: 205, 205, 205;
     --color-border: 236, 233, 233;
+    --color-link: 0, 0, 238;
+    --color-link-visited: 85, 26, 139;
   }
   html[data-theme="dark"] {
-    --color-fill: 24, 22, 22;
+    --color-fill: 13, 12, 14;
     --color-text-base: 211, 211, 182;
     --color-accent: 206, 93, 0;
-	--color-secondary: 147, 226, 123;
-    --color-card: 58, 51, 51;
-    --color-card-muted: 41, 35, 35;
+	--color-internal: 97, 187, 70;
+	--color-internal-visited: 106, 133, 10;
+    --color-card: 41, 35, 35;
+    --color-card-muted: 58, 51, 51;
     --color-border: 39, 35, 35;
+    --color-link: 118, 150, 255;
+    --color-link-visited: 140, 70, 206;
+  }
+  html[data-font="mono"] {
+    @apply font-mono;
+  }
+  html[data-font="sans"] {
+    @apply font-sans;
   }
   #sun-svg, #day-symbol
   html[data-theme="dark"] #moon-svg {
@@ -59,8 +76,25 @@
   html[data-theme="light"] #night-symbol {
     display: none;
   }
+  #sans-symbol,
+  html[data-font="mono"] #sans-symbol {
+    display: none;
+  }
+  #mono-symbol,
+  html[data-font="mono"] #mono-symbol {
+    display: inline-block;
+  }
+  #sans-symbol,
+  html[data-font="sans"] #sans-symbol {
+    display: inline-block;
+  }
+  #mono-symbol,
+  html[data-font="sans"] #mono-symbol {
+    display: none;
+  }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill /*font-mono*/ text-skin-base;
+    @apply flex min-h-[100svh] flex-col bg-skin-fill text-skin-base;
+    line-height: 1.3;
     /* selection color */
     /*selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;*/
   }
@@ -101,16 +135,22 @@
     prose-td:border-skin-line prose-img:mx-auto 
     prose-img:!mt-2 /*prose-img:border-2 */
     prose-img:border-skin-line prose-hr:!border-skin-line;
+    line-height: 1.3;
   }
 
   /* === link default colors === */
-  .prose :link { color: #0000EE; }
-  .prose :visited { color: #551A8B; }
+  .prose a:link { color: rgb(var(--color-internal)); }
+  .prose a:visited { color: rgb(var(--color-internal-visited)); }
+  .prose a[href*='//']:link { color: rgb(var(--color-link)); }
+  .prose a[href*='//']:visited { color: rgb(var(--color-link-visited)); }
 
   .prose thead th:first-child,
   tbody td:first-child,
   tfoot td:first-child {
     padding-left: 0.5714286em;
+  }
+  .prose h2 {
+    @apply font-semibold;
   }
   .prose h2#table-of-contents {
     @apply mb-2;
@@ -143,7 +183,7 @@
 	@apply text-skin-base p-2 text-sm;
   }
   .microblog a, .image a {
-	@apply break-words hover:underline decoration-dotted text-skin-secondary hover:!decoration-solid underline-offset-2;
+	@apply break-words hover:underline decoration-dotted text-skin-internal hover:!decoration-solid underline-offset-2;
   }
   .microblog img, .image img {
 	@apply mb-0;
@@ -159,7 +199,7 @@
   /* ===== Post snippet ====== */
   .postSnippet {
     @apply pl-4;
-    max-height: 5.5em;
+    height: 5.5em;
     overflow: hidden;
     mask-image: linear-gradient(180deg, #000 50%, transparent);
     -webkit-mask-image: linear-gradient(180deg, #000 50%, transparent);
@@ -178,7 +218,7 @@
 	@apply border-skin-card-muted;
   }
   .author {
-	@apply p-0 pl-2 text-skin-secondary font-bold;
+	@apply p-0 pl-2 text-skin-internal font-bold;
   }
 
   /*!====== Main content ======!*/
