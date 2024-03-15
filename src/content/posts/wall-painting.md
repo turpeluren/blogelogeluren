@@ -9,7 +9,6 @@ microblog: false
 image: true
 draft: false
 tags:
-  - images
   - art
 description: A wall I did with Jocknad in Umeå.
 ---

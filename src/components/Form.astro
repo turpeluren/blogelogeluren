@@ -7,6 +7,7 @@ const { slug } = Astro.props;
 ---
 
 <div class="contactForm">
+  <hr>
   <form class="contactFormBox" 
     name="contact" 
     netlify-honeypot="bot-field"
@@ -30,11 +31,17 @@ const { slug } = Astro.props;
     .contactFormBox {
         @apply w-full;
     }
-    .contactFormBox label {
+    .contactForm {
+        margin-top: 10em;
+    }
+    .contactForm hr {
+        @apply m-0;
+    }
+    .contactForm label {
         @apply text-skin-base w-full;
         display: flex;
     }
-    .contactFormBox label p {
+    .contactForm label p {
         @apply my-2;
         width: 5rem;
     }

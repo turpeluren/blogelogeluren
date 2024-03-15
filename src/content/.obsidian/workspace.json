@@ -11,8 +11,12 @@
             "id": "c4c307231f4cb0ed",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "posts/not-yet-written.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/not-yet-written.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/not-yet-written.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/not-yet-written.md"
+              }
             }
           }
         ]
@@ -140,32 +148,33 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
-    "Untitled.canvas",
-    "posts/crying-out.md",
-    "posts/image.md",
-    "posts/microtest.md",
-    "posts/ili.md",
-    "posts/drawing-2024-02-27.md",
-    "posts/compost-the-rich.md",
+    "posts/drawing-2024-03-15.md",
+    "posts/drawing-2024-03-07 copy.md",
+    "posts/cradled-by-nature.md",
+    "posts/not-yet-written.md",
+    "posts/no-plan.md",
     "posts/Anew_draft.md",
-    "now/now2024-02-06.md",
-    "posts/wall-painting.md",
-    "posts/drawing-2024-03-01.md",
-    "posts/turpelurpeluren-online.md",
-    "posts/third-place.md",
-    "posts/test-post.md",
-    "posts/terminal-website.md",
-    "posts/randomantagningse.md",
-    "posts/potd-webplayer.md",
-    "posts/organizing-ideas.md",
-    "posts/lainring.md",
-    "posts/demitri.md",
     "posts/blog-goals-and-practices.md",
-    "posts/2024-02-27.md",
-    "posts/2024-03-01.md",
-    "blog/lainring.md",
-    "blog/2024-03-01.md",
-    "blog/2024-02-27.md",
+    "posts/compost-the-rich.md",
+    "posts/crying-out.md",
+    "posts/demitri.md",
+    "posts/do-not-visit.md",
+    "posts/drawing-2024-02-27.md",
+    "posts/drawing-2024-03-01.md",
+    "posts/drawing-2024-03-07.md",
+    "posts/ili.md",
+    "posts/image.md",
+    "posts/lainring.md",
+    "posts/microtest.md",
+    "posts/organizing-ideas.md",
+    "posts/potd-webplayer.md",
+    "posts/randomantagningse.md",
+    "posts/terminal-website.md",
+    "posts/test-post.md",
+    "posts/third-place.md",
+    "posts/this-post-is-rightfully-yours.md",
+    "posts/turpelurpeluren-online.md",
+    "Untitled.canvas",
     "blog",
     "@assets/images",
     "@assets",

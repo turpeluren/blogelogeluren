@@ -149,7 +149,7 @@
   tfoot td:first-child {
     padding-left: 0.5714286em;
   }
-  .prose h2 {
+  .prose h2, .prose h1 {
     @apply font-semibold;
   }
   .prose h2#table-of-contents {
@@ -198,7 +198,7 @@
 
   /* ===== Post snippet ====== */
   .postSnippet {
-    @apply pl-4;
+    @apply pl-4 mt-2;
     height: 5.5em;
     overflow: hidden;
     mask-image: linear-gradient(180deg, #000 50%, transparent);

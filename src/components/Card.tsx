@@ -28,27 +28,28 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   }*/
 
   return (
-    <li className={`list-disc ml-4 mt-6 mb-2 ${microblog || image ? "" : ""}`}>
-      <span>
+    <div>
+    <li className={`list-disc ml-4 mt-5 ${microblog || image ? "" : ""}`}>
+      <div className="flex flex-row justify-between">
       
       <a
         href={href}
         className={`${microblog || image ? "text-skin-internal" : "text-skin-internal"} inline-block`}
       >
-		
-	    <h2 className="font-normal" {...headerProps}>{title}&nbsp;</h2>
-		
+        <h2 className="font-normal" {...headerProps}>{title}&nbsp;</h2>
       </a>
 
-	  {pubDatetime != null && /*!microblog &&*/ (
-		<Datetime className="" size="sm" datetime={pubDatetime} />
-	  )}
-
-      </span>
+      {pubDatetime != null && /*!microblog &&*/ (
+        <Datetime className="" size="sm" datetime={pubDatetime} />
+       )}
+      </div>
+      
     </li>
+    </div>
   );
 }
 /*<p>{description}</p>
+<hr className="mt-5 opacity-50"/>
 
 {microblog && (
         <div className={"microblog date"}>

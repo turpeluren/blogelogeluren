@@ -7,9 +7,8 @@ featured: false
 project: false
 microblog: false
 image: true
-draft: true
+draft: false
 tags:
-  - images
   - art
 description: Demitri!
 ---

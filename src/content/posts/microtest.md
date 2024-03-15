@@ -9,9 +9,8 @@ microblog: true
 draft: false
 tags:
   - meta
-  - images
-description:
-  microblog test post
+  - drawings
+description: microblog test post
 ---
 
 Trying out microblog-style posts in the feed together with normal blog article posts!
