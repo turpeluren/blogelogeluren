@@ -16,7 +16,9 @@ Back in 2021 while I was "studing" Spanish in Barcelona, me and my friend were l
 
 Back then we didn't know how an implementation of this was possible, but around a year later, I hacked together [Randomantagning.se](https://randomantagning.se) with the little Javascript I had managed to learn and a python package called [Selenium](https://pypi.org/project/selenium/).
 
-The solution is really sub-optimal and I need to scrape the site every semester (which takes a whole night, and works like a snapshot of the current state of antagning.se) to keep the site updated. At least it has it's own domain and people think its funny. In the future maybe I can find a way to update it dymanically.
+The solution is really sub-optimal and I need to scrape the site every semester (which takes a whole night, and works like a snapshot of the current state of antagning.se) to keep the site updated. At least it has it's own domain and people think its funny. In the future maybe I can find a way to update it dynamically.
+
+**As of 2024-03-18**: I did an [update](/posts/random-rewrite) to the scraper script.
 
 Below are some of the best courses I found from spring 2024:
 
@@ -34,3 +36,7 @@ Translates to:
 > Corruption in politics and management
 
 > Persian percussion tradition
+
+
+## Link 😸
+- https://randomantagning.se

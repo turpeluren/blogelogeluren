@@ -28,7 +28,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 const now = await Astro.glob('./../content/now/*.md');
 const latestnow = getSortedItems(now);
-console.log(latestnow);
 ---
 
 <Layout>
@@ -39,12 +38,14 @@ console.log(latestnow);
                 {
                     latestnow
                         .map(( { frontmatter, Content }, index ) => (
-                        index === 0 && (
+                        /*index === 0 && */(
                             <span>
                                 <h2>now</h2>
                                 <Datetime size="lg" datetime={frontmatter.pubDatetime} />
                             </span>
                             <div class="prose"><Content /></div>
+                            <div class="mb-12"></div>
+                            <Hr/>
                         )
                     ))
                 }
