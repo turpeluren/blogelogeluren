@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/graffiti.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/graffiti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/graffiti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "now/now2024-03-18.md"
+                "file": "posts/graffiti.md"
               }
             }
           }
@@ -148,8 +148,10 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
-    "posts/random-rewrite.md",
+    "posts/drawing-2024-02-27.md",
+    "posts/graffiti.md",
     "now/now2024-03-18.md",
+    "posts/random-rewrite.md",
     "posts/blog-goals-and-practices.md",
     "posts/randomantagningse.md",
     "posts/terminal-website.md",
@@ -165,7 +167,6 @@
     "posts/crying-out.md",
     "posts/demitri.md",
     "posts/do-not-visit.md",
-    "posts/drawing-2024-02-27.md",
     "posts/drawing-2024-03-01.md",
     "posts/drawing-2024-03-07.md",
     "posts/ili.md",
