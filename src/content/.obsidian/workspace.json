@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/gneder.md",
+                "file": "posts/an-attempt-to-dominate.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/gneder.md",
+                "file": "posts/an-attempt-to-dominate.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/gneder.md",
+                "file": "posts/an-attempt-to-dominate.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/gneder.md"
+                "file": "posts/an-attempt-to-dominate.md"
               }
             }
           }
@@ -148,10 +148,11 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
-    "posts/microtest.md",
-    "posts/gneder.md",
-    "posts/graffiti.md",
     "posts/Anew_draft.md",
+    "posts/an-attempt-to-dominate.md",
+    "posts/gneder.md",
+    "posts/microtest.md",
+    "posts/graffiti.md",
     "posts/drawing-2024-02-27.md",
     "now/now2024-03-18.md",
     "posts/random-rewrite.md",
@@ -173,7 +174,6 @@
     "posts/drawing-2024-03-07.md",
     "posts/ili.md",
     "posts/image.md",
-    "posts/organizing-ideas.md",
     "Untitled.canvas",
     "blog",
     "@assets/images",

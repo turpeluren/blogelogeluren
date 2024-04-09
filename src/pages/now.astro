@@ -40,7 +40,7 @@ const latestnow = getSortedItems(now);
                         .map(( { frontmatter, Content }, index ) => (
                         /*index === 0 && */(
                             <span>
-                                <h2>now</h2>
+                                { index === 0 ? (<h2>now</h2>) : (<h2>then</h2>)}
                                 <Datetime size="lg" datetime={frontmatter.pubDatetime} />
                             </span>
                             <div class="prose"><Content /></div>
