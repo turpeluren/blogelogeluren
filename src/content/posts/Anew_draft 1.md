@@ -7,7 +7,7 @@ featured: false
 project: false
 microblog: false
 image: false
-draft: false
+draft: true
 tags:
   - thoughts
 description: a
