@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Anew_draft 1.md",
+                "file": "posts/real-vs-online-worlds.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/Anew_draft 1.md",
+                "file": "posts/real-vs-online-worlds.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/Anew_draft 1.md",
+                "file": "posts/real-vs-online-worlds.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/Anew_draft 1.md"
+                "file": "posts/real-vs-online-worlds.md"
               }
             }
           }
@@ -148,32 +148,32 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
-    "posts/an-attempt-to-dominate.md",
-    "posts/panestor.md",
-    "posts/Anew_draft 1.md",
-    "posts/graffiti.md",
+    "posts/plain-old-text.md",
     "posts/Anew_draft.md",
-    "posts/gneder.md",
-    "posts/microtest.md",
-    "posts/drawing-2024-02-27.md",
-    "now/now2024-03-18.md",
-    "posts/random-rewrite.md",
-    "posts/blog-goals-and-practices.md",
-    "posts/randomantagningse.md",
+    "posts/real-vs-online-worlds.md",
+    "posts/panestor.md",
+    "posts/test-post.md",
     "posts/terminal-website.md",
-    "02-27.md",
+    "posts/third-place.md",
+    "posts/randomantagningse.md",
+    "posts/random-rewrite.md",
+    "posts/potd-webplayer.md",
+    "posts/organizing-ideas.md",
+    "posts/not-yet-written.md",
+    "posts/microtest.md",
+    "posts/lainring.md",
+    "posts/ili.md",
+    "posts/graffiti.md",
+    "posts/gneder.md",
+    "posts/drawing-2024-03-15.md",
+    "posts/drawing-2024-03-07.md",
+    "posts/drawing-2024-03-01.md",
+    "posts/drawing-2024-02-27.md",
+    "posts/do-not-visit.md",
+    "posts/demitri.md",
+    "posts/crying-out.md",
     "posts/cradled-by-nature.md",
     "posts/compost-the-rich.md",
-    "posts/lainring.md",
-    "posts/not-yet-written.md",
-    "posts/drawing-2024-03-15.md",
-    "posts/drawing-2024-03-07 copy.md",
-    "posts/no-plan.md",
-    "posts/crying-out.md",
-    "posts/demitri.md",
-    "posts/do-not-visit.md",
-    "posts/drawing-2024-03-01.md",
-    "posts/drawing-2024-03-07.md",
     "Untitled.canvas",
     "blog",
     "@assets/images",
