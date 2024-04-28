@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/real-vs-online-worlds.md",
+                "file": "posts/plain-old-text.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/real-vs-online-worlds.md",
+                "file": "posts/plain-old-text.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/real-vs-online-worlds.md",
+                "file": "posts/plain-old-text.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/real-vs-online-worlds.md"
+                "file": "posts/plain-old-text.md"
               }
             }
           }
@@ -148,9 +148,11 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
+    "posts/drawing-2024-03-15.md",
+    "now/now2024-03-18.md",
+    "posts/real-vs-online-worlds.md",
     "posts/plain-old-text.md",
     "posts/Anew_draft.md",
-    "posts/real-vs-online-worlds.md",
     "posts/panestor.md",
     "posts/test-post.md",
     "posts/terminal-website.md",
@@ -165,7 +167,6 @@
     "posts/ili.md",
     "posts/graffiti.md",
     "posts/gneder.md",
-    "posts/drawing-2024-03-15.md",
     "posts/drawing-2024-03-07.md",
     "posts/drawing-2024-03-01.md",
     "posts/drawing-2024-02-27.md",
@@ -173,7 +174,6 @@
     "posts/demitri.md",
     "posts/crying-out.md",
     "posts/cradled-by-nature.md",
-    "posts/compost-the-rich.md",
     "Untitled.canvas",
     "blog",
     "@assets/images",
