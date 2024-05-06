@@ -2,6 +2,10 @@
 dist/
 .output/
 
+# obsidian
+src/content/github-publisher
+src/content/.obsidian
+
 # dependencies
 node_modules/
 
