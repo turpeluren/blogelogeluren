@@ -8,10 +8,15 @@ project: false
 microblog: false
 image: true
 draft: false
-tags: []
+tags: 
 description: image test post of panestor
+share: "true"
 ---
 
 ![panestor](@assets/images/kroppisstortransparent2.png)
 
 [more panestor ->](/posts/an-attempt-to-dominate)
+
+| Backlinks                                                                      |
+| ------------------------------------------------------------------------------ |
+| <ul><li>[an-attempt-to-dominate](/posts/an-attempt-to-dominate)</li></ul> |
