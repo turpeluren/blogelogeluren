@@ -8,8 +8,8 @@ project: false
 draft: false
 tags:
   - thoughts
-description:
-  Crying out into the nothingness for an end to my lurker days.
+description: Crying out into the nothingness for an end to my lurker days.
+share: "true"
 ---
 
 >*This post retroactivly became part of February's [Indie web carnival](https://indieweb.org/indieweb-carnival) hosted by Manu on [digital relationships](https://manuelmoreale.com/indieweb-carnival-digital-relationships).*
@@ -29,3 +29,7 @@ So I will try this, starting here, to put myself out there. Express myself and e
 Sincerely *thank you* for reading. I really appreciate it and I would also love to hear what you have to say! 
 
 *To message me, use the `message` command (type `help message`) in my [terminal page](/posts/terminal-website)*, or simply:
+
+| Backlinks                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[cradled-by-nature](/posts/cradled-by-nature)</li><li>[now2024-03-18](/now)</li></ul> |
