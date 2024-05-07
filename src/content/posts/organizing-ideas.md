@@ -11,6 +11,7 @@ draft: false
 tags:
   - thoughts
 description: Sketching on a way to organize my ideas better.
+share: "true"
 ---
 
 ### I like ideas,
@@ -23,7 +24,7 @@ So to not let new ideas distract me right away, or so that I can remember to foc
 
 For the most part I have used the notes app on my iphone. The 'ideas' notes are very fun to read through after a couple of years, but it is no way to organize thoughts, or thinking.
 
-Recently, I have started using [Obsidian](https://obsidian.md/) to write down ideas in a blogish format like this, and [Trello](https://trello.com) to try to organize snippets of thoughts and projects in categories. 
+Recently, I have started using [Obsidian](https://obsidian/) to write down ideas in a blogish format like this, and [Trello](https://trello.com) to try to organize snippets of thoughts and projects in categories. 
 
 ## Todo-list/queue/set
 Today, as I felt rather energized, I got thinking about what's on my todo-list. Not only my boring day-to-day list of chores but the list of things I *want* to do. That list is not exactly a list but exists mostly in my head, and pieces of it are scattered around my Trello 'Ideas' board. What is not really working is when a new idea joins in, it kinda just gets added to the top of the queue, since I am usually most excited about the latest idea or project. It is however rare that I take something *out* of the queue. 
@@ -61,3 +62,7 @@ Another idea is to allocate time for all the items I cant scrap. So that I can w
 Maybe I will implement the ***focus*** board, maybe I will learn to plan. Maybe I will do neither of those. At least writing this out has helped me some of the way. Since I am into the hole thing of [digital gardening](https://maggieappleton.com/garden-history) this piece on **Organizing ideas** can continue to grow here on the site, as my understanding of the topic deepens. 
 
 How do *you* organize your thoughts?
+
+| Backlinks                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------- |
+| <ul><li>[now2024-03-18](/now)</li></ul> |

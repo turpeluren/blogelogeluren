@@ -8,8 +8,8 @@ project: true
 draft: false
 tags:
   - web
-description:
-  A website for finding random university courses & programs.
+description: A website for finding random university courses & programs.
+share: "true"
 ---
 
 Back in 2021 while I was "studing" Spanish in Barcelona, me and my friend were looking for what courses to apply for next semester. For context, all university corses and programs are free in Sweden and you apply to them through a central website called [Antagning.se](https://antagning.se). They have many filters and tools to find what's right for you, but me and my friend were not ready to commit to our lifes true path quite yet. What we really wanted was a button that would generate a totally random course from the tens of thousand avaliable. 
@@ -40,3 +40,7 @@ Translates to:
 
 ## Link 😸
 - https://randomantagning.se
+
+| Backlinks                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <ul><li>[random-rewrite](/posts/random-rewrite)</li><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[now2024-03-18](/now)</li></ul> |

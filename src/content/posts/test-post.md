@@ -6,8 +6,9 @@ postSlug: test-article
 featured: false
 project: true
 draft: true
-tags: []
+tags: 
 description: Testing out this blog template and getting to know markdown etc.
+share: "true"
 ---
 
 I am getting to know this nifty blog template [AstroPaper](https://astro-paper.pages.dev/) by [Sat Naing](https://satnaing.dev/).

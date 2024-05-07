@@ -8,8 +8,8 @@ project: true
 draft: false
 tags:
   - web
-description:
-  An interactive web player for a photo project.
+description: An interactive web player for a photo project.
+share: "true"
 ---
 
 For more than five years I have taken a picture of my face every day.
@@ -54,3 +54,7 @@ I expanded the python program to take the raw HTML as input and now it was spitt
 ![The finished python program](@assets/images/dbildpythonprogram.jpg)
 
 *This article was originally posted on [turpelurpeluren.online](/posts/turpelurpeluren-online).*
+
+| Backlinks                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[now2024-03-18](/now)</li></ul> |
