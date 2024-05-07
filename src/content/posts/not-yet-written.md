@@ -17,7 +17,6 @@ share: "true"
 
 This one I haven't written yet... Check back later!
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                            |
+| -------------------------------------------------------------------- |
+| <ul><li>[cradled-by-nature](/posts/cradled-by-nature)</li></ul> |

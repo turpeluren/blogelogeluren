@@ -13,7 +13,7 @@ tags:
 description: a
 share: "true"
 ---
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |
+

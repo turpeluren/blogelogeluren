@@ -30,7 +30,6 @@ Sincerely *thank you* for reading. I really appreciate it and I would also love 
 
 *To message me, use the `message` command (type `help message`) in my [terminal page](/posts/terminal-website)*, or simply:
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[cradled-by-nature](/posts/cradled-by-nature)</li><li>[now2024-03-18](/now)</li></ul> |

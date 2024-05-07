@@ -19,7 +19,6 @@ A vain attempt to dominate. You wouldn't fall for it so easily :-)
 
 [<- more panestor](/posts/panestor)
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                          |
+| -------------------------------------------------- |
+| <ul><li>[panestor](/posts/panestor)</li></ul> |

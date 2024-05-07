@@ -23,7 +23,6 @@ Enjoy a drink and have a chat with some lovely people:
 
 <iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                              |
+| ------------------------------------------------------ |
+| <ul><li>[crying-out](/posts/crying-out)</li></ul> |

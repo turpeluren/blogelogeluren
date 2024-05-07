@@ -49,7 +49,6 @@ I love to see artist like “sluto” that keep graffiti on the move without get
 
 Great graffiti reminds me that there is nothing holding you back. Your existence is not for someone else to define, it’s for you to exercise. By writing your name over and over lol. And any boundaries posed in art or other spheres are artificial. Let’s continue breaking all the rules in our own very special way.
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |

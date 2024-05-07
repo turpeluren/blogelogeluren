@@ -27,7 +27,6 @@ You can also subscribe to the members feeds (like rss), which I haven't yet adde
 
 My webring page can currently be reached on [turpelurpeluren.online](/posts/turpelurpeluren-online) by typing `webring`, but I probably want to add it here as well since this is where i 'live' rn :3
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                  |
+| ---------------------------------------------------------- |
+| <ul><li>[now2024-03-18](/now)</li></ul> |

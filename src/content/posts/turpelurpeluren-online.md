@@ -16,7 +16,6 @@ share: "true"
 
 Blogelogeluren resides on a subdomain of [turpelurpeluren.online](/turpelurpeluren) which we may call my personal site.
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[terminal-website](/posts/terminal-website)</li><li>[potd-webplayer](/posts/potd-webplayer)</li><li>[lainring](/posts/lainring)</li></ul> |

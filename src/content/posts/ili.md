@@ -19,7 +19,6 @@ Specifically the [people's internet](https://indieweb.org/).
 
 This blog is only my means of telling you that :)
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                  |
+| ---------------------------------------------------------- |
+| <ul><li>[now2024-02-06](/now)</li></ul> |

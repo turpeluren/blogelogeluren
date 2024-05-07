@@ -18,7 +18,13 @@ share: "true"
 
 A wall I did with [Jocknad](https://www.instagram.com/jocknad/) in Umeå. He did the faces and I the text.
 
+<<<<<<< HEAD
 ```dataview
 table without id file.inlinks as Backlinks
 where file.name = this.file.name
 ```
+=======
+| Backlinks                                                              |
+| ---------------------------------------------------------------------- |
+| <ul><li>[drawing-2024-02-27](/posts/drawing-2024-02-27)</li></ul> |
+>>>>>>> 1d9d065b37844da14b2f495619bc32a6afb0b622

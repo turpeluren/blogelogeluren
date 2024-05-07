@@ -53,7 +53,6 @@ Rhizome's [collection of surf clubs](https://sites.rhizome.org/surfclubs/) lead 
 
 - Last but not least [are.na](https://www.are.na/) is just like the [memex](https://worrydream.com/refs/Bush_1945_-_As_We_May_Think_(Life_Magazine).pdf)! Check it out:-)
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |

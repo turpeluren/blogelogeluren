@@ -20,7 +20,6 @@ I have also switched hosting from [Neocities](https://neocities.org/) to [Netlif
 
 Next step is importing the JSON data more dynamically/lazily to avoid the slow page load. 
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[randomantagningse](/posts/randomantagningse)</li><li>[now2024-03-18](/now)</li></ul> |

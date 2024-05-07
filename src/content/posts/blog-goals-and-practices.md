@@ -36,7 +36,6 @@ I still don't know enough about servers to host comments here, but I do have thi
 
 **Update:** *Thanks to [Rach Smith](https://rachsmith.com/static-blog-comments/) the form now also hooks up to the netlify api from which I can fetch comments and add them as static html! [More on static site comments.](https://darekkay.com/blog/static-site-comments/)*
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                  |
+| ---------------------------------------------------------- |
+| <ul><li>[now2024-02-06](/now)</li></ul> |

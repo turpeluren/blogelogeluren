@@ -16,7 +16,6 @@ share: "true"
 
 Do not click!
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |

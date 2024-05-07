@@ -38,7 +38,6 @@ The most interesting (and messy and weird) command is probably `cathtml` which p
 ## Link 😸
 - https://turpelurpeluren.online
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[crying-out](/posts/crying-out)</li></ul> |

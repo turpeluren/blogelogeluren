@@ -55,7 +55,6 @@ I expanded the python program to take the raw HTML as input and now it was spitt
 
 *This article was originally posted on [turpelurpeluren.online](/posts/turpelurpeluren-online).*
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[now2024-03-18](/now)</li></ul> |

@@ -17,9 +17,8 @@ share: "true"
 
 > "It's more sustainable, creates more food, is significantly healthier (it makes vegetables and fruits) and just overall less gross to compost the rich. Added benefit is that compost sequesters carbon, feeds nutrients back to the soil and helps rebuild healthy O/A top layers to eroded soil so it literally immediately starts correcting one of the wrongs of capitalist ecological rape"
 
-~DirtyHomlessWizard [[source]](https://www.reddit.com/r/solarpunk/comments/qdztqh/comment/hhqicjy/?utm_source=share&utm_medium=web2x&context=3)
+~DirtyHomlessWizard [source](source)(https://www.reddit.com/r/solarpunk/comments/qdztqh/comment/hhqicjy/?utm_source=share&utm_medium=web2x&context=3)
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |

@@ -17,7 +17,6 @@ share: "true"
 
 [more panestor ->](/posts/an-attempt-to-dominate)
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                      |
+| ------------------------------------------------------------------------------ |
+| <ul><li>[an-attempt-to-dominate](/posts/an-attempt-to-dominate)</li></ul> |

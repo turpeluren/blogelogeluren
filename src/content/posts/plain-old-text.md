@@ -16,7 +16,6 @@ share: "true"
 
 just plain old text is just not my medium # ignore translations: ただの古いテキストは私の媒体ではありません केवलं साधारणः पुरातनः पाठः केवलं मम माध्यमः नास्ति വെറും പഴയ വാചകം എൻ്റെ മാധ്യമമല്ല жай ғана ескі мәтін менің ортам емес مجرد نص قديم عادي ليس وسيلة لي
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks |
+| --------- |
+| <ul></ul> |

@@ -41,7 +41,6 @@ Translates to:
 ## Link 😸
 - https://randomantagning.se
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <ul><li>[random-rewrite](/posts/random-rewrite)</li><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[now2024-03-18](/now)</li></ul> |

@@ -86,7 +86,6 @@ I love the saying *”dig where you stand”*. We can dream big and strange but 
 
 That might be what it means to live in accordance with nature. To watch it unfold as you do. To never give up but also not try *too* much haha😉. Sounds like a fine balance, but it's really only to live truthfully to oneself! Do the dancy dance with nature and see it's not limiting but doing the moves with you. 
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+| Backlinks                                                  |
+| ---------------------------------------------------------- |
+| <ul><li>[now2024-03-18](/now)</li></ul> |
