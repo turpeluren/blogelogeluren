@@ -12,6 +12,7 @@ tags:
   - thoughts
   - art
 description: Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
+share: "true"
 ---
 Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
 
@@ -47,3 +48,8 @@ I love to see artist like “sluto” that keep graffiti on the move without get
 > — sluto [(you should really read the interview)](https://www.thegadflymagazine.org/home-1/yaydhj9qxi1grz80hs40my9h3i3oxi)
 
 Great graffiti reminds me that there is nothing holding you back. Your existence is not for someone else to define, it’s for you to exercise. By writing your name over and over lol. And any boundaries posed in art or other spheres are artificial. Let’s continue breaking all the rules in our own very special way.
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

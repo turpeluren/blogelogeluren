@@ -9,8 +9,8 @@ microblog: true
 draft: false
 tags:
   - thoughts
-description:
-  web
+description: web
+share: "true"
 ---
 
 I love the internet ❤️👾
@@ -18,3 +18,8 @@ I love the internet ❤️👾
 Specifically the [people's internet](https://indieweb.org/).
 
 This blog is only my means of telling you that :)
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

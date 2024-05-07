@@ -12,6 +12,7 @@ tags:
   - thoughts
   - philosophy
 description: Our world is enclosed tightly around our beings, almost like a cradle of nature. But it is not it that is limiting us, rather the other way around. How can we relate to living in a world we experience as through thick fog?
+share: "true"
 ---
 
 >Part of this months *(march 2024)* [Lainchan Web Festival](https://newdigitalera.org/special/lainchan-web-festival-march-2024) on the topic of nature.
@@ -84,3 +85,8 @@ I guess I am still ~~in search of~~ formulating my own impossible dream, and gar
 I love the saying *”dig where you stand”*. We can dream big and strange but all that happens happens from here. You can't skip any step of the way. To live in the spirit of the dream, with Terence's commitment, even if it is unclear, might just reveal all the right steps just as they're happening. 
 
 That might be what it means to live in accordance with nature. To watch it unfold as you do. To never give up but also not try *too* much haha😉. Sounds like a fine balance, but it's really only to live truthfully to oneself! Do the dancy dance with nature and see it's not limiting but doing the moves with you. 
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

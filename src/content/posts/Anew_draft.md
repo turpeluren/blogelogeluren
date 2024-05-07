@@ -11,5 +11,9 @@ draft: true
 tags:
   - thoughts
 description: a
+share: "true"
 ---
-
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

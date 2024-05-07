@@ -9,8 +9,8 @@ draft: false
 tags:
   - thoughts
   - meta
-description:
-  Sketching out my goals and practices for the blog.
+description: Sketching out my goals and practices for the blog.
+share: "true"
 ---
 
 Something I tend to forget, while spending hours fiddling with the details of styling or sketching out a new layout every day, is that creating this blog is not a major goal in and of itself. Creating the blog is a goal of mine, of course, but it is only a step on the way towards truer goals: Self expression and connection.
@@ -35,3 +35,8 @@ This was not intended to be this lengthy but it was good to get a thinker about 
 I still don't know enough about servers to host comments here, but I do have this nifty [form](https://sadgrl.online/learn/articles/create-webform-discord) that hooks up directly to a private discord channel thanks to [Sadness](https://sadgrl.online/):
 
 **Update:** *Thanks to [Rach Smith](https://rachsmith.com/static-blog-comments/) the form now also hooks up to the netlify api from which I can fetch comments and add them as static html! [More on static site comments.](https://darekkay.com/blog/static-site-comments/)*
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

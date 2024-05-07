@@ -11,6 +11,7 @@ draft: false
 tags:
   - thoughts
 description: Sketching on a way to organize my ideas better.
+share: "true"
 ---
 
 ### I like ideas,
@@ -61,3 +62,8 @@ Another idea is to allocate time for all the items I cant scrap. So that I can w
 Maybe I will implement the ***focus*** board, maybe I will learn to plan. Maybe I will do neither of those. At least writing this out has helped me some of the way. Since I am into the hole thing of [digital gardening](https://maggieappleton.com/garden-history) this piece on **Organizing ideas** can continue to grow here on the site, as my understanding of the topic deepens. 
 
 How do *you* organize your thoughts?
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

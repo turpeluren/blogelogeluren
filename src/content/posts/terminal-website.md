@@ -10,8 +10,8 @@ image: false
 draft: false
 tags:
   - web
-description:
-  A home page in terminal format for my website.
+description: A home page in terminal format for my website.
+share: "true"
 ---
 
 ## Background
@@ -37,3 +37,8 @@ The most interesting (and messy and weird) command is probably `cathtml` which p
 
 ## Link 😸
 - https://turpelurpeluren.online
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

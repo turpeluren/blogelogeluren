@@ -1,8 +1,8 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2024-03-06T13:23:00+01:00
-title: do not visit
-postSlug: do-not-visit
+pubDatetime: "{{date}}T{{time}}:00+01:00"
+title: a
+postSlug: a
 featured: false
 project: false
 microblog: false
@@ -10,12 +10,9 @@ image: false
 draft: true
 tags:
   - thoughts
-description: do not visit
-share: "true"
+description: a
+share: "false"
 ---
-
-Do not click!
-
 ```dataview
 table without id file.inlinks as Backlinks
 where file.name = this.file.name

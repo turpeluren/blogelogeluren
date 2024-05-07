@@ -11,6 +11,7 @@ draft: false
 tags:
   - thoughts
 description: Differences in real and online living
+share: "true"
 ---
 ***I love to hang online,*** people do crazy nice stuff here and i'm connected to the whole world. 
 
@@ -51,3 +52,8 @@ Rhizome's [collection of surf clubs](https://sites.rhizome.org/surfclubs/) lead 
 - Sadly also discontinued [dump.fm](https://hyperallergic.com/356346/in-memory-of-dump-fm-an-endlessly-collaborative-image-poem/) seems to have been a perfect shitposting ground. 
 
 - Last but not least [are.na](https://www.are.na/) is just like the [memex](https://worrydream.com/refs/Bush_1945_-_As_We_May_Think_(Life_Magazine).pdf)! Check it out:-)
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

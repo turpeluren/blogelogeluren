@@ -11,8 +11,14 @@ draft: false
 tags:
   - art
 description: A wall I did with Jocknad in Umeå.
+share: "true"
 ---
 
 ![full](https://i.imgur.com/KmfV2H8.png)
 
 A wall I did with [Jocknad](https://www.instagram.com/jocknad/) in Umeå. He did the faces and I the text.
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

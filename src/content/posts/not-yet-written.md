@@ -12,6 +12,12 @@ hidden: true
 tags:
   - meta
 description: It's just not written yet.
+share: "true"
 ---
 
 This one I haven't written yet... Check back later!
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

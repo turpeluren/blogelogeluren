@@ -12,6 +12,7 @@ tags:
   - meta
   - web
 description: I joined the Lainchan webring!
+share: "true"
 ---
 
 I joined the [Lainchan](https://lainchan.org) [webring](https://indieweb.org/webring)! Webrings are pretty cool and I had seen some of them before, wanting to join one, but I hadn't found my match until now. It was [foreverliketh.is](https://foreverliketh.is/)'s site, with a terrific collection of webrings, that lead me to Lainchan.
@@ -25,3 +26,8 @@ It's cool to see that some of the sites are hidden services on the Tor network, 
 You can also subscribe to the members feeds (like rss), which I haven't yet added to my index.
 
 My webring page can currently be reached on [turpelurpeluren.online](/posts/turpelurpeluren-online) by typing `webring`, but I probably want to add it here as well since this is where i 'live' rn :3
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```

@@ -11,8 +11,14 @@ tags:
   - meta
   - drawings
 description: microblog test post
+share: "true"
 ---
 
 Trying out microblog-style posts in the feed together with normal blog article posts!
 Complete with [links](https://knowhow.pp.ua/wp-content/uploads/2023/09/lf-0923.webp) and images!
 ![full](@assets/images/avatar-say-transparent-small.png)
+
+```dataview
+table without id file.inlinks as Backlinks
+where file.name = this.file.name
+```
