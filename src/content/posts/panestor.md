@@ -8,7 +8,8 @@ project: false
 microblog: false
 image: true
 draft: false
-tags: 
+tags:
+  - art
 description: image test post of panestor
 share: "true"
 ---
