@@ -10,8 +10,8 @@ image: false
 draft: false
 tags:
   - web
-description:
-  A home page in terminal format for my website.
+description: A home page in terminal format for my website.
+share: "true"
 ---
 
 ## Background
@@ -37,3 +37,7 @@ The most interesting (and messy and weird) command is probably `cathtml` which p
 
 ## Link 😸
 - https://turpelurpeluren.online
+
+| Backlinks                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[organizing-ideas](/posts/organizing-ideas)</li><li>[crying-out](/posts/crying-out)</li></ul> |
