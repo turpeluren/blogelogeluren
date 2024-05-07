@@ -8,7 +8,8 @@ project: false
 microblog: false
 image: false
 draft: false
-tags: 
+tags:
+  - meta
 description: A third place where you can relax.
 share: "true"
 ---
