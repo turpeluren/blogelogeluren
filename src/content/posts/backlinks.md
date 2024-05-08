@@ -26,7 +26,7 @@ share: "true"
 
 - And it is then deployed via [Netlify](https://www.netlify.com/). Netlify picks up on changes in the Github repo so everything that's pushed is automatically live in a few minutes (if nothing breaks).
 
-#### Obsidian plugins
+### Obsidian plugins
 - [Dataview](https://blacksmithgu.github.io/obsidian-dataview/) is a popular plugin for creating data queries within your vault. This is used to generate a table of the backlinks.
 
 - [Github Publisher](https://github.com/ObsidianPublisher/obsidian-github-publisher) is used to publish the notes straight to Github. This was the key to actually get the backlinks *inside* the document, since it can render Dataview queries as plain markdown.
@@ -34,10 +34,10 @@ share: "true"
 ## Step by step
 I copied my 'content' (containing all my markdown posts) folder out of the site repo and made it a new Obsidian vault. In the vault I installed Dataview and Github Publisher.
 
-#### Dataview query
+### Dataview query
 To generate a table of backlinks with Dataview, I use this code at the end of all my posts:
 ````
-``` dataview
+```dataview
 table without id link(file.link, title) as Backlinks
 where contains(this.file.inlinks, file.link)
 sort date desc
@@ -46,7 +46,7 @@ sort date desc
 
 Or a list version which would need a header above it: (Used at the end of this document)
 ````
-``` dataview
+```dataview
 list without id link(file.link, title)
 where contains(this.file.inlinks, file.link)
 sort date desc
@@ -55,13 +55,13 @@ sort date desc
 
 This one generates a table with both backlinks and outgoing links (does not work well if the vault contains files with identical names):
 ````
-``` dataview
+```dataview
 table without id link(file.inlinks, file.inlinks.title) as Backlinks, link(file.outlinks, file.outlinks.title) as "Links to"
 where file.name = this.file.name
 ```
 ````
 
-#### Github Publisher setup
+### Github Publisher setup
 In the settings of the Github Publisher plugin, I set it up with the name of my repository on Github and an access token under the tab 'GitHub config'. 
 
 Under 'File paths' I selected to use the Obsidian Path as file tree (since the folders in my vault are named the same as in the repository) and specified the root folder as the content folder in my repo. 
@@ -69,14 +69,14 @@ Under 'File paths' I selected to use the Obsidian Path as file tree (since the f
 Under 'Content' i checked `[Wikilinks](Wikilinks.md) to [MDlinks](links)` and in Text Replacer I put the following:
 - Replace `/\(/posts//` with `(/posts/`
 - Replace `/now/.*\)/` with `/now)`
-- Replace `` with nothing, since it was adding a double file extension to my Dataview links for some reason.
+- Replace `.md.md` with nothing, since it was adding a double file extension to my Dataview links for some reason.
 
 **Disclaimer:** These configurations are very specific for my setup and file structure and there is probably a better way for you to do this. Github Publisher has an option to use 'Test mode' which renders the output to a specified folder. I had to fiddle a lot to get all the links to work as they should.
 
-#### Templating
+### Templating
 In the Obsidian settings for Templates, under Core plugins, I specified a folder for my templates and added the Dataview backlink query to a file. This can now be added easily to any file.
 
-#### Publishing
+### Publishing
 All files that should be published by Github Publisher should contain the key `share: true` in the YAML frontmatter. You could change this key or choose to publish all notes in the plugin options. Like so:
 ```
 ---
