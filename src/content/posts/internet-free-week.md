@@ -33,11 +33,12 @@ I can still publish to the blog.
 
 ### Results
 
-- After *three days* it's not really much of a difference. I've not been that strict but I haven't been watching youtube or anything. When I'm using online services I try to not spend too long using them -- like im not looking up artists on spotify but just quickly favouriting the song. I also try to avoid my phone as much as possible.
+- After *three days* it's not really much of a difference. I've not been that strict but I haven't been watching youtube or anything. When I'm using online services I try to not spend too long using them – like im not looking up artists on spotify but just quickly favouriting the song. I also try to avoid my phone as much as possible.
   
   I would like to actually slow down more and for instance take time to read or draw during the day. Projects like [adding backlinks](/posts/backlinks) are an easy draw of my time, and I'm thinking of restraining more of my technological use. However, I will keep these rules for 1 week and then evaluate.
 
-```dataview
-table without id file.inlinks as Backlinks
-where file.name = this.file.name
-```
+---
+## Backlinks
+
+- [Backlinks with Astro and Obsidian](github-publisher/src/content/posts/backlinks)
+
