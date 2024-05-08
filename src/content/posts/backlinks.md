@@ -1,6 +1,6 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2024-05-07T17:35:00+01:00
+pubDatetime: 2024-05-08T21:09:00+01:00
 title: Backlinks with Astro and Obsidian
 postSlug: backlinks
 featured: false
