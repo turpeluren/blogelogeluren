@@ -40,5 +40,4 @@ I can still publish to the blog.
 ---
 ## Backlinks
 
-- [Backlinks with Astro and Obsidian](github-publisher/src/content/posts/backlinks)
 
