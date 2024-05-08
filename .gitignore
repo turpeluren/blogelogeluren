@@ -3,8 +3,10 @@ dist/
 .output/
 
 # obsidian
-src/content/github-publisher
-src/content/.obsidian
+src/content/github-publisher/
+src/content/templates/
+src/content/posts/.obsidian/
+src/content/.obsidian/
 
 # dependencies
 node_modules/
@@ -37,3 +39,4 @@ pnpm-debug.log*
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+

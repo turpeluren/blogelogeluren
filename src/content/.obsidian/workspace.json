@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/drawing-2024-02-27.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/drawing-2024-02-27.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "now/now2024-03-18.md",
+                "file": "posts/drawing-2024-02-27.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "now/now2024-03-18.md"
+                "file": "posts/drawing-2024-02-27.md"
               }
             }
           }
@@ -151,8 +151,8 @@
   },
   "active": "c4c307231f4cb0ed",
   "lastOpenFiles": [
-    "posts/drawing-2024-03-15.md",
     "now/now2024-03-18.md",
+    "posts/drawing-2024-03-15.md",
     "posts/crying-out.md",
     "posts/cradled-by-nature.md",
     "now/now2024-02-06.md",
