@@ -10,6 +10,7 @@ image: false
 draft: false
 tags:
   - thoughts
+  - meta
 description: How I added backlinks to my site using Astro and Obsidian
 share: "true"
 ---
@@ -37,7 +38,7 @@ I copied my 'content' (containing all my markdown posts) folder out of the site 
 ### Dataview query
 To generate a table of backlinks with Dataview, I use this code at the end of all my posts:
 ````
-``` dataview
+```dataview
 table without id link(file.link, title) as Backlinks
 where contains(this.file.inlinks, file.link)
 sort date desc
@@ -46,7 +47,7 @@ sort date desc
 
 Or a list version which would need a header above it: (Used at the end of this document)
 ````
-``` dataview
+```dataview
 list without id link(file.link, title)
 where contains(this.file.inlinks, file.link)
 sort date desc
@@ -55,7 +56,7 @@ sort date desc
 
 This one generates a table with both backlinks and outgoing links (does not work well if the vault contains files with identical names):
 ````
-``` dataview
+```dataview
 table without id link(file.inlinks, file.inlinks.title) as Backlinks, link(file.outlinks, file.outlinks.title) as "Links to"
 where file.name = this.file.name
 ```
@@ -69,7 +70,7 @@ Under 'File paths' I selected to use the Obsidian Path as file tree (since the f
 Under 'Content' i checked `[Wikilinks](Wikilinks.md) to [MDlinks](links)` and in Text Replacer I put the following:
 - Replace `/\(/posts//` with `(/posts/`
 - Replace `/now/.*\)/` with `/now)`
-- Replace `` with nothing, since it was adding a double file extension to my Dataview links for some reason.
+- Replace `.md.md` with nothing, since it was adding a double file extension to my Dataview links for some reason.
 
 **Disclaimer:** These configurations are very specific for my setup and file structure and there is probably a better way for you to do this. Github Publisher has an option to use 'Test mode' which renders the output to a specified folder. I had to fiddle a lot to get all the links to work as they should.
 
