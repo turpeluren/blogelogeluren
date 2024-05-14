@@ -1,0 +1,133 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import LinkButton from "@components/LinkButton.astro";
+---
+
+<Layout title={`Opt out from emails | ${SITE.title}`}>
+  <!--Header /-->
+  <Header />
+
+  <main id="main-content">
+    <div class="not-found-wrapper">
+      <h1 aria-label="Opt-out">Opt out from emails</h1>
+      <span aria-hidden="true">¯\_(ツ)_/¯</span>
+      <div class="contactForm">
+        <hr>
+        <form class="contactFormBox" 
+          name="opt-out" 
+          netlify-honeypot="bot-field"
+          >
+          <input type="hidden" name="form-name" value="contact"/>
+
+          <label><p>Enter your email: </p><input type="text" name="email" id="email" placeholder="Email you would like to unsubscribe"></label>
+
+          <label id="hidden">Don’t fill this out if you’re human: <input name="bot-field" /></label>      
+          <flexbox id="bottom"><button type="submit" id="send">Unsubscribe</button>
+        </form>
+
+        <div id="subscribe" class="prose">
+          <a href="/subscribe">subscribe again?</a></div>
+      </div>
+    </div>
+  </main>
+
+  <!--Footer /-->
+</Layout>
+
+<style>
+  #main-content {
+    @apply mx-auto flex flex-1 items-center justify-center;
+  }
+  .not-found-wrapper {
+    @apply mb-14 mt-10 flex flex-col items-center justify-center;
+  }
+  .not-found-wrapper h1 {
+    @apply text-5xl font-semibold text-skin-accent;
+  }
+  .contactForm {
+    @apply w-full mt-4;
+  }
+  .contactFormBox {
+    @apply w-full mx-auto;
+  }
+  .contactForm label p {
+    @apply mt-5 text-xl;
+  }
+  #email {
+    @apply w-full my-2 p-2 outline-skin-base bg-skin-card px-1 w-full;
+  }
+  #send {
+    @apply text-skin-base bg-skin-accent hover:bg-skin-card-muted active:bg-skin-card px-2 py-1 mt-1;
+    border-radius: 3px;
+  }
+  #hidden {
+    display: none;
+  }
+  #subscribe {
+    @apply mt-10;
+  }
+</style>
+
+<script>
+    (function () {
+    'use strict';
+
+    // Send to discord webhook
+    document.getElementById('send').onclick = function() {
+        const emailInput = document.getElementById("email") as HTMLInputElement;
+    
+        var request = new XMLHttpRequest();
+        request.open("POST", "https://discordapp.com/api/webhooks/1039221226712875170/COYPEqaVrlKTWCnqrjCPjyea9nlrHi-wdBpvLwXW4VyswzOeNogUbkkVoCuSEu2MdMKK");
+        request.setRequestHeader('Content-type', 'application/json');
+        // the below variables combine a label (text) + the textarea value + a newline (\n)
+        // add up to 2,000 characters (Discord's character limit)
+        var email = 'Mail: ' + emailInput.value + "\n";
+    
+        // you have to combine both into one single variable before you can pass it to discord
+        var date = new Date();
+        var f_date = date.toLocaleDateString('sv-SE');
+        var username = "Opt out " + f_date;
+        var msg = email;
+        // play with it a bit until you get a feel for how you want the incoming messages to look!
+    
+        var params = {
+        // you can set the username to anything you want
+            username: username,
+            content: msg,
+        }
+        request.send(JSON.stringify(params));
+
+        // below gives your user some helpful feedback letting them know their message has been sent
+        //alert('Thanks, your message has been sent.'); //Handled in netlify AJAX instead
+        
+    }
+
+    //AJAX netlify
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+        
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData as any).toString(),
+        })
+            .then(() => alert("You will no longer receive emails from turpelurpeluren. Bye :'("))
+            .catch((error) => alert(error));
+
+        // below clears the form fields after submission
+        const emailInput = document.getElementById("email") as HTMLTextAreaElement;
+        emailInput.value = '';
+    };
+
+    document
+        .querySelector("form")
+        .addEventListener("submit", handleSubmit);
+
+})();
+</script>

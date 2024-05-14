@@ -15,9 +15,11 @@ tags:
 description: Im doing an internet free week
 share: "true"
 ---
+
 I'm doing 1 week with no online entertainment.
 
 The goal is to not get stuck in consumer mode, the [internet monkeymind](/posts/internet-monkeymind), and rather do stuff I actually like, as well putting time into school work. I hope this will make space for more creativity and peacefulness by slowing down.
+
 ## Table of contents
 
 ## Rules:
