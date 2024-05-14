@@ -11,10 +11,12 @@ draft: false
 tags:
   - thoughts
   - now
+  - internet
 description: Im doing an internet free week
 share: "true"
 ---
 ## Table of contents
+
 
 I'm doing 1 week with no online entertainment.
 
