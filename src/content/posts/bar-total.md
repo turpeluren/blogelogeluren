@@ -1,7 +1,7 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2024-08-24T21:57:00+01:00
-title: Bar total
+title: Bar Total
 postSlug: bar-total
 featured: true
 project: true
@@ -11,12 +11,14 @@ draft: false
 tags:
   - web
   - dev
-description: Bar total
+description: Bar Total is live on the www!
 share: "true"
 ---
 Bar Total is an all encompassing concept by my friend group which I brought into the www this summer in the form of a webpaper (read: blog). Located at https://bartotal.se, or my favourite https://batotal.digital, the Swedish Gothenburg based journal enables me and my friends (some of which are actual journalists in training) to dabble in the written arts and engage in the cultural sphere.
 
 I learned a lot from building the site and I think the look came out clean and focused. Since it’s been such a fun project I’ve put a lot of time not only in the website but also doing art and “”marketing”” lol. Writing about whatever in Swedish under pseudonyms and in collaboration has also been freeing!
+
+The development went very much in parallel with that of [Ung i Världen](/posts/ung-i-världen), with Bar Total acting as a lower stakes, more minimalistic, lawless testing ground for much the same tech used for Ung i Världen. 
 
 ## Tech
 
