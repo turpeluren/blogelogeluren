@@ -14,7 +14,9 @@ tags:
 description: Bar Total is live on the www!
 share: "true"
 ---
-Bar Total is an all encompassing concept by my friend group which I brought into the www this summer in the form of a webpaper (read: blog). Located at https://bartotal.se, or my favourite https://batotal.digital, the Swedish Gothenburg based journal enables me and my friends (some of which are actual journalists in training) to dabble in the written arts and engage in the cultural sphere.
+Bar Total is an all encompassing concept by my friend group which I brought into the www this summer in the form of a webpaper (read: blog). Located at https://bartotal.se, or my favourite https://bartotal.digital, the Swedish Gothenburg based journal enables me and my friends (some of which are actual journalists in training) to dabble in the written arts and engage in the cultural sphere.
+
+![Bar Total Logo](@assets/images/bartotal-logo-small.png)
 
 I learned a lot from building the site and I think the look came out clean and focused. Since it’s been such a fun project I’ve put a lot of time not only in the website but also doing art and “”marketing”” lol. Writing about whatever in Swedish under pseudonyms and in collaboration has also been freeing!
 
