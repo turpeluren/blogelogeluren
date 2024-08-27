@@ -32,7 +32,7 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
                     <column class="col1">
                     <a href={`/posts/${slugify(frontmatter)}`}>
                         <div class="imagebox">
-                        <Content/>
+                            <Content/>
                         </div>
                     </a></column>
                   ) : (
@@ -47,7 +47,7 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
                     <column class="col3">
                     <a href={`/posts/${slugify(frontmatter)}`}>
                         <div class="imagebox">
-                        <Content/>
+                            <Content/>
                         </div>
                     </a></column>
                   ))
@@ -65,7 +65,7 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
 <style>
   #grid {
     @apply grid justify-center items-center;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   column {
     
@@ -80,13 +80,11 @@ const imageContent = getSortedItems(items).filter(({frontmatter}) => frontmatter
     @apply col-start-3 col-end-3;
   }
   .imagebox {
-    @apply m-2;
+    @apply bg-skin-card transition-colors hover:bg-skin-fill rounded-sm m-2 h-full overflow-hidden aspect-square items-center flex;
     font-size: 0;
   }
   .imagebox img {
-    -ms-grid-column-span: 1;
-    max-width: 100%;
-    max-height: 100%;
-    display: contents;
+    /*max-width: 100%;
+    max-height: 100%;*/
   }
 </style>
