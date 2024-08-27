@@ -4,7 +4,7 @@ pubDatetime: 2024-08-24T23:18:00+01:00
 title: Ung i Världen
 postSlug: ung-i-världen
 featured: false
-project: false
+project: true
 microblog: false
 image: false
 draft: false
