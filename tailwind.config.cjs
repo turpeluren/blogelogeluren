@@ -36,6 +36,8 @@ module.exports = {
         inverted: withOpacity("--color-text-base"),
         card: withOpacity("--color-card"),
         "card-muted": withOpacity("--color-card-muted"),
+        internal: withOpacity("--color-internal"),
+        link: withOpacity("--color-link"),
       },
     },
     outlineColor: {
@@ -52,6 +54,8 @@ module.exports = {
         accent: withOpacity("--color-accent"),
         internal: withOpacity("--color-internal"),
         "card-muted": withOpacity("--color-card-muted"),
+        link: withOpacity("--color-link"),
+        visited: withOpacity("--color-link-visited"),
       },
     },
     fill: {

@@ -39,7 +39,13 @@ console.log(latestnow);
           <div class="prose">
            <!--p class="font-semibold text-2xl">Welcome to blogelogeluren! 😸</p-->
            <p><br>I suppose this is the place to give a brief overview of the site.</p>
-            <ul>
+           <p>Navigte using the sidebar (hamburger menu on mobile). There you'll also find my rss feed, 
+            options to toggle light and dark mode,
+            to switch between a monospace font or a sans-serif one, as well as to perform
+            site wide search.
+           </p>
+           <p>A good place to start would be the featured notes down below or the <a href="/now">/now</a> page.</p>
+            <!--ul>
                 <li>
                     If you want to know what I'm currently up to, check out <a href="/now">/now.</a>
                 </li>
@@ -55,7 +61,33 @@ console.log(latestnow);
                 <li>
                     If you want to know who I am, read <a href="/about">/about</a> me.
                 </li>
-            </ul>
+            </ul-->
+
+            {
+                featuredPosts.length > 0 && (
+                  <div class="relative p-2 px-4 pb-4 mt-12 ">
+                  <!-- background -->
+                  <div class="absolute inset-0 /*bg-skin-internal*/ opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div>
+                    <h2 class="font-semibold m-0">Featured notes</h2>
+                    <div id="featured" class="">
+                      <ul class="not-prose text-skin-base">
+                        {featuredPosts.map(({ frontmatter, Content }) => (
+                          <Card
+                            href={`/posts/${slugify(frontmatter)}`}
+                            frontmatter={frontmatter}
+                            secHeading={false}
+                          />
+                          <p class="pl-4">{frontmatter.description}</p>
+                          <!--div class="postSnippet">
+                          <Content/></div-->
+                          <!--ReadMore href={`/posts/${slugify(frontmatter)}`} /-->
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )
+              }
+
             <h2 class="font-semibold">Site colors</h2>
             <ul>
                 <li>
@@ -275,7 +307,7 @@ console.log(latestnow);
   }
 
   /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
+ /* #featured,
   #recent-posts,
   #projects,
   #links,
@@ -298,5 +330,5 @@ console.log(latestnow);
   }
   .all-posts-btn-wrapper {
     @apply my-8 text-center;
-  }
+  }*/
 </style>

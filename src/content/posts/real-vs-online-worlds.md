@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-04-28T13:23:00+01:00
 title: Real vs. online worlds
 postSlug: real-vs-online-worlds
-featured: false
+featured: true
 project: false
 microblog: false
 image: true
@@ -43,6 +43,8 @@ At the end of the day I am just happy to have two worlds I really like.
 
 - One example was the website [mebious.co.uk](https://lain.wiki/wiki/Mebious.co.uk) from serial experiments lain that is sadly unusable since 2020. 
 
+- Stockholm based [civilpolis.org](http://civilpolis.org) aims to become the biggest employer in Sweden by 2150.
+
 - Radio station [Hbr1](http://www.hbr1.com/) is also a favourite of mine. 
 
 Rhizome's [collection of surf clubs](https://sites.rhizome.org/surfclubs/) lead me to some interesting projects: 
@@ -53,6 +55,3 @@ Rhizome's [collection of surf clubs](https://sites.rhizome.org/surfclubs/) lead 
 
 - Last but not least [are.na](https://www.are.na/) is just like the [memex](https://worrydream.com/refs/Bush_1945_-_As_We_May_Think_(Life_Magazine).pdf)! Check it out:-)
 
-| Backlinks |
-| --------- |
-| <ul></ul> |
