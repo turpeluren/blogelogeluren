@@ -1,7 +1,7 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2024-08-24T23:18:00+01:00
-title: Ung i Världen
+title: Ung i Världen Website
 postSlug: ung-i-världen
 featured: false
 project: true
