@@ -32,7 +32,7 @@ Next up is figuring out how to best send emails to the newsletter subscribers at
 
 ## Final notes
 
-This project has been and continues to be great fun! It’s great to work creatively with others and so nice to have our own little platform! We are still finding our footing regarding what exactly to write about and really what Bar Total even “is” — a process I am throughly enjoying. As uni is starting I am however grateful the site is working without hassle. Stickers are coming soon!
+This project has been and continues to be great fun! It’s great to work creatively with others and so nice to have our own little platform! We are still finding our footing regarding what exactly to write about and really what Bar Total even “is” — a process I am throughly enjoying. As uni is starting I am however grateful the site is working without hassle. Stickers are ~~coming soon~~ here!
 
 ## Links 😸
 - https://bartotal.digital
