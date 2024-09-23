@@ -8,6 +8,7 @@ project: true
 draft: false
 tags:
   - web
+  - dev
 description: A website for finding random university courses & programs.
 share: "true"
 ---

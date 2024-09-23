@@ -10,6 +10,7 @@ image: false
 draft: false
 tags:
   - web
+  - dev
 description: A home page in terminal format for my website.
 share: "true"
 ---

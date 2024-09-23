@@ -8,6 +8,7 @@ project: true
 draft: false
 tags:
   - web
+  - dev
 description: An interactive web player for a photo project.
 share: "true"
 ---

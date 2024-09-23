@@ -10,6 +10,7 @@ image: false
 draft: false
 tags:
   - web
+  - dev
 description: Updated my web scraper for randomantagning.se.
 share: "true"
 ---

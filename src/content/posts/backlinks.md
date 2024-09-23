@@ -11,6 +11,7 @@ draft: false
 tags:
   - thoughts
   - meta
+  - dev
 description: How I added backlinks to my site using Astro and Obsidian
 share: "true"
 ---

@@ -10,6 +10,7 @@ image: true
 draft: false
 tags:
   - thoughts
+  - internet
 description: Differences in real and online living
 share: "true"
 ---
