@@ -16,6 +16,6 @@ share: "true"
 ---
 the internet is like the global scale equivalent of the monkey mind. 
 
----
-## Backlinks
-- [Internet free week](/posts/internet-free-week)
+| Backlinks                                                              |
+| ---------------------------------------------------------------------- |
+| <ul><li>[internet-free-week](/posts/internet-free-week)</li></ul> |
