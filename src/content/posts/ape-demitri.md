@@ -1,8 +1,8 @@
 ---
 author: turpelurpeluren
-pubDatetime: 2024-02-01T13:23:00+01:00
-title: demitri sticker
-postSlug: demitri-sticker
+pubDatetime: 2024-11-03T23:23:00+01:00
+title: Ape Demitri
+postSlug: ape-demitri
 featured: false
 project: false
 microblog: false
@@ -10,14 +10,16 @@ image: true
 draft: false
 tags:
   - art
-description: Demitri!
+description: Ape Demitri!
 share: "true"
 ---
 
-![demitri](@assets/images/demitri.png)
+![Ape Demitri](@assets/images/ape-sticker.png)
 
-[more demitri ->](/posts/ape-demitri)
+Just [say](mailto:admin@turpelurpeluren.online) if you'd like some.
+
+[<- more demitri](/posts/demitri-sticker)
 
 | Backlinks                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------- |
-| <ul><li>[Ape Demitri](/posts/ape-demitri)</li></ul> |
+| <ul><li>[demitri sticker](/posts/demitri-sticker)</li></ul> |
