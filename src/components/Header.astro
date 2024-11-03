@@ -8,6 +8,8 @@ export interface Props {
   activeNav?: "/" | "now" | "posts" | "projects" | "media" | "about" | "search";
 }
 
+import pfp from "@assets/images/gobchlin.jpg";
+
 const { activeNav } = Astro.props;
 ---
 
@@ -17,7 +19,7 @@ const { activeNav } = Astro.props;
 	<a href="/" class="pfp-a"><p class="pl-1">/</p>
 	  <div class="pfp">
 		<!--img class="" src={`/assets/pfp.png`}-->
-		<img class="" src={`/assets/gobchlin.jpg`}>
+		<img class="" {...pfp}>
 	  </div>
     </a>
 
