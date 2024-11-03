@@ -10,7 +10,7 @@ image: false
 draft: false
 tags:
   - meta
-  - web
+  - internet
 description: I joined the Lainchan webring!
 share: "true"
 ---
@@ -29,4 +29,4 @@ My webring page can currently be reached on [turpelurpeluren.online](/posts/turp
 
 | Backlinks                                                  |
 | ---------------------------------------------------------- |
-| <ul><li>[now2024-03-18](/now)</li></ul> |
+| <ul><li>[now2024-03-18](now/now2024-03-18)</li></ul> |
