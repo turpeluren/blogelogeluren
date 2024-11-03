@@ -16,7 +16,3 @@ share: "true"
 
 
 Not only to shroud myself in mystery-- But because gneder is just frickenv and identity especially on the internet is so fluid, I will henceforth use more anonymbivolous & fun pronouns like ze, sie, ve/hir, em, ver/vis, hirs etc. when referring to yours truly here. You can call still me whatever, peace ✌️
-
-| Backlinks |
-| --------- |
-| <ul></ul> |
