@@ -29,25 +29,25 @@ Cursive roman numerals: Number of times the title has appeared on the list.
 2024-10-11 Jacob’s Ladder  
 2024-10-05 Encounters at the End of the World  
 2024-10-04 Dinner in America  
-  
+\-  
 2024-09-25 Hausu  
 2024-09-20 *II* The Holy Mountain  
 2024-09-15 *IV* In the Mood for Love  
 2024-09-13 Super Size Me  
 2024-09-10 Shakespeare in Love  
 2024-09-07 Tuppjuck  
-  
+\-  
 2024-08-30 Lady Bird  
 <span class="bg-skin-accent">2024-08-29 Alien: Romulus</span>  
 2024-08-28 Memories of murder  
 2024-08-21 Watership Down  
 2024-08-01 Gerry  
-  
+\-  
 2024-07-29 La cité des enfants perdus  
 2024-07-27 *II* Le otto montagne  
 2024-07-18 Der Parfumeur  
 2024-07-17 Kaguya-hime no monogatari  
-  
+\-  
 2024-06-29 Faraway, so Close!  
 2024-06-22 Gandhi  
 2024-06-22 The Squid and the Whale  
@@ -55,13 +55,13 @@ Cursive roman numerals: Number of times the title has appeared on the list.
 2024-06-09 Irrational Man  
 2024-06-03 Thumbsucker  
 2024-06-01 The Hangover  
-  
+\-  
 2024-05-22 Trouble Every Day  
 2024-05-16 A Girl Walks Home Alone at Night  
 2024-05-10 Eurotrip  
 2024-05-06 *II* Barbarian  
 2024-05-04 To Die For  
-  
+\-  
 2024-04-30 20th Century Women  
 2024-04-29 *II* Fantastic Beasts and Where to Find Them  
 2024-04-28 May December  
@@ -1139,7 +1139,7 @@ Cursive roman numerals: Number of times the title has appeared on the list.
 2016-10-30 Sin City: A Dame to Kill for  
 2016-10-29 Zodiac  
 <span class="bg-skin-accent">2016-10-28 Doctor Strange</span>  
-2016-10-x28 Max Manus  
+2016-10-28 Max Manus  
 2016-10-23 Gone Girl  
 2016-10-21 Star Wars: Episode VII - The Force Awakens  
 2016-10-21 The Grand Budapest Hotel  
