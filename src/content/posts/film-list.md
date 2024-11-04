@@ -16,7 +16,7 @@ share: "true"
 This list contains all films seen by turpelurpeluren since 2016-08-13.
 #### Notation:
 Cursive roman numerals: Number of times the title has appeared on the list.  
-==Highlighted rows==: Seen at the cinema.
+<span class="bg-skin-accent">Highlighted rows</span>: Seen at the cinema.
 
 ---
 [//]: # (guard against formatting the intro.)  
