@@ -224,7 +224,7 @@
   /*!====== Main content ======!*/
   #main-content {
     @apply col-start-2 col-end-3 px-3 sm:p-0;
-    width: calc(min(56rem, 100vw - 1em) * var(--w-main));
+    width: calc(min(56rem, 100vw - 1.5em) * var(--w-main));
   }
   @media only screen and (max-width: 640px) {
     #main-content {
