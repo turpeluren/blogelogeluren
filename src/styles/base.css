@@ -47,7 +47,7 @@
     --color-link-visited: 140, 70, 206;
   }
   html[data-font="mono"] {
-    @apply font-mono;
+    @apply font-mono tracking-tighter;
   }
   html[data-font="sans"] {
     @apply font-sans;
@@ -228,7 +228,7 @@
   }
   @media only screen and (max-width: 640px) {
     #main-content {
-        width: calc(100vw);
+        width: calc(100vw - 2em);
     }
   }
 
@@ -271,7 +271,7 @@
 }
 
 .prose {
-    @apply max-w-full;
+    @apply max-w-full text-lg sm:text-lg;
 }
 
 @layer components {

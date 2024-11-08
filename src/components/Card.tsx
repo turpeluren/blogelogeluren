@@ -28,8 +28,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
   }*/
 
   return (
-    <div>
-    <li className={`list-disc ml-4 mt-5 ${microblog || image ? "" : ""}`}>
+    <li className={`list-disc ml-4 mt-5 max-w-full ${microblog || image ? "" : ""}`}>
       <div className="flex flex-row justify-between">
       
       <a
@@ -45,7 +44,6 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </div>
       
     </li>
-    </div>
   );
 }
 /*<p>{description}</p>

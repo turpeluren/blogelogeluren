@@ -65,11 +65,11 @@ const { props } = Astro;
         @apply grid;
         grid-template-columns: calc(min(56rem, 100vw - 1.5em) * 0.6)
                                calc(min(56rem, 100vw - 1.5em) * 0.15);
-        column-gap: calc(min(56rem, 100vw - 1em) * (1 - 0.6 - 0.3) / 4);
+        column-gap: calc(min(56rem, 100vw - 1.5em) * (1 - 0.6 - 0.3) / 4);
   }
   @media only screen and (max-width: 640px) {
     #sidebar-grid {
-        grid-template-columns: calc(min(56rem, 100vw - 1.5em) * 1);
+        grid-template-columns: calc(min(56rem, 100vw - 3.5em) * 1);
         column-gap: 0;
         max-width: 100%;
     }
