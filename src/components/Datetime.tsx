@@ -8,7 +8,7 @@ export interface Props {
 
 export default function Datetime({ datetime, size = "sm", className }: Props) {
   return (
-    <span className={`opacity-80 ${className}`}>
+    <span className={`opacity-80 text-right ${className}`}>
       
       <span className="sr-only">Posted on:</span>
       <span className={`${size === "sm" ? "text-xs" : "text-base"}`}>

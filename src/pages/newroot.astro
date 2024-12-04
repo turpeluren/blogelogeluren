@@ -11,10 +11,13 @@ import Hr from "@components/Hr.astro";
 import Card from "@components/Card";
 import Socials from "@components/Socials.astro";
 import Datetime from "@components/Datetime";
+import Block from "@components/Block.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
+
+import pic from "@assets/images/gobchlin.jpg";
 
 const posts = await getCollection("posts");
 const items = await Astro.glob('./../content/posts/*.md');
@@ -29,7 +32,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
 
 const now = await Astro.glob('./../content/now/*.md');
 const latestnow = getSortedItems(now);
-console.log(latestnow);
+//console.log(latestnow);
 ---
 
 <Layout>
@@ -37,61 +40,69 @@ console.log(latestnow);
     <main id="main-content">
         <Main pageTitle="Welcome to blogelogeluren! 😸" sidebar={false}>
           <div class="prose">
-            <p><br>Hi there! I suppose this is the place for a brief intro to the site.
-                Blogelogeluren is a quick and dirty way for <a href="/about">@turpelurpeluren</a> to get 
-                hirs thoughts out in the world. Sometimes I post drawings, sometimes 
-                esoteric ramblings and sometimes tech-projects.
+            <p class="mb-0"><br>Hi there! So what can you expect from my site? We're not sticking to the rules
+                <img class="inline !m-0 h-5 w-5" src="/assets/pfp2.png">, but we're keeping it・̼̟͋̉̑̉͜ﾟ̽͠✧tasteful...
             </p>
-           <p>A good place to start exploring would be the featured notes down below or the 
-            <a href="/now">/now</a> page.</p>
+           <!--p>A good place to start exploring would be the featured notes down below or the 
+            <a href="/now">/now</a> page.</p-->
 
-            {
-                featuredPosts.length > 0 && (
-                  <div class="relative p-5 mt-12 ">
-                  <!-- background -->
-                  <div class="absolute inset-0 /*bg-skin-internal*/ opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div>
-                    <h2 class="font-semibold m-0">📝 Featured <a class="!font-semibold" href="/notes">/notes</a></h2>
-                    <div id="featured" class="">
-                      <ul class="not-prose text-skin-base">
+            <div class="flex flex-row gap-5">
+                <Block bg="accent" border="base" nomargin>
+                    <Fragment slot="title">
+                        <span class="text-gray-900">🐱‍💻 The gist</span>
+                    </Fragment>
+                    <p class="m-0 pt-5">
+                        Blogelogeluren is a quick and dirty way for 
+                        the conceptual being <a href="/about">@turpelurpeluren</a>
+                        to get hirs mind out into the world. 🌐 Sometimes I post drawings, sometimes 
+                        esoteric ramblings and sometimes tech-projects.
+                        <br><br>
+                        * All cool people are welcome!
+                    </p>
+                </Block>
+
+                <Block nomargin>
+                    <img class="!m-0 !object-cover" {...pic}>
+                </Block>
+            </div>
+
+            { featuredPosts && (
+                <Block bg="" border="internal">
+                    <Fragment slot="title">
+                        <span class="text-skin-base">📝 Featured <a class="!font-semibold" href="/notes">/notes</a></span>
+                    </Fragment>
+                    <ul class="not-prose text-skin-base">
                         {featuredPosts.map(({ frontmatter, Content }) => (
-                          <Card
+                        <Card
                             href={`/posts/${slugify(frontmatter)}`}
                             frontmatter={frontmatter}
                             secHeading={false}
-                          />
-                          <p class="pl-4">{frontmatter.description}</p>
-                          <!--div class="postSnippet"><Content/></div--><!-- Post snippet -->
-                          <!--ReadMore href={`/posts/${slugify(frontmatter)}`} /-->
+                        />
+                        <p class="pl-4">{frontmatter.description}</p>
+                        <!--div class="postSnippet"><Content/></div--><!-- Post snippet -->
+                        <!--ReadMore href={`/posts/${slugify(frontmatter)}`} /-->
                         ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <a href="/notes" class="pt- text-skin-base float-right">all /notes -&#62;</a>
+                    </ul>
+                </Block>
+            )}
 
-                )
-            }
-            {
-                microPosts.length > 0 && (
-                <div class="relative p-5 mt-12 ">
-                <!-- background -->
-                <div class="absolute inset-0 /*bg-skin-internal*/ opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div>
-                    <h2 class="font-semibold m-0">L8est <span class="text-skin-accent" >microblogs</span> <span class="text-base">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span> </h2>
-                    <div id="featured" class="">
-                    <ul class="not-prose text-skin-base pr-4 max-h-96 overflow-y-scroll ">
+            { microPosts && (
+                <Block fade bg="internal" nomargin>
+                    <Fragment slot="title">
+                        <span class="text-skin-inverted">L8est <span class="/*can change color*/" >microblogs</span> <span class="text-base">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span></span>
+                    </Fragment>
+                    <ul class="not-prose text-skin-base p-5 pt-0 max-h-64 overflow-y-scroll pb-32">
                         {microPosts.map(({ frontmatter, Content }) => (
                         <Card
                             href={`/posts/${slugify(frontmatter)}`}
                             frontmatter={frontmatter}
                             secHeading={false}
                         />
-                        <div class={`${frontmatter.microblog? ("microblog") : ("image")} prose`}><Content/></div>
+                        <div class="microblog prose"><Content/></div>
                         ))}
                     </ul>
-                    </div>
-                </div>
-
-                )
-            }
+                </Block>
+            )}
 
             <h2 class="font-semibold">Site colors</h2>
             <ul>

@@ -45,7 +45,7 @@ const next = pageNum < totalPages ? "" : "disabled";
     <main id="main-content" style="">
         <!--Searchbar client:load searchList={searchList} /-->
         <Main pageTitle="posts" pageDesc="">
-            <ul style="margin-right: 2em;" class="mr-4">
+            <ul>
             {
                 items
                 .filter(({ frontmatter }) => !frontmatter.draft)

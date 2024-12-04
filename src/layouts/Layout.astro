@@ -15,6 +15,7 @@ export interface Props {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  hideLogo?: Boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   description = SITE.desc,
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  hideLogo = false,
 } = Astro.props;
 
 const socialImageURL = new URL(
@@ -90,7 +92,9 @@ const socialImageURL = new URL(
   </head>
   <body>
     <div class="wrap">
-     <Logo />
+     {
+        hideLogo ? (<div class="w-full h-6 col-start-1 col-end-4"></div>) : (<Logo />)
+     }
      <!--Header /-->
      
         <slot />

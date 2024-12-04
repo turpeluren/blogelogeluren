@@ -1,0 +1,36 @@
+---
+
+export interface Props {
+  title?: HTMLElement;
+  bg?: string;
+  border?: string;
+  fade?: boolean;
+  nomargin?: boolean;
+}
+
+const { 
+    title=await Astro.slots.render('title'),
+    bg="internal",
+    border=bg,
+    fade=false,
+    nomargin=false,
+} = Astro.props;
+
+---
+
+<div class={"mt-12 border-2 rounded-md border-skin-"+border}>
+    <!-- Header -->
+    <div class={"px-3 py-1 rounded-t-sm bg-skin-"+bg+" border-b-2 border-skin-"+border}><h2 class="font-semibold !m-0" set:html={title}></h2></div>
+    <!-- Body -->
+    <div class={"relative "+(nomargin ? "" : "p-5 pt-0")}>
+        <!-- background -->
+        <!--div class="absolute inset-0 opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div-->
+        
+            <slot/>
+        
+        <!-- bottom fade -->
+        { fade && (
+            <div class="pointer-events-none absolute inset-0 m-[2px] sm:mr-9 rounded-md bg-gradient-to-t from-[rgb(var(--color-fill))] to-25% to-transparent"></div>
+        )}
+    </div>
+</div>
