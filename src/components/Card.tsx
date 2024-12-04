@@ -39,7 +39,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       </a>
 
       {pubDatetime != null && /*!microblog &&*/ (
-        <Datetime className="w-16" size="sm" datetime={pubDatetime} />
+        <Datetime className="w-24" size="sm" datetime={pubDatetime} />
        )}
       </div>
       
