@@ -1,0 +1,339 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import SidebarR from "@components/SidebarR.astro";
+import Main from "@layouts/Main.astro";
+import Footer from "@components/Footer.astro";
+import ReadMore from "@components/ReadMore.astro";
+import LinkButton from "@components/LinkButton.astro";
+import Hr from "@components/Hr.astro";
+import Card from "@components/Card";
+import Socials from "@components/Socials.astro";
+import Datetime from "@components/Datetime";
+import getSortedPosts from "@utils/getSortedPosts";
+import getSortedItems from "@utils/getSortedItems";
+import slugify from "@utils/slugify";
+import { SOCIALS } from "@config";
+
+const posts = await getCollection("posts");
+const items = await Astro.glob('./../content/posts/*.md');
+
+const sortedContent = getSortedItems(items);
+
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedContent.filter(({ frontmatter }) => frontmatter.featured);
+const microPosts = sortedContent.filter(({ frontmatter }) => frontmatter.microblog);
+
+const socialCount = SOCIALS.filter(social => social.active).length;
+
+const now = await Astro.glob('./../content/now/*.md');
+const latestnow = getSortedItems(now);
+console.log(latestnow);
+---
+
+<Layout>
+    <Header activeNav="/" />
+    <main id="main-content">
+        <Main pageTitle="Welcome to blogelogeluren! 😸" sidebar={false}>
+          <div class="prose">
+            <p><br>Hi there! I suppose this is the place for a brief intro to the site.
+                Blogelogeluren is a quick and dirty way for <a href="/about">@turpelurpeluren</a> to get 
+                hirs thoughts out in the world. Sometimes I post drawings, sometimes 
+                esoteric ramblings and sometimes tech-projects.
+            </p>
+           <p>A good place to start exploring would be the featured notes down below or the 
+            <a href="/now">/now</a> page.</p>
+
+            {
+                featuredPosts.length > 0 && (
+                  <div class="relative p-5 mt-12 ">
+                  <!-- background -->
+                  <div class="absolute inset-0 /*bg-skin-internal*/ opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div>
+                    <h2 class="font-semibold m-0">📝 Featured <a class="!font-semibold" href="/notes">/notes</a></h2>
+                    <div id="featured" class="">
+                      <ul class="not-prose text-skin-base">
+                        {featuredPosts.map(({ frontmatter, Content }) => (
+                          <Card
+                            href={`/posts/${slugify(frontmatter)}`}
+                            frontmatter={frontmatter}
+                            secHeading={false}
+                          />
+                          <p class="pl-4">{frontmatter.description}</p>
+                          <!--div class="postSnippet"><Content/></div--><!-- Post snippet -->
+                          <!--ReadMore href={`/posts/${slugify(frontmatter)}`} /-->
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <a href="/notes" class="pt- text-skin-base float-right">all /notes -&#62;</a>
+
+                )
+            }
+            {
+                microPosts.length > 0 && (
+                <div class="relative p-5 mt-12 ">
+                <!-- background -->
+                <div class="absolute inset-0 /*bg-skin-internal*/ opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div>
+                    <h2 class="font-semibold m-0">L8est <span class="text-skin-accent" >microblogs</span> <span class="text-base">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span> </h2>
+                    <div id="featured" class="">
+                    <ul class="not-prose text-skin-base pr-4 max-h-96 overflow-y-scroll ">
+                        {microPosts.map(({ frontmatter, Content }) => (
+                        <Card
+                            href={`/posts/${slugify(frontmatter)}`}
+                            frontmatter={frontmatter}
+                            secHeading={false}
+                        />
+                        <div class={`${frontmatter.microblog? ("microblog") : ("image")} prose`}><Content/></div>
+                        ))}
+                    </ul>
+                    </div>
+                </div>
+
+                )
+            }
+
+            <h2 class="font-semibold">Site colors</h2>
+            <ul>
+                <li>
+                    <span style="color: rgb(var(--color-internal));">Internal links</span>,
+                    meaning you don't leave this site when you click them, are 
+                    <span style="color: rgb(var(--color-internal));">naive green</span>.
+                </li>
+                <li>
+                    <span style="color: rgb(var(--color-internal-visited));">Visited internal links</span>
+                    become, with time, just as yourself, a sligthly more
+                    <span style="color: rgb(var(--color-internal-visited));">mature green</span>.
+                </li>
+                <li>
+                    <span style="color: rgb(var(--color-link));">External links</span> are this
+                    <span style="color: rgb(var(--color-link));">blue color</span>
+                    which you might recognize from a little place called the Interweb.
+                </li>
+                <li>
+                    <span style="color: rgb(var(--color-link-visited));">Visited external links</span>
+                    symbolize your gained knowledge with a 
+                    <span style="color: rgb(var(--color-link-visited));">magicians purple</span>.
+                </li>
+                <li>
+                    <span style="color: rgb(var(--color-accent));">Buttons and *flare*</span> appear
+                    <span style="color: rgb(var(--color-accent));">orange</span>. Just as I like it.
+                </li>
+                <li>
+                    <span style="color: rgb(var(--color-fill));">The background</span> is
+                    <span id="theme-name" style="color: rgb(var(--color-fill));">
+                        <span id="day-symbol">light</span>
+                        <span id="night-symbol">dark</span>
+                    </span> as you can see. Change the theme under the profile picture, or in the menu on mobile. 
+                    You can also switch between a monospace and sans-serif font.
+                </li>
+            </ul>
+          </div>
+        </Main>
+    <!--section id="hero">
+        <h3 class="opacity-70">/</h3>
+        <h2>index</h2>
+    </section-->
+
+    <!--section id="hero">
+      <h1 class="mr-2">Welcome </h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="rss-link"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="rss-icon"
+          ><path
+            d="M19 20.001C19 11.729 12.271 5 4 5v2c7.168 0 13 5.832 13 13.001h2z"
+          ></path><path
+            d="M12 20.001h2C14 14.486 9.514 10 4 10v2c4.411 0 8 3.589 8 8.001z"
+          ></path><circle cx="6" cy="18" r="2"></circle>
+        </svg>
+      </a>
+
+      <p>Welcome to blogelogeluren! I am still working on the site while putting some of my thoughts out:-)</p>
+      <p class="inline">
+        My main site is <p class="prose inline"><a href="https://turpelurpeluren.online">turpelurpeluren.online</p></a>
+        <LinkButton
+          className="hover:text-skin-accent underline underline-offset-4 decoration-dashed"
+          href="https://turpelurpeluren.online"
+        >
+        </LinkButton>
+      </p>
+      <{
+        // only display if at least one social link is enabled
+        socialCount > 0 && (
+          <div class="social-wrapper">
+            <div class="social-links">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
+    </section-->
+	<!--
+    {
+      featuredPosts.length > 0 && (
+        <>
+          <section id="featured">
+            <Hr />
+            <ul>
+              {sortedContent.map(({ frontmatter, Content }) => (
+                <Card
+                  href={`/posts/${slugify(frontmatter)}`}
+                  frontmatter={frontmatter}
+                  secHeading={false}
+                />
+                <div class="postSnippet">
+                <Content/></div>
+              ))}
+            </ul>
+          </section>
+        </>
+      )
+    }
+
+{
+	projectPosts.length > 0 && (
+	  <>
+		<section id="projects">
+		  <h2>projects</h2>
+          <Hr />
+		  <ul>
+			{sortedContent
+                .filter(({ frontmatter }) => frontmatter.project)
+                .map(({ frontmatter, Content }) => (
+			  <Card
+				href={`/posts/${slugify(frontmatter)}`}
+				frontmatter={frontmatter}
+				secHeading={false}
+			  />
+              <div class="prose postSnippet">
+              <Content/></div>
+              <ReadMore href={`/posts/${slugify(frontmatter)}`} />
+			))}
+		  </ul>
+		</section>
+	  </>
+	)
+  }
+
+    <section id="recent-posts">
+	  <h2>latest thougths</h2>
+      <Hr />
+      <ul>
+		{
+		sortedContent
+            .filter(({ frontmatter }) => !frontmatter.featured)
+            .filter(({ frontmatter }) => !frontmatter.project)
+            .map(
+              ({ frontmatter, Content }, index) =>
+                index < 4 && ((frontmatter.microblog || frontmatter.image) ? (
+                  <Card
+                    href={`/posts/${slugify(frontmatter)}`}
+                    frontmatter={frontmatter}
+                    secHeading={false}
+                  />
+				  <div class={`${frontmatter.microblog? ("microblog") : ("image")} prose`}>
+                  <Content/></div>
+                ) : (
+				  <Card
+                    href={`/posts/${slugify(frontmatter)}`}
+                    frontmatter={frontmatter}
+                    secHeading={false}
+                  />
+                  <div class="prose postSnippet">
+                  <Content/></div>
+                  <ReadMore href={`/posts/${slugify(frontmatter)}`} />
+				)
+            ))
+		}
+      </ul>
+      <div class="all-posts-btn-wrapper">
+        <LinkButton href="/archive">
+          All Posts &gt
+        </LinkButton>
+      </div>
+    </section>
+
+	<section id="links">
+		<h2>links</h2>
+        <Hr />
+		to other sites I like
+		<ul>
+			<Card
+				href={`https://neocities.org/browse`}
+				frontmatter={{title: "Neocities"}}/>
+			<Card
+				href={`https://searchmysite.net/`}
+				frontmatter={{title: "searchmysite.net"}}/>
+			<Card
+				href={`https://blog.erlend.sh/reclaiming-my-digital-identity`}
+				frontmatter={{title: "Erlend"}}/>
+			<Card
+				href={`https://www.henrikkarlsson.xyz/p/first-we-shape-our-social-graph-then`}
+				frontmatter={{title: "Escaping Flatland"}}/>
+		</ul>
+	</section>
+
+	<section id="chat">
+		<h2>chat</h2>
+        <Hr />
+		<iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+	</section-->
+
+  </main>
+  <!--SidebarR activeNav="/"/-->
+</Layout>
+
+<style>
+  /* ===== Hero Section ===== */
+  #hero {
+    @apply pb-3 pt-8;
+  }
+  #hero h1 {
+    @apply my-4 inline-block text-3xl font-bold sm:my-8 sm:text-5xl;
+  }
+  #hero .rss-link {
+    @apply mb-6;
+  }
+  #hero .rss-icon {
+    @apply mb-2 h-6 w-6 scale-110 fill-skin-accent sm:mb-3 sm:scale-125;
+  }
+  #hero p {
+    @apply my-2;
+  }
+  .social-wrapper {
+    @apply mt-4 flex flex-col sm:flex-row sm:items-center;
+  }
+  .social-links {
+    @apply mb-1 mr-2 whitespace-nowrap sm:mb-0;
+  }
+
+  /* ===== Featured & Recent Posts Sections ===== */
+ /* #featured,
+  #recent-posts,
+  #projects,
+  #links,
+  #chat {
+    @apply pb-3 pt-4;
+  }
+  #now {
+    @apply pb-16 pt-4;
+  }
+  #hero h2,
+  #featured h2,
+  #recent-posts h2,
+  #projects h2,
+  #links h2,
+  #chat h2 {
+    @apply text-xl font-semibold tracking-wide pb-1;
+  }
+  #now h2 {
+    @apply inline-block text-3xl font-semibold tracking-wide mb-8;
+  }
+  .all-posts-btn-wrapper {
+    @apply my-8 text-center;
+  }*/
+</style>
