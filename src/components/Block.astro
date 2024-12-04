@@ -18,15 +18,15 @@ const {
 
 ---
 
-<div class={"mt-12 border-2 rounded-md border-skin-"+border}>
+<div class={"overflow-hidden mt-12 border-2 rounded-md border-skin-"+border}>
     <!-- Header -->
     <div class={"px-3 py-1 rounded-t-sm bg-skin-"+bg+" border-b-2 border-skin-"+border}><h2 class="font-semibold !m-0" set:html={title}></h2></div>
     <!-- Body -->
-    <div class={"relative "+(nomargin ? "" : "p-5 pt-0")}>
+    <div class={"relative h-full "+(nomargin ? "" : "p-5 pt-0")}>
         <!-- background -->
         <!--div class="absolute inset-0 opacity-50 z-[-1] border-skin-internal border-2 rounded-md"></div-->
         
-            <slot/>
+        <slot/>
         
         <!-- bottom fade -->
         { fade && (
