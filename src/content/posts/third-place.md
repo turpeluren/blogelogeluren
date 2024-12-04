@@ -26,4 +26,4 @@ Enjoy a drink and have a chat with some lovely people:
 
 | Backlinks                                              |
 | ------------------------------------------------------ |
-| <ul><li>[crying-out](/posts/crying-out)</li></ul> |
+| <ul><li>[crying-out](/posts/crying-out)</li><li>[/](/)</li></ul> |
