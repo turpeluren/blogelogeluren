@@ -16,11 +16,12 @@ const { activeNav } = Astro.props;
 <header class="header bg-tsp">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
 
-	<a href="/" class="pfp-a"><p class="pl-1">/</p>
+	<a href="/" class="pfp-a"><p class="pfp-slash pl-1">/</p>
 	  <div class="pfp">
 		<!--img class="" src={`/assets/pfp.png`}-->
 		<img class="aspect-square object-cover" {...pfp}>
 	  </div>
+      <p class="pfp-slash float-right pl-1 -translate-y-5">/</p>
     </a>
 
     <button
@@ -74,7 +75,7 @@ const { activeNav } = Astro.props;
     @apply hidden sm:block mt-4;
   }
   .pfp {
-    @apply border rounded-sm border-skin-fill hover:border-skin-internal;
+    @apply border rounded-sm border-skin-base hover:border-skin-internal;
     box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
     width: calc(100% - 1rem);
     transform: translate(1rem, -1rem);
@@ -83,7 +84,10 @@ const { activeNav } = Astro.props;
   /* Blue on hover */
   .pfp-a:hover .pfp {
     @apply border-skin-internal;
-    box-shadow: -12px 15px rgba(var(--color-internal)), -13px 16px rgba(var(--color-internal));
+    box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-internal));
+    color: rgba(var(--color-internal));
+  }
+  .pfp-a:hover .pfp-slash {
     color: rgba(var(--color-internal));
   }
 
@@ -110,6 +114,21 @@ const { activeNav } = Astro.props;
     @apply h-0;
     background-color: rgba(0, 0, 0, 0);
   }
+
+  @keyframes jiggle {
+        from {
+            transform: rotate(-2deg);
+        }
+        50% {
+            transform: rotate(2deg);
+        }
+        to {
+            transform: rotate(-2deg);
+        }
+    }
+    .jiggle {
+        animation: jiggle 3s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    }
 </style>
 
 <script>

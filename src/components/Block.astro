@@ -6,6 +6,7 @@ export interface Props {
   border?: string;
   fade?: boolean;
   nomargin?: boolean;
+  rot? :string;
 }
 
 const { 
@@ -14,13 +15,16 @@ const {
     border=bg,
     fade=false,
     nomargin=false,
+    rot=0,
 } = Astro.props;
 
+const rand = new Date().getMilliseconds() % 2;
 ---
 
-<div class={"grow overflow-hidden mt-8 border-2 rounded-md border-skin-"+border}>
+<div class={"mt-4 rotate-["+rot+"deg]"}><p class="pl-1 text-base m-0">/</p>
+<div class={"block grow overflow-hidden border-[1px] rounded-[3px] border-skin-"+border}>
     <!-- Header -->
-    <div class={"px-2 pb-1 rounded-t-sm bg-skin-"+bg+" border-b-2 border-skin-"+border}><h2 class="font-semibold text-xl !m-0" set:html={title}></h2></div>
+    <div class={"px-2 pb-1 rounded-t-[1px] bg-skin-"+bg+" border-b-[1px] border-skin-"+border}><h2 class="font-semibold text-xl !m-0" set:html={title}></h2></div>
     <!-- Body -->
     <div class={"relative h-full "+(nomargin ? "" : "p-5 pt-0")}>
         <!-- background -->
@@ -36,3 +40,14 @@ const {
         
     </div>
 </div>
+<p class="leading-[0] float-right pl-1 text-base m-0 -translate-y-2">/</p>
+</div>
+
+<style>
+    .block {
+        box-shadow: -12px 15px rgba(var(--color-fill)), -13px 16px rgba(var(--color-text-base));
+        width: calc(100% - 1rem);
+        transform: translate(1rem, -1rem);
+    }
+    
+</style>

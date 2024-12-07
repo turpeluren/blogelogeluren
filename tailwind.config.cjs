@@ -47,6 +47,7 @@ module.exports = {
         },
         backgroundColor: {
         skin: {
+            base: withOpacity("--color-text-base"),
             fill: withOpacity("--color-fill"),
             accent: withOpacity("--color-accent"),
             inverted: withOpacity("--color-text-base"),
@@ -65,8 +66,8 @@ module.exports = {
         borderColor: {
         skin: {
             line: withOpacity("--color-border"),
-            base: withOpacity("--color-fill"),
-            fill: withOpacity("--color-text-base"),
+            base: withOpacity("--color-text-base"),
+            fill: withOpacity("--color-fill"),
             accent: withOpacity("--color-accent"),
             internal: withOpacity("--color-internal"),
             "card-muted": withOpacity("--color-card-muted"),

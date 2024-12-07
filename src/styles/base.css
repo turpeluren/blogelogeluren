@@ -15,9 +15,9 @@
   color: rgb(58, 51, 51);
   color: rgb(41, 35, 35);
   color: rgb(39, 35, 35);
-  --color-fill: 248, 250, 248;
-  --color-link: rgb(118, 150, 255);
-  --color-link-visited: rgb(140, 70, 206);
+  color: 248, 250, 248;
+  color: rgb(118, 150, 255);
+  color: rgb(140, 70, 206);
 }
 
 @layer base {
@@ -304,4 +304,15 @@ img[alt="Some courses from spring 2024"] {
 .image img[alt="height"]  {
 	max-width: 100%;
 	max-height: 20rem;
+}
+
+/* fattar iunte vrf inte tailwind får med dessa?? */
+.border-skin-link {
+    border-color: rgb(var(--color-link));
+}
+.bg-skin-link {
+    background-color: rgb(var(--color-link));
+}
+.bg-skin-internal {
+    background-color: rgb(var(--color-internal));
 }

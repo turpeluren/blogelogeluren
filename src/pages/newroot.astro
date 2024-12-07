@@ -17,8 +17,10 @@ import getSortedItems from "@utils/getSortedItems";
 import slugify from "@utils/slugify";
 import { SOCIALS } from "@config";
 
-import pic from "@assets/images/gobchlin.jpg";
-import demitri from "@assets/images/ape-sticker.png";
+//import pic from "@assets/images/2024-03-01_how-did-u.png";
+import pic from "@assets/images/2024-03-07_dj.png";
+import demitri from "@assets/images/demitri.png";
+import apeDemitri from "@assets/images/ape-sticker.png";
 
 const posts = await getCollection("posts");
 const items = await Astro.glob('./../content/posts/*.md');
@@ -48,13 +50,13 @@ const latestnow = getSortedItems(now);
             <a href="/now">/now</a> page.</p-->
 
             <div class="flex flex-col sm:flex-row gap-5">
-                <Block bg="accent" border="base" nomargin>
+                <Block bg="accent" border="fill" nomargin>
                     <Fragment slot="title">
                         <span class="text-gray-900">🐱‍💻 The gist</span>
                     </Fragment>
                     <p class="m-0 pt-5">
                         Blogelogeluren is a quick and dirty way for 
-                        the conceptual being <a title="aka 5ht2agonist aka Demitri" class="cursor-help" href="/about">@tur(pelur)²en</a>
+                        the conceptual being <a title="aka 5ht2agonist aka Goldlock aka Demitri" class="cursor-help" href="/about">@tur(pelur)²en</a>
                         to get hirs mind out into the world. 🌐 Sometimes I post drawings, sometimes 
                         esoteric ramblings and sometimes tech-projects.
                         <br><br>
@@ -62,8 +64,8 @@ const latestnow = getSortedItems(now);
                     </p>
                 </Block>
 
-                <Block nomargin>
-                    <img class="!m-0 object-cover h-full w-full" {...pic}>
+                <Block nomargin rot="-1">
+                    <a href="/posts/drawing-2024-03-07"><img class="!m-0 object-cover h-full w-full" {...pic}></a>
                 </Block>
             </div>
 
@@ -90,9 +92,9 @@ const latestnow = getSortedItems(now);
             { microPosts && (
                 <Block fade bg="internal" nomargin>
                     <Fragment slot="title">
-                        <span class="text-skin-inverted">L8est <span class="/*can change color*/" >microblogs</span> <span class="text-base">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span></span>
+                        <span class="text-skin-inverted">L8est <span class="/*can change color*/" >microblogs</span> <span class="text-sm font-normal">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span></span>
                     </Fragment>
-                    <ul class="not-prose text-skin-base p-5 pt-0 max-h-64 overflow-y-scroll pb-32">
+                    <ul class="not-prose text-skin-base p-5 pt-0 max-h-64 overflow-y-scroll">
                         {microPosts.map(({ frontmatter, Content }) => (
                         <Card
                             href={`/posts/${slugify(frontmatter)}`}
@@ -101,6 +103,8 @@ const latestnow = getSortedItems(now);
                         />
                         <div class="microblog prose"><Content/></div>
                         ))}
+                    <img class="inline mt-12 mb-8 h-64 w-64 -rotate-6" {...apeDemitri}>
+                    <img class="inline float-right mt-64 w-32 h-32" src="/assets/pfp2.png">
                     </ul>
                 </Block>
             )}
@@ -112,7 +116,7 @@ const latestnow = getSortedItems(now);
                     </Fragment>
                     <iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="256" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
                 </Block>
-                <img class="not-prose shrink w-64 aspect-square object-cover self-end" alt="ape demitri sticker" loading="lazy" {...demitri}>
+                <img class="not-prose shrink w-64 pt-2 origin-top-left rotate-6 object-cover self-end " alt="classic demitri sticker" loading="lazy" {...demitri}>
             </div>
 
             <h2 class="font-semibold">Site colors</h2>
