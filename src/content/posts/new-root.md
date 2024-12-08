@@ -13,4 +13,4 @@ tags:
 description: new-root
 share: "true"
 ---
-Updated the site root ([/](/)) to better align with my [purpose for the site](/posts/blog-goals-and-practices) – to be a highly personal creative outlet – and a real home for the online me! 🏕️ I've tried to strike a balance between whimsical and minimalistic. Hopefully the new design will also spark・ﾟ✧ more interest and draw unsuspecting new visitors deeper into the my web... 🕸️
+Updated the site root ([/](/)) to better align with my [purpose for the site](/posts/blog-goals-and-practices) – to be a highly personal creative outlet – and a real home for the online me! 🏕️ I've tried to strike a balance between whimsical and minimalistic. Hopefully the new design will also spark・ﾟ✧ more interest and draw unsuspecting new visitors deeper into my web... 🕸️

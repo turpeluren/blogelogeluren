@@ -1,7 +1,7 @@
 ---
 author: turpelurpeluren
 pubDatetime: 2024-08-24T21:57:00+01:00
-title: Bar Total
+title: Bar Total 🌼
 postSlug: bar-total
 featured: true
 project: true
