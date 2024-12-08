@@ -24,6 +24,7 @@ import apeDemitri from "@assets/images/ape-sticker.png";
 
 const posts = await getCollection("posts");
 const items = await Astro.glob('./../content/posts/*.md');
+import banner from "@assets/images/turpelurpeluren.gif";
 
 const sortedContent = getSortedItems(items);
 
@@ -44,7 +45,7 @@ const latestnow = getSortedItems(now);
         <Main pageTitle="Welcome to blogelogeluren! 😸" sidebar={false}>
           <div class="prose">
             <p class="mb-0"><br>So what can you expect from my site? We're not sticking to the rules here
-                <img class="inline !m-0 h-5 w-5" src="/assets/pfp2.png">, nor any one category. Everything here is on
+                <img class="inline !m-0 h-5 w-5" src="/assets/pfp2.png">, nor any category. Everything here is on
                 my terms –・̼̟͋̉̑̉͜ﾟ̽͠✧so watch your step!
                 <i class="inline-block work-keep break-none">୧(^ヮ^)つ</i>
             </p>
@@ -96,7 +97,7 @@ const latestnow = getSortedItems(now);
                     <Fragment slot="title">
                         <span class="text-skin-inverted">L8est <span class="/*can change color*/" >microblogs</span> <span class="text-sm font-normal">(╯°□°)╯︵ ɹǝʇʇᴉʍX</span></span>
                     </Fragment>
-                    <ul class="not-prose text-skin-base p-5 pt-0 max-h-64 overflow-y-scroll">
+                    <ul class="not-prose text-skin-base p-5 pt-0 max-h-72 overflow-y-scroll">
                         {microPosts.map(({ frontmatter, Content }) => (
                         <Card
                             href={`/posts/${slugify(frontmatter)}`}
@@ -156,7 +157,18 @@ const latestnow = getSortedItems(now);
                     You can also switch between a monospace and sans-serif font.
                 </li>
             </ul>
-            <div class="sm:hidden">Best viewed on desktop..</div>
+            <p class="sm:hidden">Best viewed on desktop..</p>
+
+            <h2 class="font-semibold">Banner</h2>
+            <a href="/posts/turpelurpeluren-online"><img class="inline mb-4" {...banner}/></a>
+
+            <h2 class="font-semibold">Links 😸</h2>
+            <ul>
+                <li><a href="https://turpelurpeluren.online/home">Archived old site</a></li>
+                <li><a href="https://turpelurpeluren.online/dbild">Picture of the day</a></li>
+                <li><a href="https://bartotal.digital/redaktionen/demitri">Bar Total 🌼</a></li>
+                <li><a href="https://randomantagning.se">Randomantagning.se</a></li>
+            </ul>
           </div>
         </Main>
     <!--section id="hero">

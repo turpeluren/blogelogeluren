@@ -2,6 +2,7 @@
 import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
 
+
 const currentYear = new Date().getFullYear();
 
 export interface Props {
@@ -17,8 +18,8 @@ const { noMarginTop = false } = Astro.props;
     <Socials centered />
     <div class="copyright-wrapper">
       <span>turpelurpeluren</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>{currentYear}</span>
+      <span class="separator">,&nbsp;</span>
+      <span><!--2023 - -->{currentYear}</span>
     </div>
   </div>
 </footer>
