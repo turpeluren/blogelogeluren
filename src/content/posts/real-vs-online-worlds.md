@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-04-28T13:23:00+01:00
 title: Real vs. online worlds
 postSlug: real-vs-online-worlds
-featured: false
+featured: true
 project: false
 microblog: false
 image: true
@@ -40,7 +40,3 @@ At the end of the day I am just happy to have two worlds I really like.
 ---
 
 ***Creatively however,*** I've found some evidence of the potential in combining the liveness of real life with the creative abundance of the internet. You’re welcome to the [art collection](/posts/art-collection).
-
-| Backlinks |
-| --------- |
-| <ul></ul> |
