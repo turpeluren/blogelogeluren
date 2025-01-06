@@ -16,13 +16,13 @@ const { activeNav } = Astro.props;
 <header class="header bg-tsp">
   <a id="skip-to-content" href="#main-content">Skip to content</a>
 
-	<a href="/" class="pfp-a"><p class="pfp-slash pl-1">/</p>
-	  <div class="pfp">
-		<!--img class="" src={`/assets/pfp.png`}-->
-		<img class="aspect-square object-cover" {...pfp}>
-	  </div>
-      <p class="pfp-slash float-right pl-1 -translate-y-5">/</p>
-    </a>
+  <a href="/" class="pfp-a"><p class="pfp-slash pl-1">/</p>
+    <div class="pfp">
+      <!--img class="" src={`/assets/pfp.png`}-->
+      <img class="aspect-square object-cover" {...pfp}>
+    </div>
+    <p class="pfp-slash float-right pl-1 -translate-y-5">/</p>
+  </a>
 
     <button
         class="hamburger-menu focus-outline"
@@ -65,7 +65,7 @@ const { activeNav } = Astro.props;
     /*border: 1px dashed black;*/
   }
   .hamburger-menu {
-    @apply self-end p-6 sm:hidden;
+    @apply self-end p-x-3 p-y-6 sm:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
