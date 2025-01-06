@@ -17,6 +17,6 @@ share: "true"
 
 This one I haven't written yet... Check back later!
 
-| Backlinks                                                            |
-| -------------------------------------------------------------------- |
-| <ul><li>[cradled-by-nature](/posts/cradled-by-nature)</li></ul> |
+| Backlinks                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>[cradled-by-nature](/posts/cradled-by-nature)</li><li>[stoner-doers](/posts/stoner-doers)</li></ul> |
