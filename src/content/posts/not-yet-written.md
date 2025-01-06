@@ -7,7 +7,7 @@ featured: false
 project: false
 microblog: false
 image: false
-draft: true
+draft: false
 hidden: true
 tags:
   - meta
