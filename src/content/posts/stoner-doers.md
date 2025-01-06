@@ -19,9 +19,9 @@ share: "true"
 ---
 If you are a stoner and a doer hmu
 
-we could organize a rave,
-do [new interesting art](/posts/art-collection),
-build a system to [overthrow the world governments](/posts/not-yet-written),
+we could organize a rave,  
+do [new interesting art](/posts/art-collection),  
+build a system to [overthrow the world governments](/posts/not-yet-written),  
 
 Maybe I'm just [dreaming](/posts/not-yet-written)...
 
