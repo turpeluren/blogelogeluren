@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-03-20T13:23:00+01:00
 title: On graffiti
 postSlug: graffiti
-featured: false
+featured: true
 project: false
 microblog: false
 image: false
@@ -11,10 +11,10 @@ draft: false
 tags:
   - thoughts
   - art
-description: Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
+description: Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and to better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
 share: "true"
 ---
-Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
+Exploring graffiti helped me find more joy in art. Large, fast, colourful, permanent brushstrokes. To be confident rather than careful and to better my muscle memory of fundamental shapes. I’m due for expressing some love for graffiti and providing my view on it!
 
 ![Matt aka "minus"](@assets/images/matt.jpg)<figcaption>*My fav character Matt aka "minus" from [Mtv's downtown](https://www.youtube.com/watch?v=u4jFT9jYB78)*</figcaption>
 
