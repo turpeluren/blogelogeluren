@@ -10,7 +10,6 @@ image: true
 draft: false
 tags:
   - thoughts
-  - internet
 description: Differences in real and online living
 share: "true"
 ---
@@ -40,19 +39,4 @@ At the end of the day I am just happy to have two worlds I really like.
 
 ---
 
-***Creatively however,*** I've found some evidence of the potential in combining the liveness of real life with the creative abundance of the internet. 
-
-- One example was the website [mebious.co.uk](https://lain.wiki/wiki/Mebious.co.uk) from serial experiments lain that is sadly unusable since 2020. 
-
-- Stockholm based [civilpolis.org](http://civilpolis.org) aims to become the biggest employer in Sweden by 2150.
-
-- Radio station [Hbr1](http://www.hbr1.com/) is also a favourite of mine. 
-
-Rhizome's [collection of surf clubs](https://sites.rhizome.org/surfclubs/) lead me to some interesting projects: 
-
-- [Cloaque](https://www.cloaque.org/) is a long vertical internet collage colab between artists. 
-
-- Sadly also discontinued [dump.fm](https://hyperallergic.com/356346/in-memory-of-dump-fm-an-endlessly-collaborative-image-poem/) seems to have been a perfect shitposting ground. 
-
-- Last but not least [are.na](https://www.are.na/) is just like the [memex](https://worrydream.com/refs/Bush_1945_-_As_We_May_Think_(Life_Magazine).pdf)! Check it out:-)
-
+***Creatively however,*** I've found some evidence of the potential in combining the liveness of real life with the creative abundance of the internet. You’re welcome to the [art collection](/posts/art-collection).

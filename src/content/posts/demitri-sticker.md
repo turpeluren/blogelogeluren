@@ -10,6 +10,7 @@ image: true
 draft: false
 tags:
   - art
+  - weed
 description: Demitri!
 share: "true"
 ---
@@ -18,6 +19,6 @@ share: "true"
 
 [more demitri ->](/posts/ape-demitri)
 
-| Backlinks                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------- |
-| <ul><li>[Ape Demitri](/posts/ape-demitri)</li></ul> |
+---
+## Backlinks
+- [Ape Demitri](/posts/ape-demitri)
