@@ -24,6 +24,8 @@ Yesterday I watched Boyhood for the first time. I felt some of the same loss of 
 
 I oft wonder what kind of direction I am keeping in my own life and if I have the guts to see it through. When I started my studies in computer science I mostly wanted to utilize it for creative work. I have since found myself entrenched in meaningless schoolwork I find too rigorous, boxed in and joyless, and been too stressed to focus on the things I really love. Of course I have also practiced useful skills, responsibility, time management etc., and I know an education is ultimately an important investment for getting over some societal hurdles alot easier in addition to a well needed kick in the arse.
 
+![Diary](@assets/images/diary.jpg)
+
 Five years is a dauntingly long time, but I'll still be myself in the end. I choose CS because I believe the digital to be the most plastic form of expression, capable of the wildest malleability. It can also be a real trap. Technology is best used sparingly.
 
 From what I understand it takes a real commitment and a real disciplined work ethic to succeed with creative endeavours. I do (at times) believe I have enough of the creative magic dust inside me to create cool (great..🫣?) stuff, if I dedicate myself enough, which of course is the really hard part.
@@ -38,7 +40,7 @@ Through education and pursuing interesting side projects I hope to launch myself
 
 My dream is to have a graffiti crew. Or a band. Can I start a band of blogger punks? Would you join it? That small scale, strong bond, creative energy is what I’m after. And not boxed in either, I want a crew that can make digital as well as physical graffiti.
 
-![RaveSim2d ar](@assets/images/raveSimWarehouse2)<figcaption>*RaveSim2d art*</figcaption>
+![RaveSim2d ar](@assets/images/raveSimWarehouse2.png)<figcaption>*RaveSim2d art*</figcaption>
 
 If you want to achieve something it is a good idea to surround yourself with people who are doing that thing or as close to it as possible, I have heard. But surrounding oneself with a specific group of people is not so easy. It requires reaching out, communication, participation, engagement, all that stuff that I find outside my comfort zone. And most of the time the people I find doing interesting stuff are micro-celebrities online — people who already deal with many others reaching out, which makes it harder for me to justify that they should be allocating time for *me*.
 
