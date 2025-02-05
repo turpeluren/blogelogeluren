@@ -21,3 +21,4 @@ This one I haven't written yet... Check back later!
 ## Backlinks
 - [Cradled by Mother nature](/posts/cradled-by-nature)
 - [Stoner doers](/posts/stoner-doers)
+- [Reflections](/posts/reflections)

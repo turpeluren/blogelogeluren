@@ -16,7 +16,7 @@ description: As winter here in the north tightens its grasp once more, I am due 
 share: "true"
 ---
 
-As winter here in the north tightens its grasp once more, I am due for some reflection. On my life situation, [[goals]], relations, creative and not so creative endeavours and how to balance it all.
+As winter here in the north tightens its grasp once more, I am due for some reflection. On my life situation, [goals](/posts/not-yet-written), relations, creative and not so creative endeavours and how to balance it all.
 
 ![Boyhood boy growing up](@assets/images/boyhood.jpg)<figcaption>*The boyhood boy growing up. Not unlike my [potd-project](/posts/potd-webplayer/).*</figcaption>
 
@@ -40,7 +40,7 @@ Through education and pursuing interesting side projects I hope to launch myself
 
 My dream is to have a graffiti crew. Or a band. Can I start a band of blogger punks? Would you join it? That small scale, strong bond, creative energy is what I’m after. And not boxed in either, I want a crew that can make digital as well as physical graffiti.
 
-![RaveSim2d ar](@assets/images/raveSimWarehouse2.png)<figcaption>*RaveSim2d art*</figcaption>
+![RaveSim2d ar](@assets/images/raveSimWarehouse2.png)<figcaption>*Art for my unfinished game RaveSim2d*</figcaption>
 
 If you want to achieve something it is a good idea to surround yourself with people who are doing that thing or as close to it as possible, I have heard. But surrounding oneself with a specific group of people is not so easy. It requires reaching out, communication, participation, engagement, all that stuff that I find outside my comfort zone. And most of the time the people I find doing interesting stuff are micro-celebrities online — people who already deal with many others reaching out, which makes it harder for me to justify that they should be allocating time for *me*.
 

@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-04-28T13:23:00+01:00
 title: Real vs. online worlds
 postSlug: real-vs-online-worlds
-featured: true
+featured: false
 project: false
 microblog: false
 image: true
