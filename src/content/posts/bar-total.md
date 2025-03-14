@@ -45,3 +45,4 @@ We also have a Twitter/X and an Instagram which you can find on the site.
 ## Backlinks
 
 - [Ung i Världen](/posts/ung-i-v%C3%A4rlden)
+- [Page views on Bar Total](/posts/bar-total-page-views)
