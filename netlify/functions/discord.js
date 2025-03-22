@@ -9,6 +9,6 @@ exports.handler = async (event) => {
 
     return {
         statusCode: response.status,
-        body: JSON.stringify(await response.json()),
+        // No Content
     };
 };
