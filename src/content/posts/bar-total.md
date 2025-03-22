@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2024-08-24T21:57:00+01:00
 title: Bar Total 🌼
 postSlug: bar-total
-featured: true
+featured: false
 project: true
 microblog: false
 image: false
