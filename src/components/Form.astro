@@ -12,7 +12,7 @@ const { slug } = Astro.props;
     name="contact" 
     netlify-honeypot="bot-field"
     >
-    <input type="hidden" name="slug" value={slug as string}/>
+    <input type="hidden" name="slug" id="slug" value={slug as string}/>
     <input type="hidden" name="form-name" value="contact"/>
 
     <h2>Leave a comment:</h2>
@@ -87,13 +87,15 @@ const { slug } = Astro.props;
         const nameInput = document.getElementById("name") as HTMLInputElement;
         const webInput = document.getElementById("website") as HTMLInputElement;
         const emailInput = document.getElementById("email") as HTMLInputElement;
+        const slugInput = document.getElementById("slug") as HTMLTextAreaElement;
     
         var request = new XMLHttpRequest();
-        request.open("POST", "https://discordapp.com/api/webhooks/1331284332702204015/LvYccn2hXRzIRSR6-ehIDpVwtz4vn_tcJyQ6ND9f--kEq06JmH5uA6ShkAeXzYqnO2qE");
+        request.open("POST", "/.netlify/functions/discord");
         request.setRequestHeader('Content-type', 'application/json');
         // the below variables combine a label (text) + the textarea value + a newline (\n)
         // add up to 2,000 characters (Discord's character limit)
         var name = nameInput.value;
+        var slug = 'New comment on: ' + slugInput.value + "\n"; 
         var web = 'Mail: ' + emailInput.value + "\n";
         var email = 'Website: ' + webInput.value + "\n";
         var message = 'Message: ' + question.value;
@@ -102,7 +104,7 @@ const { slug } = Astro.props;
         var date = new Date();
         var f_date = date.toLocaleDateString('sv-SE');
         var username = name + " " + f_date;
-        var msg = email + web + message;
+        var msg = slug + email + web + message;
         // play with it a bit until you get a feel for how you want the incoming messages to look!
     
         var params = {
