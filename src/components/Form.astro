@@ -5,7 +5,6 @@ export interface Props {
 
 const { slug } = Astro.props;
 ---
-
 <div class="contactForm">
   <hr>
   <form id="comment-form" class="contactFormBox" 
@@ -79,12 +78,12 @@ const { slug } = Astro.props;
     }
   </style>
 
-<script>
+<script is:inline>
     (function () {
     'use strict';
 
     // Centralized submit handler: send to Netlify forms and the Netlify Discord function.
-    const form = document.getElementById("comment-form") as HTMLFormElement;
+    const form = document.getElementById("comment-form")/* as HTMLFormElement*/;
     const sendBtn = document.getElementById("send");
 
     const handleSubmit = async () => {
@@ -93,7 +92,7 @@ const { slug } = Astro.props;
         const formData = new FormData(form);
 
         // Prepare Netlify form body (urlencoded)
-        const urlEncoded = new URLSearchParams(formData as any).toString();
+        const urlEncoded = new URLSearchParams(formData/* as any*/).toString();
 
         try {
             // 1) Post to Netlify Forms endpoint
@@ -104,11 +103,11 @@ const { slug } = Astro.props;
             });
 
             // 2) Post to Discord serverless function
-            const  nameInput = document.getElementById("name") as HTMLTextAreaElement;
-            const webInput = document.getElementById("website") as HTMLTextAreaElement;
-            const emailInput = document.getElementById("email") as HTMLTextAreaElement;
-            const question = document.getElementById("question") as HTMLTextAreaElement;
-            const slugInput = document.getElementById("slug") as HTMLTextAreaElement;
+            const  nameInput = document.getElementById("name")/* as HTMLTextAreaElement*/;
+            const webInput = document.getElementById("website")/* as HTMLTextAreaElement*/;
+            const emailInput = document.getElementById("email")/* as HTMLTextAreaElement*/;
+            const question = document.getElementById("question")/* as HTMLTextAreaElement*/;
+            const slugInput = document.getElementById("slug")/* as HTMLTextAreaElement*/;
 
             const name = nameInput?.value || "(anon)";
             const slug = "New comment on: " + (slugInput?.value || "(unknown)") + "\n";
