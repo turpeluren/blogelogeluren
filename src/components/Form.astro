@@ -84,14 +84,13 @@ const { slug } = Astro.props;
     'use strict';
 
     // Centralized submit handler: send to Netlify forms and the Netlify Discord function.
-    const form = document.getElementById("comment-form");
+    const form = document.getElementById("comment-form") as HTMLFormElement;
     const sendBtn = document.getElementById("send");
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async () => {
 
-        const myForm = event.target;
-        const formData = new FormData(myForm);
+        //const myForm = event.target;
+        const formData = new FormData(form);
 
         // Prepare Netlify form body (urlencoded)
         const urlEncoded = new URLSearchParams(formData as any).toString();
