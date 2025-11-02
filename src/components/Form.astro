@@ -76,72 +76,72 @@ const { slug } = Astro.props;
         display: none;
     }
   </style>
-  
+
 <script>
     (function () {
     'use strict';
 
-    // Send to discord webhook
-    document.getElementById('send').onclick = function() {
-        const question = document.getElementById("question") as HTMLTextAreaElement;
-        const nameInput = document.getElementById("name") as HTMLInputElement;
-        const webInput = document.getElementById("website") as HTMLInputElement;
-        const emailInput = document.getElementById("email") as HTMLInputElement;
-        const slugInput = document.getElementById("slug") as HTMLTextAreaElement;
-    
-        var request = new XMLHttpRequest();
-        request.open("POST", "/.netlify/functions/discord");
-        request.setRequestHeader('Content-type', 'application/json');
-        // the below variables combine a label (text) + the textarea value + a newline (\n)
-        // add up to 2,000 characters (Discord's character limit)
-        var name = nameInput.value;
-        var slug = 'New comment on: ' + slugInput.value + "\n"; 
-        var web = 'Mail: ' + emailInput.value + "\n";
-        var email = 'Website: ' + webInput.value + "\n";
-        var message = 'Message: ' + question.value;
-    
-        // you have to combine both into one single variable before you can pass it to discord
-        var date = new Date();
-        var f_date = date.toLocaleDateString('sv-SE');
-        var username = name + " " + f_date;
-        var msg = slug + email + web + message;
-        // play with it a bit until you get a feel for how you want the incoming messages to look!
-    
-        var params = {
-        // you can set the username to anything you want
-            username: username,
-            content: msg,
-        }
-        request.send(JSON.stringify(params));
+    // Centralized submit handler: send to Netlify forms and the Netlify Discord function.
+    const form = document.getElementById("contact-form");
 
-        // below gives your user some helpful feedback letting them know their message has been sent
-        //alert('Thanks, your message has been sent.'); //Handled in netlify AJAX instead
-        
-    }
-
-    //AJAX netlify
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         const myForm = event.target;
         const formData = new FormData(myForm);
-        
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData as any).toString(),
-        })
-            .then(() => alert("Thank you for your submission"))
-            .catch((error) => alert(error));
 
-        // below clears the form fields after submission
-        const question = document.getElementById("question") as HTMLTextAreaElement;
-        question.value = '';
+        // Prepare Netlify form body (urlencoded)
+        const urlEncoded = new URLSearchParams(formData as any).toString();
+
+        try {
+            // 1) Post to Netlify Forms endpoint
+            const netlifyResp = await fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: urlEncoded,
+            });
+
+            // 2) Post to Discord serverless function
+            const  nameInput = document.getElementById("name") as HTMLTextAreaElement;
+            const webInput = document.getElementById("website") as HTMLTextAreaElement;
+            const emailInput = document.getElementById("email") as HTMLTextAreaElement;
+            const question = document.getElementById("question") as HTMLTextAreaElement;
+            const slugInput = document.getElementById("slug") as HTMLTextAreaElement;
+
+            const name = nameInput?.value || "(anon)";
+            const slug = "New comment on: " + (slugInput?.value || "(unknown)") + "\n";
+            const web = "Mail: " + (emailInput?.value || "") + "\n";
+            const email = "Website: " + (webInput?.value || "") + "\n";
+            const message = "Message: " + (question?.value || "");
+
+            const date = new Date();
+            const f_date = date.toLocaleDateString("sv-SE");
+            const username = `${name} ${f_date}`;
+            const msg = slug + email + web + message;
+
+            const params = { username, content: msg };
+
+            const discordResp = await fetch("/.netlify/functions/discord", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(params),
+            });
+
+            if (!netlifyResp.ok) throw new Error(`Form post failed (${netlifyResp.status})`);
+            if (!discordResp.ok) throw new Error(`Discord webhook failed (${discordResp.status})`);
+
+            alert("Thank you for your submission");
+
+            // Clear 
+            if (question) question.value = "";
+
+        } catch (error) {
+            console.error(error);
+            alert("There was an error sending your message. Please try again later.");
+        }
     };
 
-    document
-        .querySelector("form")
-        .addEventListener("submit", handleSubmit);
+    form?.addEventListener("submit", handleSubmit);
 
 })();
 </script>
