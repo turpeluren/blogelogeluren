@@ -24,7 +24,7 @@ const { slug } = Astro.props;
     <label id="hidden">Don’t fill this out if you’re human: <input name="bot-field" /></label>
     <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here! You can use markdown and html!"></textarea>
 
-    <div id="bottom"><button type="submit" id="send">Send!</button>
+    <div id="bottom"><button type="button" id="send">Send!</button>
     <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></div>
   </form>
 </div>
@@ -85,6 +85,7 @@ const { slug } = Astro.props;
 
     // Centralized submit handler: send to Netlify forms and the Netlify Discord function.
     const form = document.getElementById("comment-form");
+    const sendBtn = document.getElementById("send");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -101,7 +102,8 @@ const { slug } = Astro.props;
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: urlEncoded,
-            });
+            })
+                .then(); // Prevent netlify thank you page redirection?
 
             // 2) Post to Discord serverless function
             const  nameInput = document.getElementById("name") as HTMLTextAreaElement;
@@ -143,7 +145,7 @@ const { slug } = Astro.props;
         }
     };
 
-    form?.addEventListener("submit", handleSubmit);
+    sendBtn?.addEventListener("click", handleSubmit);
 
 })();
 </script>
