@@ -8,8 +8,10 @@ const { slug } = Astro.props;
 
 <div class="contactForm">
   <hr>
-  <form class="contactFormBox" 
+  <form id="comment-form" class="contactFormBox" 
     name="contact" 
+    method="POST"
+    data-netlify="true"
     netlify-honeypot="bot-field"
     >
     <input type="hidden" name="slug" id="slug" value={slug as string}/>
@@ -22,8 +24,8 @@ const { slug } = Astro.props;
     <label id="hidden">Don’t fill this out if you’re human: <input name="bot-field" /></label>
     <textarea rows="4" cols="50" id="question" name="message" placeholder="Type your message here! You can use markdown and html!"></textarea>
 
-    <flexbox id="bottom"><button type="submit" id="send">Send!</button>
-    <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></flexbox>
+    <div id="bottom"><button type="submit" id="send">Send!</button>
+    <a id="ref" href="https://sadgrl.online/learn/articles/create-webform-discord">Get your own message box!</a></div>
   </form>
 </div>
 
@@ -82,7 +84,7 @@ const { slug } = Astro.props;
     'use strict';
 
     // Centralized submit handler: send to Netlify forms and the Netlify Discord function.
-    const form = document.getElementById("contact-form");
+    const form = document.getElementById("comment-form");
 
     const handleSubmit = async (event) => {
         event.preventDefault();
