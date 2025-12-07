@@ -9,10 +9,14 @@ microblog: false
 image: false
 draft: false
 tags:
-  - thoughts
+  - events
+  - dev
+  - social
 description: I participated in the Northwestern Europe Regional competitive programming Competition 2025!
 share: "true"
 ---
+![NWERC25 at KIT in Karlsruhe](@assets/images/nwerc25.jpg)
+
 A month ago, "competitive programming" was a term I barely recognized--Today, I participated in the Northwestern European Regional Competition ([NWERC](https://2025.nwerc.eu/)) 2025 in Karlsruhe, Germany!
 
 Together with another CS- and one math student, we formed team UmU (get it? we're from Umeå University). My teammates had both qualified through the Nordic Collegiate Programming Contest ([NCPC](https://nordic.icpc.io/ncpc2025/)), while I was recruited in lack of a third eligible contestant, unable to decline a free holiday. Before the competition, we actually got interviewed by the university, archived [here](https://web.archive.org/web/20251207002130/https%3A%2F%2Fwww.umu.se%2Fnyheter%2Fde-representerar-universitetet-i-programmeringstavling_12149645%2F).

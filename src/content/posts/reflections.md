@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2025-02-05T15:34:00+01:00
 title: Reflections
 postSlug: reflections
-featured: true
+featured: false
 project: false
 microblog: false
 image: false
