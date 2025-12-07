@@ -18,7 +18,7 @@ share: "true"
 
 Just [say](mailto:admin@turpelurpeluren.online) if you'd like some.
 
-[<- more demitri](/posts/demitri-sticker)
+[ <- ](/posts/demitri-sticker) more demitri [ -> ](/posts/gobsheet)
 
 | Backlinks                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------- |
