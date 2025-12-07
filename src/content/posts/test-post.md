@@ -60,9 +60,6 @@ I've actually never written in markdown before.
 ![something](@assets/images/example.jpg)
 ```
 
-![something](@assets/images/AstroPaper-v3.png)
-<img src="../../assets/images/AstroPaper-v3.png" alt="something">
-
 The recommended size for OG image is **_1200 X 640_** px.
 
 Bye bye!
