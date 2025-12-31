@@ -22,4 +22,4 @@ My first a5 sheet is goblin themed. If you'd like one, I'm looking to get rid of
 ![on my laptop](@assets/images/stub.jpg)
 *laptop covered in goblins, alongside a few from the champ [Terp](https://www.instagram.com/terpstreetart/)*
 
-[<- more stickers](/posts/ape-demitri)
+[<- more stickers](/posts/ape-demitri), [more goblins ->](/posts/ape-demitri)
