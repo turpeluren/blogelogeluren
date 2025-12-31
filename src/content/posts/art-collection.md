@@ -18,6 +18,8 @@ share: "true"
 ## My collection of cool interesting art:
 Very work in progress, unexhaustive etc. Leave any suggestions u think I might like in the comments. 
 ### Web based:
+- Contemporary Stockholm based [Civil Polis](https://civilpolis.org/) blur the lines between a band and a movement, with a supposed 200 members and distributed songwriting. Their website is an image board and they roll their own streaming platform on port 4533.
+
 - The website [mebious.co.uk](https://lain.wiki/wiki/Mebious.co.uk) from serial experiments lain that is sadly unusable since 2020. 
 
 - Radio station [Hbr1](http://www.hbr1.com/) is also a favourite of mine. 
