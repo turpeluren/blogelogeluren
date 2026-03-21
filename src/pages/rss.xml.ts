@@ -2,6 +2,7 @@ import rss from "@astrojs/rss";
 import { getCollection } from "astro:content";
 import getSortedPosts from "@utils/getSortedPosts";
 import slugify from "@utils/slugify";
+import { marked } from "marked";
 import { SITE } from "@config";
 
 export async function GET() {
@@ -11,12 +12,14 @@ export async function GET() {
     title: SITE.title,
     description: SITE.desc,
     site: SITE.website,
-    items: sortedPosts.map(({ data }) => ({
-      link: `posts/${slugify(data)}`,
-      title: data.title,
-      author: data.author,
-      description: data.description+"<br><hr><br>"+data.content,
-      pubDate: new Date(data.pubDatetime),
+    items: sortedPosts.map(post => ({
+      link: `posts/${slugify(post.data)}`,
+      title: post.data.title,
+      author: post.data.author,
+      // Convert raw markdown body to HTML for RSS description
+      description:
+        post.data.description + "<br><hr><br>" + marked.parse(post.body ?? ""),
+      pubDate: new Date(post.data.pubDatetime),
     })),
   });
 }
