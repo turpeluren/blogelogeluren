@@ -14,7 +14,8 @@ export async function GET() {
     items: sortedPosts.map(({ data }) => ({
       link: `posts/${slugify(data)}`,
       title: data.title,
-      description: data.description,
+      author: data.author,
+      description: data.description+"<br><hr><br>"+data.content,
       pubDate: new Date(data.pubDatetime),
     })),
   });
