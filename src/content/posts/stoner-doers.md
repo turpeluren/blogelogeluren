@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2025-01-06T17:43:00+01:00
 title: Stoner doers
 postSlug: stoner-doers
-featured: true
+featured: false
 project: false
 microblog: false
 image: false

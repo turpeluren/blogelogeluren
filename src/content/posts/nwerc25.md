@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2025-12-07T13:50:00+01:00
 title: NWERC25
 postSlug: nwerc25
-featured: true
+featured: false
 project: false
 microblog: false
 image: false
