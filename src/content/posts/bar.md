@@ -32,3 +32,6 @@ I used [excalibur.js](https://excaliburjs.com/) for the beer table and websocket
 
 ## Link 😽
 - https://bar.turpelurpeluren.online
+
+## Preview 👀
+![Preview of the bar](@assets/images/bar_23_07_2026.png)
