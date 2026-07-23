@@ -7,6 +7,7 @@ export interface Props {
   fade?: boolean;
   nomargin?: boolean;
   rot? :string;
+  classList?: string;
 }
 
 const { 
@@ -16,12 +17,12 @@ const {
     fade=false,
     nomargin=false,
     rot=0,
+    classList="",
 } = Astro.props;
 
-const rand = new Date().getMilliseconds() % 2;
 ---
 
-<div class={"mt-4 rotate-["+rot+"deg]"}><p class="pl-1 text-base m-0">/</p>
+<div class={"mt-4 rotate-["+rot+"deg]"+" "+(classList || "")}><p class="pl-1 text-base m-0">/</p>
 <div class={"block grow overflow-hidden border-[1px] rounded-[3px] border-skin-"+border}>
     <!-- Header -->
     <div class={"px-2 pb-1 rounded-t-[1px] bg-skin-"+bg+" border-b-[1px] border-skin-"+border}><h2 class="font-semibold text-xl !m-0" set:html={title}></h2></div>

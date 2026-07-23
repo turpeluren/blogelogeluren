@@ -3,7 +3,7 @@ author: turpelurpeluren
 pubDatetime: 2026-03-21T18:54:00+01:00
 title: LinkLair
 postSlug: linklair
-featured: true
+featured: false
 project: true
 microblog: false
 image: false

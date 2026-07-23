@@ -115,14 +115,24 @@ const latestnow = getSortedItems(now);
                 </Block>
             )}
 
-            <div class="flex flex-col sm:flex-row gap-5 justify-between">
-                <Block bg="link" border="link" nomargin>
+            <div class="flex flex-col sm:flex-row gap-1 justify-between">
+                {/* Bar */}
+                <Block bg="link" border="link" nomargin classList="grow">
                     <Fragment slot="title">
-                        <span class="text-skin-inverted">👾 <a class="!text-skin-inverted" href="/posts/third-place">3rd place hangout</a></span>
+                        <span class="text-skin-inverted">🍺 <a class="!text-skin-inverted" href="/posts/bar">Have a beer</a></span>
                     </Fragment>
-                    <iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="256" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                    <iframe src="https://bar.turpelurpeluren.online" width="100%" height="512" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
                 </Block>
-                <img class="not-prose shrink w-64 pt-2 origin-top-left rotate-6 object-cover self-end " alt="classic demitri sticker" loading="lazy" {...demitri}>
+                {/* Cbox chat + demitri sticker */}
+                <div class="flex flex-col gap-1">
+                  <Block bg="link" border="link" nomargin>
+                      <Fragment slot="title">
+                          <span class="text-skin-inverted">👾 <a class="!text-skin-inverted" href="/posts/third-place">3rd place hangout</a></span>
+                      </Fragment>
+                      <iframe src="https://www5.cbox.ws/box/?boxid=948822&boxtag=vvqRoz" width="100%" height="256" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
+                  </Block>
+                  <img class="not-prose shrink w-64 pt-2 origin-top-left rotate-6 object-cover self-end " alt="classic demitri sticker" loading="lazy" {...demitri}>
+                </div>
             </div>
 
             <h2 class="font-semibold">Site colors</h2>
