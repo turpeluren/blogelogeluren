@@ -52,8 +52,8 @@ const latestnow = getSortedItems(now);
            <!--p>A good place to start exploring would be the featured notes down below or the 
             <a href="/now">/now</a> page.</p-->
 
-            <div class="flex flex-col sm:flex-row gap-5">
-                <Block bg="accent" border="fill" nomargin>
+            <div class="grid sm:grid-cols-[1fr_1fr] grid-cols-[1fr] gap-5 w-full">
+                <Block bg="accent" border="fill" nomargin classList="">
                     <Fragment slot="title">
                         <span class="text-gray-900">🐱‍💻 The gist</span>
                     </Fragment>
@@ -67,7 +67,7 @@ const latestnow = getSortedItems(now);
                     </p>
                 </Block>
 
-                <Block nomargin rot="-1">
+                <Block nomargin rot="-1" classList="">
                     <Fragment slot="title">
                         <div class="text-right"><span class="text-skin-inverted">Featured drawing 🖌️</span></div>
                     </Fragment>
@@ -115,7 +115,7 @@ const latestnow = getSortedItems(now);
                 </Block>
             )}
 
-            <div class="flex flex-col sm:flex-row gap-1 justify-between">
+            <div class="flex flex-col sm:flex-row gap-5 justify-between">
                 {/* Bar */}
                 <Block bg="link" border="link" nomargin classList="grow">
                     <Fragment slot="title">
